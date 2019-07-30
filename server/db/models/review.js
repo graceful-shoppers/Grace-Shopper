@@ -10,4 +10,14 @@ const Review = db.define('review', {
   }
 })
 
+Review.beforeValidate(review => {
+  if (!review.userId || !review.productId) {
+    const err = new Error('a userId and productId are required')
+    throw err
+  } else if (review.text.length < 5) {
+    const err = new Error('that review is too short')
+    throw err
+  }
+})
+
 module.exports = Review
