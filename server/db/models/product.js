@@ -3,23 +3,36 @@ const db = require('../db')
 
 const Product = db.define('product', {
   title: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   description: {
-    type: Sequelize.TEXT
+    type: Sequelize.TEXT,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   price: {
-    type: Sequelize.DECIMAL(10, 2)
+    type: Sequelize.DECIMAL(10, 2),
+    allowNull: false,
+    validate: {
+      isDecimal: true
+    }
   },
   quantity: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      isInt: true
+    }
   },
   category: {
-    type: Sequelize.ENUM(
-      'yardShovel',
-      'kitchenShovel',
-      'mouthShovel',
-      'snowShovel'
+    type: Sequelize.ARRAY(
+      Sequelize.ENUM('yardShovel', 'kitchenShovel', 'mouthShovel', 'snowShovel')
     )
   },
   imageUrl: {
