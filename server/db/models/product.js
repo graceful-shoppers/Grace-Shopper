@@ -15,7 +15,12 @@ const Product = db.define('product', {
     type: Sequelize.INTEGER
   },
   category: {
-    type: Sequelize.ENUM('yardShovel', 'kitchenShovel', 'mouthShovel')
+    type: Sequelize.ENUM(
+      'yardShovel',
+      'kitchenShovel',
+      'mouthShovel',
+      'snowShovel'
+    )
   },
   imageUrl: {
     type: Sequelize.STRING,
