@@ -6,7 +6,7 @@ const Order = db.define('order', {
     type: Sequelize.ENUM('Created', 'Processing', 'Cancelled', 'Completed')
   },
   sessionId: {
-    type: Sequelize.INTEGER
+    type: Sequelize.STRING
   },
   subtotal: {
     type: Sequelize.INTEGER

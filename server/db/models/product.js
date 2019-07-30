@@ -32,11 +32,8 @@ const Product = db.define('product', {
   },
   category: {
     type: Sequelize.ARRAY(
-      Sequelize.ENUM('yardShovel', 'kitchenShovel', 'mouthShovel')
-    ),
-    validate: {
-      len: [1, 3]
-    }
+      Sequelize.ENUM('yardShovel', 'kitchenShovel', 'mouthShovel', 'snowShovel')
+    )
   },
   imageUrl: {
     type: Sequelize.STRING,
