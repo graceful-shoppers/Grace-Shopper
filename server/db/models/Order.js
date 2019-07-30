@@ -13,4 +13,11 @@ const Order = db.define('order', {
   }
 })
 
+Order.beforeValidate(order => {
+  if (!order.sessionId && !order.userId) {
+    const err = new Error('a sessionId or userId is required')
+    throw err
+  }
+})
+
 module.exports = Order
