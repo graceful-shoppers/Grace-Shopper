@@ -16,10 +16,14 @@ const onToken = (amount, description, email, shipping) => token =>
   axios
     .post('/api/checkout', {
       // name: 'Ben',
-      description: 'Grace Shoveller',
+      description: 'description',
       source: token.id,
       currency: 'USD',
-      amount: fromDollarToCent(123)
+      amount: fromDollarToCent(amount),
+      metadata: {
+        email,
+        shipping
+      }
     })
     .then(successPayment)
     .catch(errorPayment)
@@ -38,7 +42,6 @@ class Checkout extends React.Component {
       [event.target.name]: event.target.value
     })
   }
-
   render() {
     return (
       <div>
@@ -54,7 +57,12 @@ class Checkout extends React.Component {
         </form>
         <StripeCheckout
           name="Bens cool guy shit"
-          token={onToken()}
+          token={onToken(
+            321,
+            'cool stuff',
+            this.state.email,
+            this.state.shipping
+          )}
           stripeKey="pk_test_DY5MZUNFD7FjEQYwYhz4sK9h00CNymDRBp"
           email={this.state.email}
           shipping={this.state.shipping}

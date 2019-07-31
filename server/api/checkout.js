@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', async (req, res, next) => {
-  console.log('req; ', req)
+  console.log('req.body; ', req.body)
   try {
     await stripe.charges.create(req.body)
     res.status(200).send()
