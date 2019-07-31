@@ -6,7 +6,8 @@ const {
   Product,
   Order,
   ProductOrder,
-  Review
+  Review,
+  Session
 } = require('../server/db/models')
 
 async function seed() {
@@ -20,6 +21,10 @@ async function seed() {
       isAdmin: false
     })
   ])
+
+  const session = await Session.create({
+    sid: 'lHA2qOvmujhQF_CON0Rn6hwEtli_MqR1'
+  })
 
   const products = await Promise.all([
     Product.create({
@@ -73,28 +78,28 @@ async function seed() {
 
   await Order.create({
     status: 'Created',
-    sid: 'aa34d',
+    sid: 'lHA2qOvmujhQF_CON0Rn6hwEtli_MqR1',
     subtotal: 10498,
     userId: 1
   })
 
   await Order.create({
     status: 'Processing',
-    sid: 'ac345',
+    sid: 'lHA2qOvmujhQF_CON0Rn6hwEtli_MqR1',
     subtotal: 2499,
     userId: 1
   })
 
   await Order.create({
     status: 'Cancelled',
-    sid: 'aa334411',
+    sid: 'lHA2qOvmujhQF_CON0Rn6hwEtli_MqR1',
     subtotal: 3799,
     userId: 1
   })
 
   await Order.create({
     status: 'Completed',
-    sid: 'aa88i3jd',
+    sid: 'lHA2qOvmujhQF_CON0Rn6hwEtli_MqR1',
     subtotal: 3499,
     userId: 1
   })
