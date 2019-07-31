@@ -19,3 +19,16 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.allShovels {
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shovel {
+  /* background: red; */
+  width: 90%;
+}
