@@ -24,7 +24,7 @@ async function seed() {
   const products = await Promise.all([
     Product.create({
       title: 'Garant Plastic 24 in. W Snow Shovel',
-      price: 49.99,
+      price: 4999,
       category: ['snowShovel'],
       imageUrl:
         'https://hw.menardc.com/main/items/media/EMSCO001/ProductMedium/1196.jpg',
@@ -34,7 +34,7 @@ async function seed() {
     }),
     Product.create({
       title: 'Garant Nordic Steel 24 in. W Snow Pusher',
-      price: 24.99,
+      price: 2499,
       category: ['snowShovel'],
       imageUrl:
         'http://cdn-tp3.mozu.com/24645-37138/cms/37138/files/28541512-812d-4408-bb8b-801e7b041926?max=300&quality=40&_mzcb=_1564029509205',
@@ -44,7 +44,7 @@ async function seed() {
     }),
     Product.create({
       title: 'Suncast Plastic 4.3 ft. L x 20 in. W Snow ',
-      price: 37.99,
+      price: 3799,
       category: ['snowShovel'],
       imageUrl:
         'http://cdn-tp3.mozu.com/24645-37138/cms/37138/files/9390bf37-f70c-4f01-9d88-05eab13636f1?max=300&quality=40&_mzcb=_1564029509205',
@@ -53,7 +53,7 @@ async function seed() {
     }),
     Product.create({
       title: 'Ames True Temper Aluminum 4.33 ft. L x 18 in. W Snow Shovel',
-      price: 34.99,
+      price: 3499,
       category: ['snowShovel'],
       imageUrl:
         'http://cdn-tp3.mozu.com/24645-37138/cms/37138/files/8a7894cc-f249-4195-8f3c-7f216ace82ac?max=300&quality=40&_mzcb=_1564029509205',
@@ -62,7 +62,7 @@ async function seed() {
     }),
     Product.create({
       title: 'Garant Alpine Plastic 18 in. W Snow Shovel',
-      price: 5.0,
+      price: 500,
       category: ['snowShovel'],
       imageUrl:
         'http://cdn-tp3.mozu.com/24645-37138/cms/37138/files/a67b8879-f288-47c5-b0e9-ca9327ad736b?max=300&quality=40&_mzcb=_1564029509205',
@@ -73,15 +73,64 @@ async function seed() {
 
   await Order.create({
     status: 'Created',
-    sessionId: 'aa34d',
-    subtotal: 103,
+    sid: 'aa34d',
+    subtotal: 10498,
+    userId: 1
+  })
+
+  await Order.create({
+    status: 'Processing',
+    sid: 'ac345',
+    subtotal: 2499,
+    userId: 1
+  })
+
+  await Order.create({
+    status: 'Cancelled',
+    sid: 'aa334411',
+    subtotal: 3799,
+    userId: 1
+  })
+
+  await Order.create({
+    status: 'Completed',
+    sid: 'aa88i3jd',
+    subtotal: 3499,
     userId: 1
   })
 
   await ProductOrder.create({
-    price: 7.02,
+    price: 4999,
     quantity: 2,
+    productId: 1,
+    orderId: 1
+  })
+
+  await ProductOrder.create({
+    price: 2499,
+    quantity: 1,
+    productId: 2,
+    orderId: 2
+  })
+
+  await ProductOrder.create({
+    price: 3799,
+    quantity: 1,
+    productId: 3,
+    orderId: 3
+  })
+
+  await ProductOrder.create({
+    price: 3499,
+    quantity: 1,
     productId: 4,
+    orderId: 4
+  })
+
+  await ProductOrder.create({
+    price: 500,
+    quantity: 1,
+    productId: 5,
     orderId: 1
   })
 
