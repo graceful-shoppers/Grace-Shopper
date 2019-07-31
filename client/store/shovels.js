@@ -4,6 +4,7 @@ import history from '../history'
 /**
  * ACTION TYPES
  */
+
 const GET_SHOVELS = 'GET_SHOVELS'
 const REMOVE_SHOVELS = 'REMOVE_SHOVELS'
 
