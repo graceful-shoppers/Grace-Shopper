@@ -73,28 +73,28 @@ async function seed() {
 
   await Order.create({
     status: 'Created',
-    sessionId: 'aa34d',
+    sid: 'aa34d',
     subtotal: 10498,
     userId: 1
   })
 
   await Order.create({
     status: 'Processing',
-    sessionId: 'ac345',
+    sid: 'ac345',
     subtotal: 2499,
     userId: 1
   })
 
   await Order.create({
     status: 'Cancelled',
-    sessionId: 'aa334411',
+    sid: 'aa334411',
     subtotal: 3799,
     userId: 1
   })
 
   await Order.create({
     status: 'Completed',
-    sessionId: 'aa88i3jd',
+    sid: 'aa88i3jd',
     subtotal: 3499,
     userId: 1
   })
