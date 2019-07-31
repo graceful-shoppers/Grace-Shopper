@@ -25,13 +25,13 @@ class Routes extends Component {
 
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route exact path="/checkout" component={Checkout} />
 
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
             <Route exact path="/shovels" component={AllShovelsView} />
-            <Route exact path="/checkout" component={Checkout} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
