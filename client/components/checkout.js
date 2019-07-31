@@ -1,25 +1,37 @@
 import React from 'react'
 import StripeCheckout from 'react-stripe-checkout'
+import axios from 'axios'
 
-export default class TakeMoney extends React.Component {
+const fromDollarToCent = amount => amount * 100
+
+const successPayment = data => {
+  alert('Your shovels are on their way')
+}
+
+const errorPayment = data => {
+  alert('Payment Error')
+}
+
+const onToken = (amount, description, email, shipping) => token =>
+  axios
+    .post('/api/checkout', {
+      // name: 'Ben',
+      description: 'Grace Shoveller',
+      source: token.id,
+      currency: 'USD',
+      amount: fromDollarToCent(123)
+    })
+    .then(successPayment)
+    .catch(errorPayment)
+
+class Checkout extends React.Component {
   constructor() {
     super()
     this.state = {
-      shipping: '',
-      email: ''
+      email: '',
+      shipping: ''
     }
     this.handleChange = this.handleChange.bind(this)
-  }
-  onToken = token => {
-    console.log('token')
-    fetch('/api/checkout', {
-      method: 'POST',
-      body: JSON.stringify(token)
-    }).then(response => {
-      response.json().then(data => {
-        alert(`We are in business, ${data.email}`)
-      })
-    })
   }
   handleChange(event) {
     this.setState({
@@ -27,28 +39,29 @@ export default class TakeMoney extends React.Component {
     })
   }
 
-  // ...
-
   render() {
     return (
       <div>
-        {/* put some information about the persons cart here */}
         <form>
           <label>
-            Shipping Address:
-            <input type="text" name="shipping" onChange={this.handleChange} />
+            Email Address
+            <input name="email" onChange={this.handleChange} />
           </label>
-          <br />
           <label>
-            Email Address:
-            <input type="text" name="email" onChange={this.handleChange} />
+            Shipping Address
+            <input name="shipping" onChange={this.handleChange} />
           </label>
         </form>
         <StripeCheckout
-          token={this.onToken}
+          name="Bens cool guy shit"
+          token={onToken()}
           stripeKey="pk_test_DY5MZUNFD7FjEQYwYhz4sK9h00CNymDRBp"
+          email={this.state.email}
+          shipping={this.state.shipping}
         />
       </div>
     )
   }
 }
+
+export default Checkout

@@ -1,28 +1,20 @@
 const router = require('express').Router()
 const stripe = require('stripe')('sk_test_gpMBV53Rxvu2RkZQfLLRNNSE004rlxLEsb')
 
-router.get('/', (req, res, next) => {})
+router.get('/', (req, res, next) => {
+  res.send({
+    message: 'Hello Stripe checkout server',
+    timestamp: new Date().toISOString
+  })
+})
 
 router.post('/', async (req, res, next) => {
-  console.log('in checkout post')
-  console.log(req)
+  console.log('req; ', req)
   try {
-    const charge = await stripe.charges.create(
-      {
-        amount: 999,
-        currency: 'usd',
-        source: 'tok_visa',
-        receipt_email: 'jenny.rosen@example.com'
-      },
-      function(err, charge) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log('success')
-        }
-      }
-    )
+    await stripe.charges.create(req.body)
+    res.status(200).send()
   } catch (err) {
+    res.status(500).send({error: err})
     console.log(err)
   }
 })
