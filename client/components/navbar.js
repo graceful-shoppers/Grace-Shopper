@@ -32,7 +32,6 @@ class Navbar extends React.Component {
   }
 
   burgerShow() {
-    console.log(this.state)
     if (this.state.burger) {
       this.setState({
         burger: false
@@ -55,7 +54,7 @@ class Navbar extends React.Component {
         {this.state.burger ? (
           <DropDown>
             <Link to="/home">Home</Link>
-            <Link to="/categories">Categories</Link>
+            <Link to="/shovels">Shovels</Link>
             <Link to="/faq">FAQ</Link>
           </DropDown>
         ) : (
@@ -65,11 +64,11 @@ class Navbar extends React.Component {
         <div />
         <h1>Graceful Shoveler</h1>
         <nav>
-          {this.isLoggedIn ? (
+          {this.props.isLoggedIn ? (
             <div>
               {/* The navbar will show these links after you log in */}
               <Link to="/home">Home</Link>
-              <a href="#" onClick={this.handleClick}>
+              <a href="#" onClick={this.props.handleClick}>
                 Logout
               </a>
             </div>

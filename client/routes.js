@@ -6,6 +6,7 @@ import {Login, Signup, UserHome} from './components'
 import {me} from './store'
 import {getAllShovels} from './store/shovels'
 import AllShovelsView from './components/allShovels'
+import SingleShovel from './components/singleShovel'
 
 /**
  * COMPONENT
@@ -30,6 +31,7 @@ class Routes extends Component {
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
             <Route exact path="/shovels" component={AllShovelsView} />
+            <Route path="/shovels/:shovelId" component={SingleShovel} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

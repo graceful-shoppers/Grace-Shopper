@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 class AllShovelsView extends React.Component {
   constructor() {
@@ -13,11 +14,13 @@ class AllShovelsView extends React.Component {
       <div className="allShovels">
         {shovels.map(shovel => {
           return (
-            <div className="shovel">
-              <h3>{shovel.title}</h3>
-              <h6>{shovel.price}</h6>
-              <img src={shovel.imageUrl} />
-            </div>
+            <Link to={`/shovels/${shovel.id}`} key={shovel.id}>
+              <div className="shovel">
+                <h3>{shovel.title}</h3>
+                <h6>{shovel.price}</h6>
+                <img src={shovel.imageUrl} />
+              </div>
+            </Link>
           )
         })}
       </div>
