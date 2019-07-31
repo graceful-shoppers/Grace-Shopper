@@ -6,12 +6,13 @@ import {Login, Signup, UserHome} from './components'
 import {me} from './store'
 import {getAllShovels} from './store/shovels'
 import AllShovelsView from './components/allShovels'
+import CartView from './components/cart'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
-  componentDidMount() {
+  async componentDidMount() {
     this.props.loadInitialData()
   }
 
@@ -30,6 +31,7 @@ class Routes extends Component {
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
             <Route exact path="/shovels" component={AllShovelsView} />
+            <Route exact path="/cart" component={CartView} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
@@ -46,7 +48,8 @@ const mapState = state => {
   return {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    user: state.user
   }
 }
 
