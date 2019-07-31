@@ -4,6 +4,8 @@ import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {Login, Signup, UserHome} from './components'
 import {me} from './store'
+import {getAllShovels} from './store/shovels'
+import AllShovelsView from './components/allShovels'
 
 /**
  * COMPONENT
@@ -19,12 +21,15 @@ class Routes extends Component {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
+
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
+            <Route exact path="/shovels" component={AllShovelsView} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
@@ -49,6 +54,7 @@ const mapDispatch = dispatch => {
   return {
     loadInitialData() {
       dispatch(me())
+      dispatch(getAllShovels())
     }
   }
 }
