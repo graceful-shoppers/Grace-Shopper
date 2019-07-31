@@ -15,7 +15,7 @@ class AllShovelsView extends React.Component {
           return (
             <div className="shovel">
               <h3>{shovel.title}</h3>
-              <h6>{shovel.price}</h6>
+              <h6>${shovel.price / 100}</h6>
               <img src={shovel.imageUrl} />
             </div>
           )
