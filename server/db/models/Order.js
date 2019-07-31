@@ -5,9 +5,7 @@ const Order = db.define('order', {
   status: {
     type: Sequelize.ENUM('Created', 'Processing', 'Cancelled', 'Completed')
   },
-  // sessionId: {
-  //   type: Sequelize.INTEGER
-  // },
+//removed sessionId as it is now added as 'sid' via association with session table
   subtotal: {
     type: Sequelize.INTEGER
   }
