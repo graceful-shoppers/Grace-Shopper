@@ -5,9 +5,9 @@ const Order = db.define('order', {
   status: {
     type: Sequelize.ENUM('Created', 'Processing', 'Cancelled', 'Completed')
   },
-  sessionId: {
-    type: Sequelize.INTEGER
-  },
+  // sessionId: {
+  //   type: Sequelize.INTEGER
+  // },
   subtotal: {
     type: Sequelize.INTEGER
   }

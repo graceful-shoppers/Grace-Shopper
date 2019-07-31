@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 //replicate the table created by connect-session-sequelize
-const Session = db.define('session', {
+const Session = db.define('Session', {
   sid: {
     type: Sequelize.STRING,
     primaryKey: true
