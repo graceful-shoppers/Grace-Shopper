@@ -1,6 +1,31 @@
 const router = require('express').Router()
 const {Order, ProductOrder, Product} = require('../db/models')
 
+router.post('/', async (req, res, next) => {
+  try {
+    console.log('here')
+
+    const order = await Order.findOne({
+      where: {
+        userId: req.body.userId,
+        status: 'Created'
+      }
+    })
+
+    const newProductOrder = await ProductOrder.create({
+      productId: req.body.productId,
+      quantity: 1,
+      price: req.body.price,
+      orderId: order.id
+    })
+
+    console.log('new order', newProductOrder)
+    res.json(newProductOrder)
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.get('/:id', async (req, res, next) => {
   try {
     var cart = await Order.findOne({
