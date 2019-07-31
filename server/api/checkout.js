@@ -5,6 +5,7 @@ router.get('/', (req, res, next) => {})
 
 router.post('/', async (req, res, next) => {
   console.log('in checkout post')
+  console.log(req)
   try {
     const charge = await stripe.charges.create(
       {
