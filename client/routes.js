@@ -6,6 +6,7 @@ import {Login, Signup, UserHome} from './components'
 import {me} from './store'
 import {getAllShovels} from './store/shovels'
 import AllShovelsView from './components/allShovels'
+import Checkout from './components/checkout'
 import SingleShovel from './components/singleShovel'
 import CartView from './components/cart'
 
@@ -26,6 +27,7 @@ class Routes extends Component {
 
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route exact path="/checkout" component={Checkout} />
 
         {isLoggedIn && (
           <Switch>
