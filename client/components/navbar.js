@@ -55,7 +55,7 @@ class Navbar extends React.Component {
           <DropDown>
             <Link to="/home">Home</Link>
             <Link to="/shovels">Shovels</Link>
-            <Link to="/faq">FAQ</Link>
+            <Link to="/myAccount">My Account</Link>
           </DropDown>
         ) : (
           <div />

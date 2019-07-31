@@ -9,12 +9,14 @@ import AllShovelsView from './components/allShovels'
 import Checkout from './components/checkout'
 import SingleShovel from './components/singleShovel'
 import CartView from './components/cart'
+import MyAccount from './components/myAccount'
+import Orders from './components/orders'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
-  async componentDidMount() {
+  componentDidMount() {
     this.props.loadInitialData()
   }
 
@@ -36,6 +38,8 @@ class Routes extends Component {
             <Route exact path="/shovels" component={AllShovelsView} />
             <Route path="/shovels/:shovelId" component={SingleShovel} />
             <Route exact path="/cart" component={CartView} />
+            <Route exact path="/myAccount" component={MyAccount} />
+            <Route exact path="/myAccount/orders" component={Orders} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
