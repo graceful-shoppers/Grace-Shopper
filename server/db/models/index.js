@@ -3,6 +3,7 @@ const Order = require('./Order')
 const Product = require('./Product')
 const Review = require('./review')
 const ProductOrder = require('./product_order')
+const Session = require('./session')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -20,6 +21,9 @@ Product.hasMany(Review)
 
 Product.belongsToMany(Order, {through: ProductOrder})
 Order.belongsToMany(Product, {through: ProductOrder})
+
+Order.belongsTo(Session, {foreignKey: 'sid'})
+
 /**
  * We'll export all of our models here, so that any time a module needs a model,
  * we can just require it from 'db/models'
@@ -31,5 +35,6 @@ module.exports = {
   Order,
   Product,
   Review,
-  ProductOrder
+  ProductOrder,
+  Session
 }
