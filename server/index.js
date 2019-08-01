@@ -11,8 +11,6 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
-const Product = require('./db/models/Product')
-const ProductOrder = require('./db/models/product_order')
 
 module.exports = app
 
