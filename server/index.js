@@ -6,10 +6,12 @@ const session = require('express-session')
 const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
+const {Order} = require('./db/models')
 const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
+
 module.exports = app
 
 // This is a global Mocha hook, used for resource cleanup.
@@ -62,6 +64,97 @@ const createApp = () => {
   )
   app.use(passport.initialize())
   app.use(passport.session())
+  //cart middleware
+  app.use(async (req, res, next) => {
+    let cart
+    //handle user
+    if (req.user) {
+      try {
+        cart = await Order.findOne({
+          where: {
+            userId: req.user.id,
+            status: 'Created'
+          },
+          include: [{all: true}]
+        })
+      } catch (err) {
+        console.error(err)
+        res.send('error find cart with userid')
+      }
+      if (cart) {
+        req.cart = cart.data
+        next()
+      } else {
+        try {
+          cart = await Order.create({
+            userId: req.user.id,
+            status: 'Created'
+          })
+          req.cart = cart.data
+        } catch {
+          console.error('error creating new cart with userid')
+          res.send(error)
+        }
+        next()
+      }
+    } else {
+      //handle non-user
+      try {
+        cart = await Order.findOne({
+          where: {
+            sid: req.sessionID,
+            status: 'Created'
+          },
+          include: [{all: true}]
+        })
+      } catch (err) {
+        console.error(err)
+        res.send('seomthing wrong in finding order with sid')
+      }
+      if (cart) {
+        req.cart = cart.data
+        next()
+      } else {
+        try {
+          cart = await Order.create({
+            sid: req.sessionID,
+            status: 'Created'
+          })
+
+          req.cart = cart.data
+        } catch (err) {
+          console.error(err)
+          res.send('something wrong creating order with sid')
+        }
+        next()
+      }
+    }
+  })
+
+  app.use(async (req, res, next) => {
+    try {
+      var cart
+      if (req.user) {
+        cart = await Order.findOne({
+          where: {
+            userId: req.user.id
+          },
+          include: [{all: true}]
+        })
+      } else {
+        cart = await Order.findOne({
+          where: {
+            sid: req.sessionID
+          },
+          include: [{all: true}]
+        })
+      }
+      req.cart = cart
+      next()
+    } catch (err) {
+      next(err)
+    }
+  })
 
   // auth and api routes
   app.use('/auth', require('./auth'))

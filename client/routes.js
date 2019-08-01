@@ -11,9 +11,7 @@ import SingleShovel from './components/singleShovel'
 import CartView from './components/cart'
 import MyAccount from './components/myAccount'
 import Orders from './components/orders'
-import AdminPortal from './components/adminPortal'
-import AdminShovels from './components/adminShovels'
-import AdminEditShovel from './components/adminEditShovel'
+import {getCartThunk} from './store/cart'
 
 /**
  * COMPONENT
@@ -34,23 +32,15 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
         <Route exact path="/checkout" component={Checkout} />
 
-        {isLoggedIn && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
-            <Route exact path="/shovels" component={AllShovelsView} />
-            <Route path="/shovels/:shovelId" component={SingleShovel} />
-            <Route exact path="/cart" component={CartView} />
-            <Route exact path="/myAccount" component={MyAccount} />
-            <Route exact path="/myAccount/orders" component={Orders} />
-            <Route exact path="/adminPortal" component={AdminPortal} />
-            <Route path="/adminPortal/allShovels" component={AdminShovels} />
-            <Route
-              path="/adminPortal/editShovel/:shovelId"
-              component={AdminEditShovel}
-            />
-          </Switch>
-        )}
+        <Switch>
+          {/* Routes placed here are only available after logging in */}
+          <Route path="/home" component={UserHome} />
+          <Route exact path="/shovels" component={AllShovelsView} />
+          <Route path="/shovels/:shovelId" component={SingleShovel} />
+          <Route exact path="/cart" component={CartView} />
+          <Route exact path="/myAccount" component={MyAccount} />
+          <Route exact path="/myAccount/orders" component={Orders} />
+        </Switch>
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
       </Switch>
@@ -75,6 +65,7 @@ const mapDispatch = dispatch => {
     loadInitialData() {
       dispatch(me())
       dispatch(getAllShovels())
+      dispatch(getCartThunk())
     }
   }
 }
