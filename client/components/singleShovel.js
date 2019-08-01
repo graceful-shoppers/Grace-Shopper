@@ -49,29 +49,31 @@ class SingleShovel extends React.Component {
   render() {
     const shovel = this.props.selectedShovel
     return (
-      <SingleShovelDiv>
-        <h3>{shovel.title}</h3>
-        <h6>${shovel.price / 100}</h6>
-        <img src={shovel.imageUrl} />
-        <form onSubmit={evt => this.handleClick(evt, shovel)}>
-          <input placeholder="quantity" name="quantity" />
-          <button type="submit">Add to cart</button>
-        </form>
-        <p>{shovel.description}</p>
+      <div className="shovel">
+        <SingleShovelDiv>
+          <h3>{shovel.title}</h3>
+          <h6>${shovel.price / 100}</h6>
+          <img src={shovel.imageUrl} />
+          <form onSubmit={evt => this.handleClick(evt, shovel)}>
+            <input placeholder="quantity" name="quantity" />
+            <button type="submit">Add to cart</button>
+          </form>
+          <p>{shovel.description}</p>
 
-        <h3> Reviews </h3>
+          <h3> Reviews </h3>
 
-        {this.props.reviews.map(review => {
-          return (
-            <Review
-              value={review.rating}
-              text={review.text}
-              key={review.id}
-              name={review.id}
-            />
-          )
-        })}
-      </SingleShovelDiv>
+          {this.props.reviews.map(review => {
+            return (
+              <Review
+                value={review.rating}
+                text={review.text}
+                key={review.id}
+                name={review.id}
+              />
+            )
+          })}
+        </SingleShovelDiv>
+      </div>
     )
   }
 }
