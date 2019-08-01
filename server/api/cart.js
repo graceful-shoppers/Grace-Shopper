@@ -3,15 +3,8 @@ const {Order, ProductOrder, Product} = require('../db/models')
 
 router.post('/', async (req, res, next) => {
   try {
-    const order = await Order.findOne({
-      where: {
-        userId: req.body.userId,
-        status: 'Created'
-      }
-    })
-
+    const order = req.cart
     var newProductOrder
-
     newProductOrder = await ProductOrder.findOne({
       where: {
         productId: req.body.productId,
@@ -26,7 +19,6 @@ router.post('/', async (req, res, next) => {
       } else {
         newQuantity = newProductOrder.quantity + req.body.quantity
       }
-
       await newProductOrder.update({
         quantity: newQuantity
       })
@@ -39,31 +31,24 @@ router.post('/', async (req, res, next) => {
       })
     }
 
-    res.json(newProductOrder)
+    const product = await Product.findOne({
+      where: {
+        id: req.body.productId
+      }
+    })
+
+    product.product_order = newProductOrder
+    const newProduct = product
+
+    res.json(newProduct)
   } catch (err) {
     next(err)
   }
 })
 
-router.get('/:id', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    var cart = await Order.findOne({
-      where: {
-        userId: req.params.id
-      },
-      include: [{all: true}]
-    })
-
-    if (!cart) {
-      cart = await Order.findOne({
-        where: {
-          sid: req.params.id
-        },
-        include: [{all: true}]
-      })
-    }
-
-    res.json(cart)
+    res.json(req.cart)
   } catch (err) {
     next(err)
   }

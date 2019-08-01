@@ -15,7 +15,7 @@ class Cart extends React.Component {
 
   componentDidMount() {
     // if()
-    this.props.getCart(this.props.user.id)
+    // this.props.getCart(this.props.user.id)
   }
 
   handleClick(evt, product) {
@@ -91,7 +91,6 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getCart: id => dispatch(getCartThunk(id)),
     removeItem: item => dispatch(removeItemThunk(item)),
     addItem: item => dispatch(addItemThunk(item))
   }

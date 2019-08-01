@@ -10,6 +10,10 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
+const Order = require('./db/models/Order')
+const Product = require('./db/models/Product')
+const ProductOrder = require('./db/models/product_order')
+
 module.exports = app
 
 // This is a global Mocha hook, used for resource cleanup.
@@ -62,6 +66,31 @@ const createApp = () => {
   )
   app.use(passport.initialize())
   app.use(passport.session())
+
+  app.use(async (req, res, next) => {
+    try {
+      var cart
+      if (req.user) {
+        cart = await Order.findOne({
+          where: {
+            userId: req.user.id
+          },
+          include: [{all: true}]
+        })
+      } else {
+        cart = await Order.findOne({
+          where: {
+            sid: req.sessionID
+          },
+          include: [{all: true}]
+        })
+      }
+      req.cart = cart
+      next()
+    } catch (err) {
+      next(err)
+    }
+  })
 
   // auth and api routes
   app.use('/auth', require('./auth'))
