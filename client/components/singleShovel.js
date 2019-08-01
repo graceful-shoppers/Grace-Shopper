@@ -30,7 +30,6 @@ class SingleShovel extends React.Component {
     const shovel = this.props.selectedShovel
     return (
       <div className="shovel">
-        <div> Is showing?</div>
         <h3>{shovel.title}</h3>
         <h6>${shovel.price / 100}</h6>
         <img src={shovel.imageUrl} />
