@@ -9,11 +9,13 @@ class SingleShovel extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(shovel) {
+  handleClick(evt, shovel) {
+    evt.preventDefault()
+
     const newProductOrder = {
       userId: this.props.user.id,
       productId: shovel.id,
-      quantity: 1,
+      quantity: parseInt(event.target.quantity.value),
       price: shovel.price
     }
 
@@ -32,7 +34,10 @@ class SingleShovel extends React.Component {
         <h3>{shovel.title}</h3>
         <h6>${shovel.price / 100}</h6>
         <img src={shovel.imageUrl} />
-        <button onClick={() => this.handleClick(shovel)}>Add to cart</button>
+        <form onSubmit={evt => this.handleClick(evt, shovel)}>
+          <input placeholder="quantity" name="quantity" />
+          <button type="submit">Add to cart</button>
+        </form>
       </div>
     )
   }
