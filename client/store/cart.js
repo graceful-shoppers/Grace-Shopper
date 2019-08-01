@@ -12,7 +12,9 @@ const ADD_ITEM = 'ADD_ITEM'
 /**
  * INITIAL STATE
  */
-const defaultCart = {}
+const defaultCart = {
+  products: []
+}
 
 /**
  * ACTION CREATORS
@@ -58,7 +60,11 @@ export default function(state = defaultCart, action) {
     case GET_CART:
       return action.cart
     case ADD_ITEM:
-      return {...state, products: [state.products, action.item]}
+      const products = state.products.filter(
+        product => product.id !== action.item.id
+      )
+
+      return {...state, products: [...products, action.item]}
 
     case REMOVE_ITEM:
       const newProducts = state.products.filter(
