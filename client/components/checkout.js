@@ -12,28 +12,13 @@ const errorPayment = data => {
   alert('Payment Error')
 }
 
-const onToken = (amount, description, email, shipping) => token =>
-  axios
-    .post('/api/checkout', {
-      // name: 'Ben',
-      description: 'description',
-      source: token.id,
-      currency: 'USD',
-      amount: fromDollarToCent(amount),
-      metadata: {
-        email,
-        shipping
-      }
-    })
-    .then(successPayment)
-    .catch(errorPayment)
-
 class Checkout extends React.Component {
   constructor() {
     super()
     this.state = {
       email: '',
-      shipping: ''
+      shipping: '',
+      amount: 500
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -41,6 +26,24 @@ class Checkout extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+  }
+
+  onToken = (token, addresses) => {
+    axios
+      .post('/api/checkout', {
+        // name: 'Ben',
+        description: 'description',
+        source: token.id,
+        currency: 'USD',
+        amount: this.state.amount,
+
+        metadata: {
+          email: 'ben@me.com'
+          // addresses
+        }
+      })
+      .then(successPayment)
+      .catch(errorPayment)
   }
   render() {
     return (
@@ -57,15 +60,11 @@ class Checkout extends React.Component {
         </form>
         <StripeCheckout
           name="Bens cool guy shit"
-          token={onToken(
-            321,
-            'cool stuff',
-            this.state.email,
-            this.state.shipping
-          )}
+          token={this.onToken}
           stripeKey="pk_test_DY5MZUNFD7FjEQYwYhz4sK9h00CNymDRBp"
-          email={this.state.email}
-          shipping={this.state.shipping}
+          email
+          amount={this.state.amount}
+          shippingAddress
         />
       </div>
     )
