@@ -8,12 +8,15 @@ import cart from './cart'
 import singleShovel from './singleShovel'
 import myAccountOrders from './myAccountOrders'
 
+import reviews from './reviews'
+
 const reducer = combineReducers({
   user,
   shovels,
   singleShovel,
   cart,
-  myAccountOrders
+  myAccountOrders,
+  reviews
 })
 
 const middleware = composeWithDevTools(
