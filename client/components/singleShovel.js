@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {getShovel} from '../store/singleShovel'
 import {addItemThunk} from '../store/cart'
 import styled from 'styled-components'
+import Review from './review'
 
 const SingleShovelDiv = styled.div`
   display: flex;
@@ -55,6 +56,7 @@ class SingleShovel extends React.Component {
         </form>
 
         <button>View Reviews</button>
+        <Review value={3} text="Here is some review text" />
       </SingleShovelDiv>
     )
   }
