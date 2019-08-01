@@ -4,7 +4,7 @@ import {getAllOrders} from '../store/myAccountOrders'
 
 class Orders extends React.Component {
   componentDidMount() {
-    this.props.getShovel(this.props.match.params.shovelId)
+    this.props.getAllOrders(this.props.match.params.orderId)
   }
 
   render() {
@@ -24,7 +24,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getShovel: shovelId => dispatch(getAllOrders(shovelId))
+    getAllOrders: orderId => dispatch(getAllOrders(orderId))
   }
 }
 
