@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const stripe = require('stripe')('sk_test_gpMBV53Rxvu2RkZQfLLRNNSE004rlxLEsb')
+const pick = require('lodash.pick')
 
 router.get('/', (req, res, next) => {
   res.send({
@@ -8,10 +9,20 @@ router.get('/', (req, res, next) => {
   })
 })
 
+const verifyAmount = (receivedValue, cart) => {
+  cart.reduce((total, product) => {
+    //get the value * quantity for each product and return that plus the total
+    //if it matches return true, if not false
+  })
+}
+
+const updateDb = () => {}
+
 router.post('/', async (req, res, next) => {
-  console.log('req.body; ', req.body)
   try {
-    await stripe.charges.create(req.body)
+    // if(req.body.amount !== the value of everything in req.cart) throw an error
+    const chargePayload = pick(req.body, ['source', 'currency', 'amount'])
+    await stripe.charges.create(chargePayload)
     res.status(200).send()
   } catch (err) {
     res.status(500).send({error: err})

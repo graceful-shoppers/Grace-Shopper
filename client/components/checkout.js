@@ -4,8 +4,6 @@ import axios from 'axios'
 import {connect} from 'react-redux'
 import Cart from './cart'
 
-const fromDollarToCent = amount => amount * 100
-
 const successPayment = data => {
   alert('Your shovels are on their way')
 }
@@ -41,31 +39,27 @@ class Checkout extends React.Component {
     })
   }
 
-  onToken = (token, addresses) => {
+  onToken = token => {
     axios
       .post('/api/checkout', {
         // name: 'Ben',
         description: 'description',
         source: token.id,
         currency: 'USD',
-        amount: this.state.amount,
+        amount: this.state.subtotal,
 
-        metadata: {
-          email: 'ben@me.com'
-          // addresses
-        }
+        metadata: {}
       })
-      .then(
+      .then()
+      .catch(errorPayment)
+      .finally(
         this.setState({
           ...this.state,
           orderSubmitted: true
         })
       )
-      .catch(errorPayment)
   }
   render() {
-    let cart = this.props.cart
-
     if (this.state.orderSubmitted) {
       return (
         <div>
@@ -77,29 +71,14 @@ class Checkout extends React.Component {
         <div>
           <div>
             <h3>Items you are purchasing</h3>
-            {cart.products ? (
-              cart.products.map(product => {
-                {
-                  /* subTotal += product.price * product.product_Order.quantity */
-                }
-
+            {this.state.cart.products ? (
+              this.state.cart.products.map(product => {
                 return (
                   <div key={product.id}>
                     <h3>{product.title}</h3>
-
-                    <button onClick={() => this.removeFromCart(product)}>
-                      delete this item
-                    </button>
-
-                    <h3>Quantity: {product.product_Order.quantity}</h3>
-                    <form onSubmit={evt => this.handleClick(evt, product)}>
-                      <input placeholder="quantity" name="quantity" />
-                      <button type="submit">Change quantity</button>
-                    </form>
-
-                    <h3>
-                      ${product.price * product.product_Order.quantity / 100}
-                    </h3>
+                    Quantity: {product.product_Order.quantity} Price: ${product.price *
+                      product.product_Order.quantity /
+                      100}
                   </div>
                 )
               })
