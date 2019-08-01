@@ -11,6 +11,9 @@ import SingleShovel from './components/singleShovel'
 import CartView from './components/cart'
 import MyAccount from './components/myAccount'
 import Orders from './components/orders'
+import AdminPortal from './components/adminPortal'
+import AdminShovels from './components/adminShovels'
+import AdminEditShovel from './components/adminEditShovel'
 
 /**
  * COMPONENT
