@@ -14,8 +14,8 @@ class Cart extends React.Component {
   }
 
   componentDidMount() {
+    // if()
     this.props.getCart(this.props.user.id)
-    // this.setState(this.props.cart)
   }
 
   handleClick(evt, product) {
@@ -38,7 +38,6 @@ class Cart extends React.Component {
   }
 
   removeFromCart(product) {
-    console.log(product)
     this.props.removeItem(product)
   }
 
