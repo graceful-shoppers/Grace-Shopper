@@ -60,9 +60,12 @@ class SingleShovel extends React.Component {
             <button type="submit">Add to cart</button>
           </form>
           <p>{shovel.description}</p>
+
         </SingleShovelDiv>
 
-        <h3> Reviews </h3>
+
+          <h3> Reviews </h3>
+
 
         {this.props.reviews.map(review => {
           return (
@@ -76,6 +79,7 @@ class SingleShovel extends React.Component {
         })}
 
         <ReviewForm shovelId={shovel.id} />
+
       </div>
     )
   }
