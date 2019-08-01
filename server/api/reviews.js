@@ -14,4 +14,18 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
+router.post('/', async (req, res, next) => {
+  try {
+    const review = await Review.create({
+      text: req.body.text,
+      rating: req.body.rating,
+      userId: req.user.dataValues.id,
+      productId: req.body.productId
+    })
+    res.status(200).send(review)
+  } catch (err) {
+    next(err)
+  }
+})
+
 module.exports = router

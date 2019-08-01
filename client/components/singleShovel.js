@@ -5,6 +5,7 @@ import {addItemThunk} from '../store/cart'
 import styled from 'styled-components'
 import Review from './review'
 import {getAllReviews} from '../store/reviews'
+import ReviewForm from './reviewForm'
 
 const SingleShovelDiv = styled.div`
   display: flex;
@@ -50,15 +51,16 @@ class SingleShovel extends React.Component {
     const shovel = this.props.selectedShovel
     return (
       <div className="shovel">
-      <SingleShovelDiv>
-        <h3>{shovel.title}</h3>
-        <h6>${shovel.price / 100}</h6>
-        <img src={shovel.imageUrl} />
-        <form onSubmit={evt => this.handleClick(evt, shovel)}>
-          <input placeholder="quantity" name="quantity" />
-          <button type="submit">Add to cart</button>
-        </form>
-        <p>{shovel.description}</p>
+        <SingleShovelDiv>
+          <h3>{shovel.title}</h3>
+          <h6>${shovel.price / 100}</h6>
+          <img src={shovel.imageUrl} />
+          <form onSubmit={evt => this.handleClick(evt, shovel)}>
+            <input placeholder="quantity" name="quantity" />
+            <button type="submit">Add to cart</button>
+          </form>
+          <p>{shovel.description}</p>
+        </SingleShovelDiv>
 
         <h3> Reviews </h3>
 
@@ -72,7 +74,9 @@ class SingleShovel extends React.Component {
             />
           )
         })}
-      </SingleShovelDiv>
+
+        <ReviewForm shovelId={shovel.id} />
+      </div>
     )
   }
 }
