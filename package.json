@@ -46,6 +46,7 @@
     "connect-session-sequelize": "^6.0.0",
     "express": "^4.16.4",
     "express-session": "^1.15.1",
+    "faker": "^4.1.0",
     "history": "^4.9.0",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
@@ -57,11 +58,13 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.1",
     "react-router-dom": "^5.0.0",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sequelize": "^5.3.1",
     "socket.io": "^2.2.0",
+    "stripe": "^7.5.2",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
