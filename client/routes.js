@@ -31,17 +31,15 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
         <Route exact path="/checkout" component={Checkout} />
 
-        {isLoggedIn && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
-            <Route exact path="/shovels" component={AllShovelsView} />
-            <Route path="/shovels/:shovelId" component={SingleShovel} />
-            <Route exact path="/cart" component={CartView} />
-            <Route exact path="/myAccount" component={MyAccount} />
-            <Route exact path="/myAccount/orders" component={Orders} />
-          </Switch>
-        )}
+        <Switch>
+          {/* Routes placed here are only available after logging in */}
+          <Route path="/home" component={UserHome} />
+          <Route exact path="/shovels" component={AllShovelsView} />
+          <Route path="/shovels/:shovelId" component={SingleShovel} />
+          <Route exact path="/cart" component={CartView} />
+          <Route exact path="/myAccount" component={MyAccount} />
+          <Route exact path="/myAccount/orders" component={Orders} />
+        </Switch>
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
       </Switch>
