@@ -4,7 +4,11 @@ import StarRatingComponent from 'react-star-rating-component'
 const Review = props => {
   return (
     <div>
-      <StarRatingComponent starCount={5} value={props.value} />
+      <StarRatingComponent
+        name={`${props.name}`}
+        starCount={5}
+        value={props.value}
+      />
       <p>{props.text}</p>
     </div>
   )

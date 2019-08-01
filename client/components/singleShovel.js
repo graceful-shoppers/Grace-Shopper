@@ -4,15 +4,16 @@ import {getShovel} from '../store/singleShovel'
 import {addItemThunk} from '../store/cart'
 import styled from 'styled-components'
 import Review from './review'
+import {getAllReviews} from '../store/reviews'
 
 const SingleShovelDiv = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-const SingleReview = props => {
-  return <div />
-}
+// const SingleReview = props => {
+//   return <div />
+// }
 
 class SingleShovel extends React.Component {
   constructor() {
@@ -40,7 +41,9 @@ class SingleShovel extends React.Component {
   }
 
   componentDidMount() {
+    console.log('this.props.match :', this.props.match)
     this.props.getShovel(this.props.match.params.shovelId)
+    this.props.getAllReviews(this.props.match.params.shovelId)
   }
 
   render() {
@@ -54,9 +57,20 @@ class SingleShovel extends React.Component {
           <input placeholder="quantity" name="quantity" />
           <button type="submit">Add to cart</button>
         </form>
+        <p>{shovel.description}</p>
 
-        <button>View Reviews</button>
-        <Review value={3} text="Here is some review text" />
+        <h3> Reviews </h3>
+
+        {this.props.reviews.map(review => {
+          return (
+            <Review
+              value={review.rating}
+              text={review.text}
+              key={review.id}
+              name={review.id}
+            />
+          )
+        })}
       </SingleShovelDiv>
     )
   }
@@ -65,14 +79,16 @@ class SingleShovel extends React.Component {
 const mapState = state => {
   return {
     selectedShovel: state.singleShovel,
-    user: state.user
+    user: state.user,
+    reviews: state.reviews
   }
 }
 
 const mapDispatch = dispatch => {
   return {
     getShovel: shovelId => dispatch(getShovel(shovelId)),
-    addItem: item => dispatch(addItemThunk(item))
+    addItem: item => dispatch(addItemThunk(item)),
+    getAllReviews: shovelId => dispatch(getAllReviews(shovelId))
   }
 }
 
