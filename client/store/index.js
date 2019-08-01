@@ -8,7 +8,6 @@ import cart from './cart'
 import singleShovel from './singleShovel'
 import myAccountOrders from './myAccountOrders'
 
-
 const reducer = combineReducers({
   user,
   shovels,
@@ -16,7 +15,6 @@ const reducer = combineReducers({
   cart,
   myAccountOrders
 })
-
 
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
