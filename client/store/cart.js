@@ -60,8 +60,6 @@ export default function(state = defaultCart, action) {
     case GET_CART:
       return action.cart
     case ADD_ITEM:
-      console.log('action item', action.item)
-
       var newArr = [...state.products]
       var exists = false
 

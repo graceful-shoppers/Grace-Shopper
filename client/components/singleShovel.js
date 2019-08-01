@@ -3,15 +3,18 @@ import {connect} from 'react-redux'
 import {getShovel} from '../store/singleShovel'
 import {addItemThunk} from '../store/cart'
 import styled from 'styled-components'
+import Review from './review'
+import {getAllReviews} from '../store/reviews'
+import ReviewForm from './reviewForm'
 
 const SingleShovelDiv = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-const SingleReview = props => {
-  return <div />
-}
+// const SingleReview = props => {
+//   return <div />
+// }
 
 class SingleShovel extends React.Component {
   constructor() {
@@ -39,23 +42,41 @@ class SingleShovel extends React.Component {
   }
 
   componentDidMount() {
+    console.log('this.props.match :', this.props.match)
     this.props.getShovel(this.props.match.params.shovelId)
+    this.props.getAllReviews(this.props.match.params.shovelId)
   }
 
   render() {
     const shovel = this.props.selectedShovel
     return (
-      <SingleShovelDiv>
-        <h3>{shovel.title}</h3>
-        <h6>${shovel.price / 100}</h6>
-        <img src={shovel.imageUrl} />
-        <form onSubmit={evt => this.handleClick(evt, shovel)}>
-          <input placeholder="quantity" name="quantity" />
-          <button type="submit">Add to cart</button>
-        </form>
+      <div className="shovel">
+        <SingleShovelDiv>
+          <h3>{shovel.title}</h3>
+          <h6>${shovel.price / 100}</h6>
+          <img src={shovel.imageUrl} />
+          <form onSubmit={evt => this.handleClick(evt, shovel)}>
+            <input placeholder="quantity" name="quantity" />
+            <button type="submit">Add to cart</button>
+          </form>
+          <p>{shovel.description}</p>
+        </SingleShovelDiv>
 
-        <button>View Reviews</button>
-      </SingleShovelDiv>
+        <h3> Reviews </h3>
+
+        {this.props.reviews.map(review => {
+          return (
+            <Review
+              value={review.rating}
+              text={review.text}
+              key={review.id}
+              name={review.id}
+            />
+          )
+        })}
+
+        <ReviewForm shovelId={shovel.id} />
+      </div>
     )
   }
 }
@@ -63,14 +84,16 @@ class SingleShovel extends React.Component {
 const mapState = state => {
   return {
     selectedShovel: state.singleShovel,
-    user: state.user
+    user: state.user,
+    reviews: state.reviews
   }
 }
 
 const mapDispatch = dispatch => {
   return {
     getShovel: shovelId => dispatch(getShovel(shovelId)),
-    addItem: item => dispatch(addItemThunk(item))
+    addItem: item => dispatch(addItemThunk(item)),
+    getAllReviews: shovelId => dispatch(getAllReviews(shovelId))
   }
 }
 
