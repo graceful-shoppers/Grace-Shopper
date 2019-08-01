@@ -2,6 +2,16 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getShovel} from '../store/singleShovel'
 import {addItemThunk} from '../store/cart'
+import styled from 'styled-components'
+
+const SingleShovelDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const SingleReview = props => {
+  return <div />
+}
 
 class SingleShovel extends React.Component {
   constructor() {
@@ -12,10 +22,16 @@ class SingleShovel extends React.Component {
   handleClick(evt, shovel) {
     evt.preventDefault()
 
+    var addNum = parseInt(event.target.quantity.value)
+
+    if (!addNum) {
+      addNum = 1
+    }
+
     const newProductOrder = {
       userId: this.props.user.id,
       productId: shovel.id,
-      quantity: parseInt(event.target.quantity.value),
+      quantity: addNum,
       price: shovel.price
     }
 
@@ -30,6 +46,7 @@ class SingleShovel extends React.Component {
     const shovel = this.props.selectedShovel
     return (
       <div className="shovel">
+      <SingleShovelDiv>
         <h3>{shovel.title}</h3>
         <h6>${shovel.price / 100}</h6>
         <img src={shovel.imageUrl} />
@@ -37,7 +54,9 @@ class SingleShovel extends React.Component {
           <input placeholder="quantity" name="quantity" />
           <button type="submit">Add to cart</button>
         </form>
-      </div>
+
+        <button>View Reviews</button>
+      </SingleShovelDiv>
     )
   }
 }
