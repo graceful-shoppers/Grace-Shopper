@@ -53,9 +53,22 @@ class Navbar extends React.Component {
         </HamburgerButton>
         {this.state.burger ? (
           <DropDown>
-            <Link to="/home">Home</Link>
-            <Link to="/shovels">Shovels</Link>
-            <Link to="/myAccount">My Account</Link>
+            <Link to="/home" onClick={() => this.burgerShow()}>
+              Home
+            </Link>
+            <Link to="/shovels" onClick={() => this.burgerShow()}>
+              Shovels
+            </Link>
+            <Link to="/myAccount" onClick={() => this.burgerShow()}>
+              My Account
+            </Link>
+            {this.props.isAdmin ? (
+              <Link to="/adminPortal" onClick={() => this.burgerShow()}>
+                Admin Portal
+              </Link>
+            ) : (
+              <div />
+            )}
           </DropDown>
         ) : (
           <div />
@@ -91,7 +104,8 @@ class Navbar extends React.Component {
  */
 const mapState = state => {
   return {
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    isAdmin: state.user.isAdmin
   }
 }
 

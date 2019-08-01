@@ -49,6 +49,7 @@ class SingleShovel extends React.Component {
   render() {
     const shovel = this.props.selectedShovel
     return (
+      <div className="shovel">
       <SingleShovelDiv>
         <h3>{shovel.title}</h3>
         <h6>${shovel.price / 100}</h6>

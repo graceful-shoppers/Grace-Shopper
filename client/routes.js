@@ -11,6 +11,9 @@ import SingleShovel from './components/singleShovel'
 import CartView from './components/cart'
 import MyAccount from './components/myAccount'
 import Orders from './components/orders'
+import AdminPortal from './components/adminPortal'
+import AdminShovels from './components/adminShovels'
+import AdminEditShovel from './components/adminEditShovel'
 
 /**
  * COMPONENT
@@ -40,6 +43,12 @@ class Routes extends Component {
             <Route exact path="/cart" component={CartView} />
             <Route exact path="/myAccount" component={MyAccount} />
             <Route exact path="/myAccount/orders" component={Orders} />
+            <Route exact path="/adminPortal" component={AdminPortal} />
+            <Route path="/adminPortal/allShovels" component={AdminShovels} />
+            <Route
+              path="/adminPortal/editShovel/:shovelId"
+              component={AdminEditShovel}
+            />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
