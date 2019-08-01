@@ -5,6 +5,7 @@ import {addItemThunk} from '../store/cart'
 import styled from 'styled-components'
 import Review from './review'
 import {getAllReviews} from '../store/reviews'
+import ReviewForm from './reviewForm'
 
 const SingleShovelDiv = styled.div`
   display: flex;
@@ -60,19 +61,25 @@ class SingleShovel extends React.Component {
           </form>
           <p>{shovel.description}</p>
 
+        </SingleShovelDiv>
+
+
           <h3> Reviews </h3>
 
-          {this.props.reviews.map(review => {
-            return (
-              <Review
-                value={review.rating}
-                text={review.text}
-                key={review.id}
-                name={review.id}
-              />
-            )
-          })}
-        </SingleShovelDiv>
+
+        {this.props.reviews.map(review => {
+          return (
+            <Review
+              value={review.rating}
+              text={review.text}
+              key={review.id}
+              name={review.id}
+            />
+          )
+        })}
+
+        <ReviewForm shovelId={shovel.id} />
+
       </div>
     )
   }
