@@ -6,8 +6,17 @@ import user from './user'
 import shovels from './shovels'
 import cart from './cart'
 import singleShovel from './singleShovel'
+import myAccountOrders from './myAccountOrders'
 
-const reducer = combineReducers({user, shovels, singleShovel, cart})
+
+const reducer = combineReducers({
+  user,
+  shovels,
+  singleShovel,
+  cart,
+  myAccountOrders
+})
+
 
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
