@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {Product, User} = require('../db/models')
 
 router.put('/editShovel/:id', async (req, res, next) => {
-  console.log('words')
+  console.log(req.body)
   try {
     const shovel = await Product.findOne({
       where: {

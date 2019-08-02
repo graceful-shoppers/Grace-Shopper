@@ -16,6 +16,7 @@ const selectedShovel = {}
  */
 const getSelectedShovel = shovel => ({type: SET_SELECTED_SHOVEL, shovel})
 const editShovel = shovel => ({type: EDIT_SHOVEL, shovel})
+
 /**
  * THUNK CREATORS
  */
@@ -29,7 +30,6 @@ export const getShovel = shovelId => async dispatch => {
 }
 
 export const editSelectedShovel = shovel => async dispatch => {
-  console.log('reaching')
   try {
     await axios.put(`/api/adminPortal/editShovel/${shovel.id}`, shovel, {
       where: {id: shovel.id}
