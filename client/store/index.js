@@ -7,13 +7,15 @@ import shovels from './shovels'
 import cart from './cart'
 import singleShovel from './singleShovel'
 import myAccountOrders from './myAccountOrders'
+import allUsers from './usersAll'
 
 const reducer = combineReducers({
   user,
   shovels,
   singleShovel,
   cart,
-  myAccountOrders
+  myAccountOrders,
+  allUsers
 })
 
 const middleware = composeWithDevTools(

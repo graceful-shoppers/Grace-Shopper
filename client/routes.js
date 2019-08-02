@@ -14,6 +14,7 @@ import Orders from './components/orders'
 import AdminPortal from './components/adminPortal'
 import AdminShovels from './components/adminShovels'
 import AdminEditShovel from './components/adminEditShovel'
+import AdminUsers from './components/adminUsers'
 
 /**
  * COMPONENT
@@ -49,6 +50,7 @@ class Routes extends Component {
               path="/adminPortal/editShovel/:shovelId"
               component={AdminEditShovel}
             />
+            <Route path="/adminPortal/allUsers" component={AdminUsers} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
