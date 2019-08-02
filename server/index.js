@@ -1,3 +1,5 @@
+/* eslint-disable max-statements */
+/* eslint-disable complexity */
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
@@ -11,6 +13,7 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
+const destroySessionOrder = require('./helper')
 
 module.exports = app
 
@@ -82,7 +85,13 @@ const createApp = () => {
         res.send('error find cart with userid')
       }
       if (cart) {
-        req.cart = cart.data
+        req.cart = cart
+        //destroy session-order
+        try {
+          destroySessionOrder(req.sessionID)
+        } catch (err) {
+          console.error('err', 'something in the userid if card thing')
+        }
         next()
       } else {
         try {
@@ -90,7 +99,13 @@ const createApp = () => {
             userId: req.user.id,
             status: 'Created'
           })
-          req.cart = cart.data
+          req.cart = cart
+          //destroy session-order
+          try {
+            destroySessionOrder(req.sessionID)
+          } catch (err) {
+            console.error('err', 'something in the userid if card thing')
+          }
         } catch {
           console.error('error creating new cart with userid')
           res.send(error)
@@ -112,7 +127,7 @@ const createApp = () => {
         res.send('seomthing wrong in finding order with sid')
       }
       if (cart) {
-        req.cart = cart.data
+        req.cart = cart
         next()
       } else {
         try {
@@ -121,7 +136,7 @@ const createApp = () => {
             status: 'Created'
           })
 
-          req.cart = cart.data
+          req.cart = cart
         } catch (err) {
           console.error(err)
           res.send('something wrong creating order with sid')
