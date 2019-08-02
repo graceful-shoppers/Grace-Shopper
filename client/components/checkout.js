@@ -2,14 +2,15 @@ import React from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import {connect} from 'react-redux'
-import Cart from './cart'
+
 import {getCartThunk} from '../store/cart'
 
 // const successPayment = data => {
 //   alert('Your shovels are on their way')
 // }
 
-const errorPayment = data => {
+const errorPayment = () => {
+  // eslint-disable-next-line no-alert
   alert('Payment Error')
 }
 
@@ -45,7 +46,6 @@ class Checkout extends React.Component {
     console.log('token :', token)
     axios
       .post('/api/checkout', {
-        // name: 'Ben',
         description: 'description',
         source: token.id,
         currency: 'USD',
