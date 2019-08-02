@@ -69,13 +69,10 @@ const createApp = () => {
   app.use(passport.session())
   //cart middleware
   app.use('/auth', require('./auth'))
+
   app.use(async (req, res, next) => {
     let cart
     //handle user
-    console.log(
-      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
-      req
-    )
 
     let sessionStuff = await Session.findOne({
       where: {
@@ -84,12 +81,13 @@ const createApp = () => {
     })
 
     if (!sessionStuff) {
-      console.log('hahahahahahahahahejfhewjfhwjefhjwehfiwuehfiuwh')
       next()
     }
+
     if (req.user) {
       //check if session cart exists
       try {
+        console.log('cancelling old cart')
         let sessCart = await findSessionCart(req.sessionID)
         if (sessCart) {
           await cancelCart(req.sessionID)
@@ -145,7 +143,7 @@ const createApp = () => {
           '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
         )
         cart = await findSessionCart(req.sessionID)
-        console.log(cart)
+        // console.log(cart)
       } catch (err) {
         console.error(err)
         res.send('seomthing wrong in finding order with sid')
