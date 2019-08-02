@@ -3,6 +3,7 @@ const {Order, ProductOrder, Product} = require('../db/models')
 
 router.put('/', async (req, res, next) => {
   try {
+
     var productOrder = await ProductOrder.findOne({
       where: {
         productId: req.body.productId,
@@ -28,6 +29,7 @@ router.put('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
+
     const order = req.cart
     var newProductOrder
     newProductOrder = await ProductOrder.findOne({
@@ -39,7 +41,9 @@ router.post('/', async (req, res, next) => {
 
     if (newProductOrder) {
       let newQuantity = 0
+
       newQuantity = newProductOrder.quantity + req.body.quantity
+
 
       await newProductOrder.update({
         quantity: newQuantity
@@ -59,7 +63,9 @@ router.post('/', async (req, res, next) => {
       }
     })
 
+
     res.json({newProductOrder, product})
+
   } catch (err) {
     next(err)
   }
