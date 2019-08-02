@@ -14,6 +14,7 @@ import Orders from './components/orders'
 import AdminPortal from './components/adminPortal'
 import AdminShovels from './components/adminShovels'
 import AdminEditShovel from './components/adminEditShovel'
+import {getCartThunk} from './store/cart'
 
 /**
  * COMPONENT
@@ -25,7 +26,6 @@ class Routes extends Component {
 
   render() {
     const {isLoggedIn} = this.props
-
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}

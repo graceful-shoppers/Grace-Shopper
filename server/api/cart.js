@@ -1,6 +1,31 @@
 const router = require('express').Router()
 const {Order, ProductOrder, Product} = require('../db/models')
 
+router.put('/', async (req, res, next) => {
+  try {
+    var productOrder = await ProductOrder.findOne({
+      where: {
+        productId: req.body.productId,
+        orderId: req.cart.id
+      }
+    })
+
+    var product = await Product.findOne({
+      where: {
+        id: req.body.productId
+      }
+    })
+
+    await productOrder.update({
+      quantity: req.body.quantity
+    })
+
+    res.json({productOrder, product})
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.post('/', async (req, res, next) => {
   try {
     const order = req.cart
@@ -14,11 +39,8 @@ router.post('/', async (req, res, next) => {
 
     if (newProductOrder) {
       let newQuantity = 0
-      if (req.body.changeQuantity) {
-        newQuantity = req.body.quantity
-      } else {
-        newQuantity = newProductOrder.quantity + req.body.quantity
-      }
+      newQuantity = newProductOrder.quantity + req.body.quantity
+
       await newProductOrder.update({
         quantity: newQuantity
       })
@@ -37,10 +59,7 @@ router.post('/', async (req, res, next) => {
       }
     })
 
-    product.product_order = newProductOrder
-    const newProduct = product
-
-    res.json(newProduct)
+    res.json({newProductOrder, product})
   } catch (err) {
     next(err)
   }

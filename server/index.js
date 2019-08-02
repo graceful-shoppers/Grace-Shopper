@@ -75,7 +75,7 @@ const createApp = () => {
           where: {
             userId: req.user.id
           },
-          include: [{all: true}]
+          include: [{model: Product}]
         })
       } else {
         cart = await Order.findOne({
