@@ -14,6 +14,7 @@ import Orders from './components/orders'
 import AdminPortal from './components/adminPortal'
 import AdminShovels from './components/adminShovels'
 import AdminEditShovel from './components/adminEditShovel'
+import AdminUsers from './components/adminUsers'
 import {getCartThunk} from './store/cart'
 
 /**

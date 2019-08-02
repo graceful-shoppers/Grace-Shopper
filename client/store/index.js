@@ -7,6 +7,7 @@ import shovels from './shovels'
 import cart from './cart'
 import singleShovel from './singleShovel'
 import myAccountOrders from './myAccountOrders'
+import allUsers from './usersAll'
 
 import reviews from './reviews'
 
@@ -16,6 +17,7 @@ const reducer = combineReducers({
   singleShovel,
   cart,
   myAccountOrders,
+  allUsers,
   reviews
 })
 
