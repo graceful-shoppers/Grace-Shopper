@@ -68,6 +68,7 @@ const createApp = () => {
   app.use(async (req, res, next) => {
     let cart
     //handle user
+    console.log('here1')
     if (req.user) {
       try {
         cart = await Order.findOne({
@@ -82,7 +83,7 @@ const createApp = () => {
         res.send('error find cart with userid')
       }
       if (cart) {
-        req.cart = cart.data
+        req.cart = cart
         next()
       } else {
         try {
@@ -90,7 +91,7 @@ const createApp = () => {
             userId: req.user.id,
             status: 'Created'
           })
-          req.cart = cart.data
+          req.cart = cart
         } catch {
           console.error('error creating new cart with userid')
           res.send(error)
@@ -100,6 +101,7 @@ const createApp = () => {
     } else {
       //handle non-user
       try {
+        console.log('guest')
         cart = await Order.findOne({
           where: {
             sid: req.sessionID,
@@ -128,36 +130,6 @@ const createApp = () => {
         }
         next()
       }
-    }
-  })
-
-  app.use(async (req, res, next) => {
-    try {
-      var cart
-      if (req.user) {
-        cart = await Order.findOne({
-          where: {
-            userId: req.user.id,
-            status: 'Created'
-          },
-          include: [{model: Product}]
-        })
-      } else {
-        cart = await Order.findOne({
-          where: {
-            sid: req.sessionID,
-            status: 'Created'
-          },
-          include: [{all: true}]
-        })
-      }
-
-      console.log('here')
-      console.log('cart is', cart)
-      req.cart = cart
-      next()
-    } catch (err) {
-      next(err)
     }
   })
 

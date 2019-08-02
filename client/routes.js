@@ -73,7 +73,7 @@ const mapDispatch = dispatch => {
   return {
     loadInitialData() {
       dispatch(me())
-      dispatch(getAllShovels())
+      dispatch(getAllShovels('all'))
       dispatch(getCartThunk())
     }
   }
