@@ -21,6 +21,13 @@ const DropDown = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
 class Navbar extends React.Component {
   constructor() {
     super()
@@ -45,61 +52,65 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
-        <HamburgerButton onClick={() => this.burgerShow()}>
-          <div className="bar" />
-          <div className="bar" />
-          <div className="bar" />
-        </HamburgerButton>
-        {this.state.burger ? (
-          <DropDown>
-            <Link to="/home" onClick={() => this.burgerShow()}>
-              Home
-            </Link>
-            <Link to="/shovels" onClick={() => this.burgerShow()}>
-              Shovels
-            </Link>
-            <Link to="/myAccount" onClick={() => this.burgerShow()}>
-              My Account
-            </Link>
+      <React.Fragment>
+        <HeaderDiv>
+          <div>
+            <HamburgerButton onClick={() => this.burgerShow()}>
+              <div className="bar" />
+              <div className="bar" />
+              <div className="bar" />
+            </HamburgerButton>
+            {this.state.burger ? (
+              <DropDown>
+                <Link to="/home" onClick={() => this.burgerShow()}>
+                  Home
+                </Link>
+                <Link to="/shovels" onClick={() => this.burgerShow()}>
+                  Shovels
+                </Link>
+                <Link to="/myAccount" onClick={() => this.burgerShow()}>
+                  My Account
+                </Link>
 
-            <Link to="/cart" onClick={() => this.burgerShow()}>
+                {this.props.isAdmin ? (
+                  <Link to="/adminPortal" onClick={() => this.burgerShow()}>
+                    Admin Portal
+                  </Link>
+                ) : (
+                  <div />
+                )}
 
-              Cart
-            </Link>
-            {this.props.isAdmin ? (
-              <Link to="/adminPortal" onClick={() => this.burgerShow()}>
-                Admin Portal
-              </Link>
+                <nav>
+                  {this.props.isLoggedIn ? (
+                    <div>
+                      {/* The navbar will show these links after you log in */}
+                      <Link to="/home">Home</Link>
+                      <a href="#" onClick={this.props.handleClick}>
+                        Logout
+                      </a>
+                    </div>
+                  ) : (
+                    <div>
+                      {/* The navbar will show these links before you log in */}
+                      <Link to="/login">Login</Link>
+                      <Link to="/signup">Sign Up</Link>
+                    </div>
+                  )}
+                </nav>
+              </DropDown>
             ) : (
               <div />
             )}
-          </DropDown>
-        ) : (
-          <div />
-        )}
+          </div>
 
-        <div />
-        <h1>Graceful Shoveler</h1>
-        <nav>
-          {this.props.isLoggedIn ? (
-            <div>
-              {/* The navbar will show these links after you log in */}
-              <Link to="/home">Home</Link>
-              <a href="#" onClick={this.props.handleClick}>
-                Logout
-              </a>
-            </div>
-          ) : (
-            <div>
-              {/* The navbar will show these links before you log in */}
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Sign Up</Link>
-            </div>
-          )}
-        </nav>
+          <div>
+            <Link to="/cart">
+              <img src="/cart.png" style={{width: 50}} />
+            </Link>
+          </div>
+        </HeaderDiv>
         <hr />
-      </div>
+      </React.Fragment>
     )
   }
 }

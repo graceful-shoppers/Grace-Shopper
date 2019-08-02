@@ -1,9 +1,21 @@
 const router = require('express').Router()
 const {Product} = require('../db/models')
+const {Op} = require('sequelize')
 
-router.get('/', async (req, res, next) => {
+router.get('/get/:type', async (req, res, next) => {
   try {
-    const shovels = await Product.findAll()
+    var shovels
+
+    if (req.params.type === 'all') {
+      shovels = await Product.findAll()
+    } else {
+      shovels = await Product.findAll({
+        where: {
+          category: {[Op.contains]: [req.params.type]}
+        }
+      })
+    }
+
     res.json(shovels)
   } catch (err) {
     next(err)

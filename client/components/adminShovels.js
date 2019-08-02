@@ -12,7 +12,7 @@ class AllShovelsView extends React.Component {
         {shovels.map(shovel => {
           return (
             <div key={shovel.id}>
-              <Link to={`/shovels/${shovel.id}`}>
+              <Link to={`/adminPortal/editShovel/${shovel.id}`}>
                 <div className="shovel">
                   <h3>{shovel.title}</h3>
                   <h6>{shovel.price}</h6>
@@ -29,7 +29,6 @@ class AllShovelsView extends React.Component {
                 >
                   Delete
                 </button>
-                <button type="button">Availability</button>
               </div>
             </div>
           )
