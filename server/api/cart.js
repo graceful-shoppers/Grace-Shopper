@@ -39,6 +39,7 @@ router.post('/', async (req, res, next) => {
 
     if (newProductOrder) {
       let newQuantity = 0
+
       newQuantity = newProductOrder.quantity + req.body.quantity
 
       await newProductOrder.update({
@@ -58,6 +59,8 @@ router.post('/', async (req, res, next) => {
         id: req.body.productId
       }
     })
+
+    console.log({newProductOrder, product})
 
     res.json({newProductOrder, product})
   } catch (err) {

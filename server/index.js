@@ -1,3 +1,5 @@
+/* eslint-disable max-statements */
+/* eslint-disable complexity */
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
@@ -6,11 +8,12 @@ const session = require('express-session')
 const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
-const {Order} = require('./db/models')
+const {Order, Session} = require('./db/models')
 const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
+const {findSessionCart, cancelCart} = require('./helper')
 
 module.exports = app
 
@@ -65,11 +68,36 @@ const createApp = () => {
   app.use(passport.initialize())
   app.use(passport.session())
   //cart middleware
+  app.use('/auth', require('./auth'))
   app.use(async (req, res, next) => {
     let cart
     //handle user
-    console.log('here1')
+    console.log(
+      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
+      req
+    )
+
+    let sessionStuff = await Session.findOne({
+      where: {
+        sid: req.sessionID
+      }
+    })
+
+    if (!sessionStuff) {
+      console.log('hahahahahahahahahejfhewjfhwjefhjwehfiwuehfiuwh')
+      next()
+    }
     if (req.user) {
+      //check if session cart exists
+      try {
+        let sessCart = await findSessionCart(req.sessionID)
+        if (sessCart) {
+          await cancelCart(req.sessionID)
+        }
+      } catch (err) {
+        console.error('err', 'error in finding cart session')
+      }
+
       try {
         cart = await Order.findOne({
           where: {
@@ -84,6 +112,12 @@ const createApp = () => {
       }
       if (cart) {
         req.cart = cart
+        //destroy session-order
+        try {
+          // findSessionCart(req.userId, req.sessionID)
+        } catch (err) {
+          console.error('err', 'something in the userid if card thing')
+        }
         next()
       } else {
         try {
@@ -92,6 +126,12 @@ const createApp = () => {
             status: 'Created'
           })
           req.cart = cart
+          //destroy session-order
+          try {
+            // findSessionCart(req.userId, req.sessionID)
+          } catch (err) {
+            console.error('err', 'something in the userid if card thing')
+          }
         } catch {
           console.error('error creating new cart with userid')
           res.send(error)
@@ -101,29 +141,30 @@ const createApp = () => {
     } else {
       //handle non-user
       try {
-        console.log('guest')
-        cart = await Order.findOne({
-          where: {
-            sid: req.sessionID,
-            status: 'Created'
-          },
-          include: [{all: true}]
-        })
+        console.log(
+          '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+        )
+        cart = await findSessionCart(req.sessionID)
+        console.log(cart)
       } catch (err) {
         console.error(err)
         res.send('seomthing wrong in finding order with sid')
       }
       if (cart) {
-        req.cart = cart.data
+        console.log('carcarcarfcarcartcarcarttttjfjfjfjfjfjfjfjfjfj')
+        req.cart = cart
         next()
       } else {
         try {
-          cart = await Order.create({
+          console.log(
+            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ'
+          )
+          const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'
           })
 
-          req.cart = cart.data
+          req.cart = newCart
         } catch (err) {
           console.error(err)
           res.send('something wrong creating order with sid')
@@ -134,7 +175,6 @@ const createApp = () => {
   })
 
   // auth and api routes
-  app.use('/auth', require('./auth'))
   app.use('/api', require('./api'))
 
   // static file-serving middleware

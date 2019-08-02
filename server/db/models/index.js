@@ -20,6 +20,7 @@ Review.belongsTo(Product)
 Product.hasMany(Review)
 
 Order.belongsToMany(Product, {through: ProductOrder})
+
 Product.belongsToMany(Order, {through: ProductOrder})
 
 Order.belongsTo(Session, {foreignKey: 'sid'})

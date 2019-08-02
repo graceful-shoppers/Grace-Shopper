@@ -49,6 +49,7 @@ class Routes extends Component {
             path="/adminPortal/editShovel/:shovelId"
             component={AdminEditShovel}
           />
+          <Route path="/adminPortal/allUsers" component={AdminUsers} />
         </Switch>
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
