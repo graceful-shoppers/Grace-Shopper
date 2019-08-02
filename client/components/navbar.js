@@ -64,7 +64,6 @@ class Navbar extends React.Component {
             </Link>
 
             <Link to="/cart" onClick={() => this.burgerShow()}>
-
               Cart
             </Link>
             {this.props.isAdmin ? (

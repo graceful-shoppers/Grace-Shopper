@@ -14,7 +14,6 @@ class Cart extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-
   handleClick(evt, product) {
     evt.preventDefault()
     let newQuantity = parseInt(event.target.quantity.value)

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import history from '../history'
+import {getCartThunk} from './cart'
 
 /**
  * ACTION TYPES
@@ -40,6 +41,7 @@ export const auth = (email, password, method) => async dispatch => {
 
   try {
     dispatch(getUser(res.data))
+    dispatch(getCartThunk())
     history.push('/home')
   } catch (dispatchOrHistoryErr) {
     console.error(dispatchOrHistoryErr)
@@ -50,6 +52,7 @@ export const logout = () => async dispatch => {
   try {
     await axios.post('/auth/logout')
     dispatch(removeUser())
+    dispatch(getCartThunk())
     history.push('/login')
   } catch (err) {
     console.error(err)
