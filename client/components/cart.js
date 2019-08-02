@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {getCartThunk} from '../store/cart'
 import {removeItemThunk} from '../store/cart'
 import {addItemThunk} from '../store/cart'
+import {Link} from 'react-router-dom'
 
 class Cart extends React.Component {
   constructor() {
@@ -14,8 +15,8 @@ class Cart extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getCart(this.props.user.id)
-    // this.setState(this.props.cart)
+    // if()
+    // this.props.getCart(this.props.user.id)
   }
 
   handleClick(evt, product) {
@@ -38,7 +39,6 @@ class Cart extends React.Component {
   }
 
   removeFromCart(product) {
-    console.log(product)
     this.props.removeItem(product)
   }
 
@@ -77,7 +77,7 @@ class Cart extends React.Component {
 
         <div>Subtotal: ${subTotal / 100}</div>
 
-        <button onClick={() => console.log('clicked')}>Checkout</button>
+        <Link to="/checkout">Checkout</Link>
       </div>
     )
   }
@@ -92,7 +92,6 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getCart: id => dispatch(getCartThunk(id)),
     removeItem: item => dispatch(removeItemThunk(item)),
     addItem: item => dispatch(addItemThunk(item))
   }

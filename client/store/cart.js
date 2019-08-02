@@ -12,7 +12,9 @@ const ADD_ITEM = 'ADD_ITEM'
 /**
  * INITIAL STATE
  */
-const defaultCart = {}
+const defaultCart = {
+  products: []
+}
 
 /**
  * ACTION CREATORS
@@ -42,9 +44,9 @@ export const removeItemThunk = item => {
   }
 }
 
-export const getCartThunk = id => async dispatch => {
+export const getCartThunk = () => async dispatch => {
   try {
-    const res = await axios.get(`/api/cart/${id}`)
+    const res = await axios.get('/api/cart')
     dispatch(getCart(res.data))
   } catch (err) {
     console.error(err)
@@ -58,7 +60,23 @@ export default function(state = defaultCart, action) {
     case GET_CART:
       return action.cart
     case ADD_ITEM:
-      return {...state, products: [state.products, action.item]}
+      console.log('action item', action.item)
+
+      var newArr = [...state.products]
+      var exists = false
+
+      for (var i = 0; i < newArr.length; i++) {
+        if (newArr[i].id === action.item.id) {
+          exists = true
+        }
+      }
+
+      if (exists) {
+        newArr = state.products.filter(product => product.id !== action.item.id)
+      }
+      newArr.push(action.item)
+
+      return {...state, products: newArr}
 
     case REMOVE_ITEM:
       const newProducts = state.products.filter(

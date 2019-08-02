@@ -15,6 +15,7 @@ import AdminPortal from './components/adminPortal'
 import AdminShovels from './components/adminShovels'
 import AdminEditShovel from './components/adminEditShovel'
 import AdminUsers from './components/adminUsers'
+import {getCartThunk} from './store/cart'
 
 /**
  * COMPONENT
@@ -77,6 +78,7 @@ const mapDispatch = dispatch => {
     loadInitialData() {
       dispatch(me())
       dispatch(getAllShovels())
+      dispatch(getCartThunk())
     }
   }
 }
