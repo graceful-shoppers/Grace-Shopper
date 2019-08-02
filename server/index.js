@@ -13,7 +13,7 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
-const destroySessionOrder = require('./helper')
+const {findSessionCart} = require('./helper')
 
 module.exports = app
 
@@ -88,7 +88,7 @@ const createApp = () => {
         req.cart = cart
         //destroy session-order
         try {
-          destroySessionOrder(req.sessionID)
+          // findSessionCart(req.userId, req.sessionID)
         } catch (err) {
           console.error('err', 'something in the userid if card thing')
         }
@@ -102,7 +102,7 @@ const createApp = () => {
           req.cart = cart
           //destroy session-order
           try {
-            destroySessionOrder(req.sessionID)
+            // findSessionCart(req.userId, req.sessionID)
           } catch (err) {
             console.error('err', 'something in the userid if card thing')
           }
@@ -115,13 +115,7 @@ const createApp = () => {
     } else {
       //handle non-user
       try {
-        cart = await Order.findOne({
-          where: {
-            sid: req.sessionID,
-            status: 'Created'
-          },
-          include: [{all: true}]
-        })
+        cart = await findSessionCart(req.sessionID)
       } catch (err) {
         console.error(err)
         res.send('seomthing wrong in finding order with sid')
@@ -131,12 +125,12 @@ const createApp = () => {
         next()
       } else {
         try {
-          cart = await Order.create({
+          const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'
           })
 
-          req.cart = cart
+          req.cart = newCart
         } catch (err) {
           console.error(err)
           res.send('something wrong creating order with sid')
