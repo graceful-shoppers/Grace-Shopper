@@ -1,7 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {getAllUsers} from '../store/usersAll'
 
 class MyAccount extends React.Component {
+  constructor() {
+    super()
+
+    this.componentDidMount = this.componentDidMount.bind(this)
+  }
+
+  componentDidMount() {
+    console.log(this.props)
+    this.props.getAllUsers()
+  }
+
   render() {
     return (
       <div>
@@ -19,4 +32,16 @@ class MyAccount extends React.Component {
   }
 }
 
-export default MyAccount
+const mapState = state => {
+  return {
+    allUsers: state.allUsers
+  }
+}
+
+const mapDispatch = dispatch => {
+  return {
+    getAllUsers: () => dispatch(getAllUsers())
+  }
+}
+
+export default connect(mapState, mapDispatch)(MyAccount)

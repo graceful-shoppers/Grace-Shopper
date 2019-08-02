@@ -1,12 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {deleteShovel} from '../store/shovels'
 
 class AllShovelsView extends React.Component {
-  constructor() {
-    super()
-  }
-
   render() {
     const shovels = this.props.shovels
 
@@ -24,8 +21,14 @@ class AllShovelsView extends React.Component {
               </Link>
               <div>
                 <Link to={`/adminPortal/editShovel/${shovel.id}`}>
-                  <button type="button">Edit/Delete</button>
+                  <button type="button">Edit</button>
                 </Link>
+                <button
+                  type="button"
+                  onClick={() => this.props.deleteShovel(shovel.id)}
+                >
+                  Delete
+                </button>
                 <button type="button">Availability</button>
               </div>
             </div>
@@ -42,4 +45,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(AllShovelsView)
+const mapDispatch = dispatch => {
+  return {
+    deleteShovel: shovelId => dispatch(deleteShovel(shovelId))
+  }
+}
+
+export default connect(mapState, mapDispatch)(AllShovelsView)
