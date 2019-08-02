@@ -48,7 +48,6 @@ class Cart extends React.Component {
 
     return (
       <div>
-        <h3>Items you are purchasing</h3>
         {cart.products ? (
           cart.products.map(product => {
             subTotal += product.price * product.product_Order.quantity
@@ -57,6 +56,7 @@ class Cart extends React.Component {
               <div key={product.id}>
                 <h3>{product.title}</h3>
                 <img src={product.imageUrl} />
+
                 <button onClick={() => this.removeFromCart(product)}>
                   delete this item
                 </button>
