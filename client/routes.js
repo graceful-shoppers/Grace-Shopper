@@ -16,6 +16,7 @@ import AdminShovels from './components/adminShovels'
 import AdminEditShovel from './components/adminEditShovel'
 import AdminUsers from './components/adminUsers'
 import {getCartThunk} from './store/cart'
+import ResetPassword from './components/resetPassword'
 
 /**
  * COMPONENT
@@ -27,6 +28,7 @@ class Routes extends Component {
 
   render() {
     const {isLoggedIn} = this.props
+    const passwordResetCheck = this.props.user.needPasswordReset
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -51,6 +53,8 @@ class Routes extends Component {
           />
           <Route path="/adminPortal/allUsers" component={AdminUsers} />
         </Switch>
+         
+        {isLoggedIn && passwordResetCheck && <ResetPassword />}
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
       </Switch>

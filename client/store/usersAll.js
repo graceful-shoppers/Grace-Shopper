@@ -4,7 +4,7 @@ import axios from 'axios'
  */
 
 const GET_ALL_USERS = 'GET_ALL_USERS'
-const REMOVE_USER = 'REMOVE_USER'
+const DELETE_USER = 'DELETE_USER'
 
 /**
  * INITIAL STATE
@@ -15,7 +15,7 @@ const allUsers = []
  * ACTION CREATORS
  */
 const getManyUsers = users => ({type: GET_ALL_USERS, users})
-const removeUser = userId => ({type: REMOVE_USER, userId})
+const removeUser = userId => ({type: DELETE_USER, userId})
 /**
  * THUNK CREATORS
  */
@@ -30,7 +30,7 @@ export const getAllUsers = () => async dispatch => {
 
 export const deleteUser = userId => async dispatch => {
   try {
-    await axios.delete(`/api/usersAll/${userId}`)
+    await axios.delete(`/api/adminPortal/allUsers/${userId}`)
     dispatch(removeUser(userId))
   } catch (err) {
     console.error(err)
@@ -44,7 +44,7 @@ export default function(state = allUsers, action) {
   switch (action.type) {
     case GET_ALL_USERS:
       return action.users
-    case REMOVE_USER:
+    case DELETE_USER:
       return state.filter(user => user.id !== action.userId)
     default:
       return state

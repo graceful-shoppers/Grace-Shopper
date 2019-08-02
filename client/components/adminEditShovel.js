@@ -66,14 +66,12 @@ class SingleShovel extends React.Component {
     }
     form.reset()
     this.props.editSelectedShovel(updatedShovel)
-    this.props.selectedShovel.availability = !this.props.selectedShovel
-      .availability
     this.forceUpdate()
   }
 
   toggleAvailability() {
-    let status = this.props.selectedShovel.availability
-    if (status) {
+    let updatedShovel = this.props.selectedShovel
+    if (updatedShovel.availability) {
       this.setState({
         availability: false
       })
@@ -82,7 +80,10 @@ class SingleShovel extends React.Component {
         availability: true
       })
     }
-    this.handleSubmit()
+    this.props.selectedShovel.availability = !this.props.selectedShovel
+      .availability
+    this.props.editSelectedShovel(updatedShovel)
+    this.forceUpdate()
   }
 
   deleteCategory(event) {
