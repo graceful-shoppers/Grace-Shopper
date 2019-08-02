@@ -62,7 +62,8 @@ class Navbar extends React.Component {
             <Link to="/myAccount" onClick={() => this.burgerShow()}>
               My Account
             </Link>
-            <Link to="/cart" onClick={() => this.burgerShow}>
+
+            <Link to="/cart" onClick={() => this.burgerShow()}>
               Cart
             </Link>
             {this.props.isAdmin ? (
