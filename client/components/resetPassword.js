@@ -20,14 +20,12 @@ class ResetPassword extends React.Component {
     })
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-  }
-
   changePassword(user) {
-    user.password = this.state.newPassword
-    user.newPasswordReset = false
-    this.props.editSelfPassword(user)
+    let updatedUser = user
+    updatedUser.password = this.state.newPassword
+    updatedUser.needPasswordReset = false
+    this.props.editSelfPassword(updatedUser)
+    console.log(updatedUser)
   }
 
   render() {

@@ -85,7 +85,6 @@ async function seed() {
         userId: randIndex(users) + 1
       }
     })
-    // console.log(what)
     let hah = await Order.findOrCreate({
       where: {
         status: status[randIndex(status)],
