@@ -47,6 +47,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.1",
     "faker": "^4.1.0",
+    "gmail-send": "^1.8.10",
     "history": "^4.9.0",
     "lodash": "^4.17.15",
     "lodash.pick": "^4.4.0",

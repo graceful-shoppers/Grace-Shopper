@@ -3,10 +3,11 @@ import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import Cart from './cart'
+import {getCartThunk} from '../store/cart'
 
-const successPayment = data => {
-  alert('Your shovels are on their way')
-}
+// const successPayment = data => {
+//   alert('Your shovels are on their way')
+// }
 
 const errorPayment = data => {
   alert('Payment Error')
@@ -16,8 +17,8 @@ class Checkout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: '',
-      shipping: '',
+      // email: '',
+      // shipping: '',
       subtotal: 0,
       orderSubmitted: false,
       cart: this.props.cart
@@ -39,7 +40,9 @@ class Checkout extends React.Component {
     })
   }
 
-  onToken = token => {
+  onToken = (token, addresses) => {
+    console.log('addresses :', addresses)
+    console.log('token :', token)
     axios
       .post('/api/checkout', {
         // name: 'Ben',
@@ -47,7 +50,7 @@ class Checkout extends React.Component {
         source: token.id,
         currency: 'USD',
         amount: this.state.subtotal,
-
+        email: token.email,
         metadata: {}
       })
       .then()
@@ -58,6 +61,7 @@ class Checkout extends React.Component {
           orderSubmitted: true
         })
       )
+    this.props.getCart()
   }
   render() {
     if (this.state.orderSubmitted) {
@@ -87,12 +91,13 @@ class Checkout extends React.Component {
             )}
           </div>
           <StripeCheckout
-            name="Bens cool guy shit"
+            name="Graceful Shoveler"
             token={this.onToken}
             stripeKey="pk_test_DY5MZUNFD7FjEQYwYhz4sK9h00CNymDRBp"
             email
             amount={this.state.subtotal}
             shippingAddress
+            billingAddress
           />
         </div>
       )
@@ -107,4 +112,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(Checkout)
+const mapDispatch = dispatch => {
+  return {
+    getCart: () => dispatch(getCartThunk())
+  }
+}
+
+export default connect(mapState, mapDispatch)(Checkout)
