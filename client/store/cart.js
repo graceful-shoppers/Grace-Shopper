@@ -79,14 +79,12 @@ export default function(state = defaultCart, action) {
     case GET_CART:
       return action.cart
     case ADD_ITEM:
-
       const newProductArr = state.products.filter(
         product => product.id !== action.item.id
       )
       newProductArr.push(action.item)
 
       return {...state, products: newProductArr}
-
 
     case REMOVE_ITEM:
       const newProducts = state.products.filter(

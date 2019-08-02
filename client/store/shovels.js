@@ -21,9 +21,9 @@ const removeShovel = shovelId => ({type: REMOVE_SHOVEL, shovelId})
 /**
  * THUNK CREATORS
  */
-export const getAllShovels = () => async dispatch => {
+export const getAllShovels = type => async dispatch => {
   try {
-    const res = await axios.get('/api/shovels')
+    const res = await axios.get(`/api/shovels/get/${type}`)
     dispatch(getShovels(res.data))
   } catch (err) {
     console.error(err)

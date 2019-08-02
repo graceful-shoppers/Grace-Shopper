@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const User = require('../db/models/user')
+const {Order, Session} = require('../db/models')
+
 module.exports = router
 
 router.post('/login', async (req, res, next) => {
@@ -12,6 +14,23 @@ router.post('/login', async (req, res, next) => {
       console.log('Incorrect password for user:', req.body.email)
       res.status(401).send('Wrong username and/or password')
     } else {
+      req.user = user
+      //check if this user has a cart with a session id
+      console.log('user is', req.user)
+      const sessionCart = await Session.findOne({
+        where: {
+          sid: req.sessionID
+        }
+      })
+
+      console.log('prev cart', sessionCart)
+
+      if (sessionCart) {
+        await sessionCart.update({
+          status: 'Cancelled'
+        })
+      }
+
       req.login(user, err => (err ? next(err) : res.json(user)))
     }
   } catch (err) {
