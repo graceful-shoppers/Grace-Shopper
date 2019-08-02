@@ -42,7 +42,6 @@ class SingleShovel extends React.Component {
   }
 
   componentDidMount() {
-    console.log('this.props.match :', this.props.match)
     this.props.getShovel(this.props.match.params.shovelId)
     this.props.getAllReviews(this.props.match.params.shovelId)
   }

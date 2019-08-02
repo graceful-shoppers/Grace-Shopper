@@ -68,11 +68,14 @@ const createApp = () => {
   app.use(passport.initialize())
   app.use(passport.session())
   //cart middleware
-  app.use('/auth', require('./auth'))
 
   app.use(async (req, res, next) => {
     let cart
     //handle user
+    console.log(
+      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
+      req.user
+    )
 
     let sessionStuff = await Session.findOne({
       where: {
@@ -173,6 +176,7 @@ const createApp = () => {
   })
 
   // auth and api routes
+  app.use('/auth', require('./auth'))
   app.use('/api', require('./api'))
 
   // static file-serving middleware
