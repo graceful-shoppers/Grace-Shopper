@@ -73,18 +73,23 @@ const createApp = () => {
       if (req.user) {
         cart = await Order.findOne({
           where: {
-            userId: req.user.id
+            userId: req.user.id,
+            status: 'Created'
           },
           include: [{model: Product}]
         })
       } else {
         cart = await Order.findOne({
           where: {
-            sid: req.sessionID
+            sid: req.sessionID,
+            status: 'Created'
           },
           include: [{all: true}]
         })
       }
+
+      console.log('here')
+      console.log('cart is', cart)
       req.cart = cart
       next()
     } catch (err) {
