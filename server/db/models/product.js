@@ -35,6 +35,10 @@ const Product = db.define('product', {
       Sequelize.ENUM('yardShovel', 'kitchenShovel', 'mouthShovel', 'snowShovel')
     )
   },
+  availability: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true
+  },
   imageUrl: {
     type: Sequelize.STRING,
     validate: {
