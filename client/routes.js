@@ -27,7 +27,6 @@ class Routes extends Component {
 
   render() {
     const {isLoggedIn} = this.props
-
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -54,6 +53,7 @@ class Routes extends Component {
             <Route path="/adminPortal/allUsers" component={AdminUsers} />
           </Switch>
         )}
+
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
       </Switch>

@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getCartThunk} from '../store/cart'
 import {removeItemThunk} from '../store/cart'
-import {addItemThunk} from '../store/cart'
+import {updateItemThunk} from '../store/cart'
 import {Link} from 'react-router-dom'
 
 class Cart extends React.Component {
@@ -14,17 +14,18 @@ class Cart extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  componentDidMount() {
-    // if()
-    // this.props.getCart(this.props.user.id)
-  }
 
   handleClick(evt, product) {
     evt.preventDefault()
     let newQuantity = parseInt(event.target.quantity.value)
+    if (newQuantity === 0) {
+      this.removeFromCart(product)
+      return
+    }
 
     if (!newQuantity) {
       quantity = product.product_Order.quantity
+      return
     }
 
     const newProductOrder = {
@@ -35,7 +36,7 @@ class Cart extends React.Component {
       changeQuantity: true
     }
 
-    this.props.addItem(newProductOrder)
+    this.props.updateItem(newProductOrder)
   }
 
   removeFromCart(product) {
@@ -44,8 +45,8 @@ class Cart extends React.Component {
 
   render() {
     let cart = this.props.cart
-
     let subTotal = 0
+
     return (
       <div>
         <h3>Items you are purchasing</h3>
@@ -93,7 +94,8 @@ const mapState = state => {
 const mapDispatch = dispatch => {
   return {
     removeItem: item => dispatch(removeItemThunk(item)),
-    addItem: item => dispatch(addItemThunk(item))
+    updateItem: item => dispatch(updateItemThunk(item)),
+    getCart: () => dispatch(getCartThunk())
   }
 }
 
