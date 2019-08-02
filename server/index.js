@@ -146,56 +146,6 @@ const createApp = () => {
     }
   })
 
-  app.use(async (req, res, next) => {
-    try {
-      var cart
-      if (req.user) {
-        cart = await Order.findOne({
-          where: {
-            userId: req.user.id
-          },
-          include: [{all: true}]
-        })
-      } else {
-        cart = await Order.findOne({
-          where: {
-            sid: req.sessionID
-          },
-          include: [{all: true}]
-        })
-      }
-      req.cart = cart
-      next()
-    } catch (err) {
-      next(err)
-    }
-  })
-
-  app.use(async (req, res, next) => {
-    try {
-      var cart
-      if (req.user) {
-        cart = await Order.findOne({
-          where: {
-            userId: req.user.id
-          },
-          include: [{model: Product}]
-        })
-      } else {
-        cart = await Order.findOne({
-          where: {
-            sid: req.sessionID
-          },
-          include: [{all: true}]
-        })
-      }
-      req.cart = cart
-      next()
-    } catch (err) {
-      next(err)
-    }
-  })
-
   // auth and api routes
   app.use('/auth', require('./auth'))
   app.use('/api', require('./api'))
