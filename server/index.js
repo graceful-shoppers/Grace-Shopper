@@ -8,12 +8,12 @@ const session = require('express-session')
 const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
-const {Order} = require('./db/models')
+const {Order, Session} = require('./db/models')
 const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
-const {findSessionCart} = require('./helper')
+const {findSessionCart, cancelCart} = require('./helper')
 
 module.exports = app
 
@@ -68,10 +68,36 @@ const createApp = () => {
   app.use(passport.initialize())
   app.use(passport.session())
   //cart middleware
+  app.use('/auth', require('./auth'))
   app.use(async (req, res, next) => {
     let cart
     //handle user
+    console.log(
+      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
+      req
+    )
+
+    let sessionStuff = await Session.findOne({
+      where: {
+        sid: req.sessionID
+      }
+    })
+
+    if (!sessionStuff) {
+      console.log('hahahahahahahahahejfhewjfhwjefhjwehfiwuehfiuwh')
+      next()
+    }
     if (req.user) {
+      //check if session cart exists
+      try {
+        let sessCart = await findSessionCart(req.sessionID)
+        if (sessCart) {
+          await cancelCart(req.sessionID)
+        }
+      } catch (err) {
+        console.error('err', 'error in finding cart session')
+      }
+
       try {
         cart = await Order.findOne({
           where: {
@@ -115,16 +141,24 @@ const createApp = () => {
     } else {
       //handle non-user
       try {
+        console.log(
+          '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+        )
         cart = await findSessionCart(req.sessionID)
+        console.log(cart)
       } catch (err) {
         console.error(err)
         res.send('seomthing wrong in finding order with sid')
       }
       if (cart) {
+        console.log('carcarcarfcarcartcarcarttttjfjfjfjfjfjfjfjfjfj')
         req.cart = cart
         next()
       } else {
         try {
+          console.log(
+            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ'
+          )
           const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'
@@ -141,7 +175,6 @@ const createApp = () => {
   })
 
   // auth and api routes
-  app.use('/auth', require('./auth'))
   app.use('/api', require('./api'))
 
   // static file-serving middleware

@@ -60,6 +60,8 @@ router.post('/', async (req, res, next) => {
       }
     })
 
+    console.log({newProductOrder, product})
+
     res.json({newProductOrder, product})
   } catch (err) {
     next(err)
