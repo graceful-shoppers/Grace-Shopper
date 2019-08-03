@@ -16,7 +16,7 @@ const SingleShovelDiv = styled.div`
 //   return <div />
 // }
 
-class SingleShovel extends React.Component {
+export class SingleShovel extends React.Component {
   constructor() {
     super()
     this.handleClick = this.handleClick.bind(this)
