@@ -42,17 +42,17 @@ router.post('/', async (req, res, next) => {
       subtotal: total
     })
 
-    // if (req.cart.dataValues.userId) {
-    //   await Order.create({
-    //     userId: req.cart.dataValues.userId,
-    //     status: 'Created'
-    //   })
-    // } else {
-    //   await Order.create({
-    //     sid: req.cart.dataValues.sid,
-    //     status: 'Created'
-    //   })
-    // }
+    if (req.cart.dataValues.userId) {
+      await Order.create({
+        userId: req.cart.dataValues.userId,
+        status: 'Created'
+      })
+    } else {
+      await Order.create({
+        sid: req.cart.dataValues.sid,
+        status: 'Created'
+      })
+    }
 
     productOrders.forEach(async productOrder => {
       const product = await Product.findOne({

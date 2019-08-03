@@ -3,7 +3,7 @@ import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import {connect} from 'react-redux'
 
-import {getCartThunk} from '../store/cart'
+import {getNewCartThunk} from '../store/cart'
 
 // const successPayment = data => {
 //   alert('Your shovels are on their way')
@@ -61,8 +61,12 @@ class Checkout extends React.Component {
           orderSubmitted: true
         })
       )
-    this.props.getCart()
   }
+
+  componentWillUnmount() {
+    this.props.getNewCart()
+  }
+
   render() {
     if (this.state.orderSubmitted) {
       return (
@@ -114,7 +118,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getCart: () => dispatch(getCartThunk())
+    getNewCart: () => dispatch(getNewCartThunk())
   }
 }
 
