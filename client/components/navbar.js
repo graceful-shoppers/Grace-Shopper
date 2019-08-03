@@ -22,6 +22,14 @@ const DropDown = styled.div`
   flex-direction: column;
 `
 
+const CartItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+`
+
 const HeaderDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -103,11 +111,12 @@ class Navbar extends React.Component {
             )}
           </div>
 
-          <div>
+          <CartItems>
+            {this.props.cart.products.length}
             <Link to="/cart">
               <img src="/cart.png" style={{width: 50}} />
             </Link>
-          </div>
+          </CartItems>
         </HeaderDiv>
         <hr />
       </React.Fragment>
@@ -121,7 +130,8 @@ class Navbar extends React.Component {
 const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
-    isAdmin: state.user.isAdmin
+    isAdmin: state.user.isAdmin,
+    cart: state.cart
   }
 }
 

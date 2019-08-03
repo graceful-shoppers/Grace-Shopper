@@ -55,7 +55,7 @@ class Cart extends React.Component {
             return (
               <div key={product.id}>
                 <h3>{product.title}</h3>
-                <img src={product.imageUrl} />
+                <img src={product.imageUrl} style={{height: 100}} />
 
                 <button onClick={() => this.removeFromCart(product)}>
                   delete this item

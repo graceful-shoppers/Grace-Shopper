@@ -1,18 +1,44 @@
 const router = require('express').Router()
-const {Product} = require('../db/models')
+const {Product, Review} = require('../db/models')
 const {Op} = require('sequelize')
 
-router.get('/get/:type', async (req, res, next) => {
+router.get('/get/:type/:sort', async (req, res, next) => {
   try {
     var shovels
 
-    if (req.params.type === 'all') {
-      shovels = await Product.findAll()
+    if (
+      req.params.type === 'all' &&
+      req.params.sort !== 'ASC' &&
+      req.params.sort !== 'DESC'
+    ) {
+      shovels = await Product.findAll({
+        include: [{all: true}]
+      })
+    } else if (
+      req.params.type === 'all' &&
+      (req.params.sort === 'ASC' || req.params.sort === 'DESC')
+    ) {
+      shovels = await Product.findAll({
+        include: [{all: true}],
+        order: [['price', req.params.sort.toString()]]
+      })
+    } else if (
+      req.params.type !== 'all' &&
+      (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          category: {[Op.contains]: [req.params.type]}
+        },
+        include: [{all: true}]
+      })
     } else {
       shovels = await Product.findAll({
         where: {
           category: {[Op.contains]: [req.params.type]}
-        }
+        },
+        order: [['price', req.params.sort.toString()]],
+        include: [{all: true}]
       })
     }
 

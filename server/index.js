@@ -72,10 +72,6 @@ const createApp = () => {
   app.use(async (req, res, next) => {
     let cart
     //handle user
-    console.log(
-      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
-      req.user
-    )
 
     let sessionStuff = await Session.findOne({
       where: {
@@ -90,7 +86,6 @@ const createApp = () => {
     if (req.user) {
       //check if session cart exists
       try {
-        console.log('cancelling old cart')
         let sessCart = await findSessionCart(req.sessionID)
         if (sessCart) {
           await cancelCart(req.sessionID)
@@ -142,24 +137,16 @@ const createApp = () => {
     } else {
       //handle non-user
       try {
-        console.log(
-          '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-        )
         cart = await findSessionCart(req.sessionID)
-        // console.log(cart)
       } catch (err) {
         console.error(err)
         res.send('seomthing wrong in finding order with sid')
       }
       if (cart) {
-        console.log('carcarcarfcarcartcarcarttttjfjfjfjfjfjfjfjfjfj')
         req.cart = cart
         next()
       } else {
         try {
-          console.log(
-            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ'
-          )
           const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'

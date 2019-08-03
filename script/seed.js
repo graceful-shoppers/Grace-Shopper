@@ -56,7 +56,7 @@ async function seed() {
         title: faker.lorem.word(),
         price: faker.random.number(),
         category: randomArr(),
-        imageUrl: faker.random.image(),
+        imageUrl: '/defaultShovel.png',
         description: faker.company.catchPhraseDescriptor(),
         quantity: Math.floor(Math.random() * 9)
       })
