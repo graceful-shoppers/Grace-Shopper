@@ -74,6 +74,20 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+router.get('/newCart', async (req, res, next) => {
+  try {
+    const cart = await Order.findOne({
+      where: {
+        userId: req.user.id,
+        status: 'Created'
+      }
+    })
+    res.status(200).json(cart)
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.delete('/:productId/:orderId', async (req, res, next) => {
   try {
     const productOrder = await ProductOrder.destroy({
