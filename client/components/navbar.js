@@ -112,7 +112,7 @@ class Navbar extends React.Component {
           </div>
 
           <CartItems>
-            {this.props.cart.products.length}
+            {this.props.cart.products ? this.props.cart.products.length : 0}
             <Link to="/cart">
               <img src="/cart.png" style={{width: 50}} />
             </Link>
