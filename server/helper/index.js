@@ -1,14 +1,18 @@
 const {Order} = require('../db/models')
 
 const findSessionCart = async reqSid => {
-  const order = await Order.findOne({
-    where: {
-      sid: reqSid,
-      status: 'Created'
-    },
-    include: [{all: true}]
-  })
-  return order
+  try {
+    const order = await Order.findOne({
+      where: {
+        sid: reqSid,
+        status: 'Created'
+      },
+      include: [{all: true}]
+    })
+    return order
+  } catch (err) {
+    console.error('error in findsessioncart in helper/index.js', err)
+  }
 }
 
 const cancelCart = async reqSid => {
