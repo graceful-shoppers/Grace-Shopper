@@ -9,7 +9,7 @@ const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
 const {Order, Session} = require('./db/models')
-const sessionStore = new SequelizeStore({db})
+const sessionStore = new SequelizeStore({db}, {Session})
 const PORT = process.env.PORT || 3000
 const app = express()
 const socketio = require('socket.io')
@@ -68,24 +68,8 @@ const createApp = () => {
   app.use(passport.initialize())
   app.use(passport.session())
   //cart middleware
-
   app.use(async (req, res, next) => {
     let cart
-    //handle user
-    console.log(
-      '****%*%*%*%*%*%*%%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%*%&%^&*&^&*&^&*(&^%^&*',
-      req.user
-    )
-
-    let sessionStuff = await Session.findOne({
-      where: {
-        sid: req.sessionID
-      }
-    })
-
-    if (!sessionStuff) {
-      next()
-    }
 
     if (req.user) {
       //check if session cart exists
@@ -141,25 +125,22 @@ const createApp = () => {
       }
     } else {
       //handle non-user
-      try {
-        console.log(
-          '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-        )
-        cart = await findSessionCart(req.sessionID)
-        // console.log(cart)
-      } catch (err) {
-        console.error(err)
-        res.send('seomthing wrong in finding order with sid')
-      }
+      cart = await findSessionCart(req.sessionID)
       if (cart) {
-        console.log('carcarcarfcarcartcarcarttttjfjfjfjfjfjfjfjfjfj')
+        console.log('found cart at top of "session" block middleware')
         req.cart = cart
         next()
       } else {
         try {
           console.log(
-            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ'
+            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ, with sessionid: ' +
+              req.sessionID
           )
+
+          await Session.create({
+            sid: req.sessionID
+          })
+
           const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'
