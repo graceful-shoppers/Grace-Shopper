@@ -93,31 +93,22 @@ const createApp = () => {
         })
       } catch (err) {
         console.error(err)
-        res.send('error find cart with userid')
       }
       if (cart) {
         req.cart = cart
-        //destroy session-order
-        try {
-          // findSessionCart(req.userId, req.sessionID)
-        } catch (err) {
-          console.error('err', 'something in the userid if card thing')
-        }
         next()
       } else {
         try {
-          cart = await Order.create({
-            userId: req.user.id,
-            status: 'Created'
+          cart = await Order.findOrCreate({
+            where: {
+              userId: req.user.id
+            },
+            defaults: {
+              status: 'Created'
+            }
           })
           req.cart = cart
-          //destroy session-order
-          try {
-            // findSessionCart(req.userId, req.sessionID)
-          } catch (err) {
-            console.error('err', 'something in the userid if card thing')
-          }
-        } catch {
+        } catch (error) {
           console.error('error creating new cart with userid')
           res.send(error)
         }
@@ -127,22 +118,15 @@ const createApp = () => {
       //handle non-user
       cart = await findSessionCart(req.sessionID)
       if (cart) {
-        console.log('found cart at top of "session" block middleware')
         req.cart = cart
         next()
       } else {
         try {
-          console.log(
-            'creating new cartFGHJKJHGFHJKJGFGHJKFGHJKHGFGHJKGHJKJHGFGHJ, with sessionid: ' +
-              req.sessionID
-          )
-
           await Session.findOrCreate({
             where: {
               sid: req.sessionID
             }
           })
-
           const newCart = await Order.create({
             sid: req.sessionID,
             status: 'Created'
