@@ -2,13 +2,15 @@ import React from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import {connect} from 'react-redux'
-import Cart from './cart'
 
-const successPayment = data => {
-  alert('Your shovels are on their way')
-}
+import {getNewCartThunk} from '../store/cart'
 
-const errorPayment = data => {
+// const successPayment = data => {
+//   alert('Your shovels are on their way')
+// }
+
+const errorPayment = () => {
+  // eslint-disable-next-line no-alert
   alert('Payment Error')
 }
 
@@ -16,8 +18,8 @@ class Checkout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: '',
-      shipping: '',
+      // email: '',
+      // shipping: '',
       subtotal: 0,
       orderSubmitted: false,
       cart: this.props.cart
@@ -39,15 +41,16 @@ class Checkout extends React.Component {
     })
   }
 
-  onToken = token => {
+  onToken = (token, addresses) => {
+    console.log('addresses :', addresses)
+    console.log('token :', token)
     axios
       .post('/api/checkout', {
-        // name: 'Ben',
         description: 'description',
         source: token.id,
         currency: 'USD',
         amount: this.state.subtotal,
-
+        email: token.email,
         metadata: {}
       })
       .then()
@@ -59,6 +62,11 @@ class Checkout extends React.Component {
         })
       )
   }
+
+  componentWillUnmount() {
+    this.props.getNewCart()
+  }
+
   render() {
     if (this.state.orderSubmitted) {
       return (
@@ -87,12 +95,13 @@ class Checkout extends React.Component {
             )}
           </div>
           <StripeCheckout
-            name="Bens cool guy shit"
+            name="Graceful Shoveler"
             token={this.onToken}
             stripeKey="pk_test_DY5MZUNFD7FjEQYwYhz4sK9h00CNymDRBp"
             email
             amount={this.state.subtotal}
             shippingAddress
+            billingAddress
           />
         </div>
       )
@@ -107,4 +116,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(Checkout)
+const mapDispatch = dispatch => {
+  return {
+    getNewCart: () => dispatch(getNewCartThunk())
+  }
+}
+
+export default connect(mapState, mapDispatch)(Checkout)

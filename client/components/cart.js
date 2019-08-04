@@ -4,8 +4,25 @@ import {getCartThunk} from '../store/cart'
 import {removeItemThunk} from '../store/cart'
 import {updateItemThunk} from '../store/cart'
 import {Link} from 'react-router-dom'
+import styled from 'styled-components'
 
-class Cart extends React.Component {
+const Checkout = styled(Link)`
+  font-size: 18px;
+  font-family: AppleGothic;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  padding: 1em;
+  margin-top: 100em;
+  &:hover {
+    box-shadow: 0px 0px 5px black;
+  }
+  &:focus {
+    outline: 0;
+  }
+`
+
+export class Cart extends React.Component {
   constructor() {
     super()
     this.state = {}
@@ -58,8 +75,8 @@ class Cart extends React.Component {
 
             return (
               <div key={product.id}>
-                <h3>{product.title}</h3>
-                <img src={product.imageUrl} style={{height: 100}} />
+                <h2>{product.title}</h2>
+                <img src={product.imageUrl} />
 
                 <button onClick={() => this.removeFromCart(product)}>
                   delete this item
@@ -80,8 +97,9 @@ class Cart extends React.Component {
         )}
 
         <div>Subtotal: ${subTotal / 100}</div>
-
-        <Link to="/checkout">Checkout</Link>
+        <br />
+        <br />
+        <Checkout to="/checkout">Checkout</Checkout>
       </div>
     )
   }

@@ -9,6 +9,7 @@ const GET_CART = 'GET_CART'
 const UPDATE_CART = 'UPDATE_CART'
 const REMOVE_ITEM = 'REMOVE_ITEM'
 const ADD_ITEM = 'ADD_ITEM'
+const GET_NEW_CART = 'GET_NEW_CART'
 
 /**
  * INITIAL STATE
@@ -25,6 +26,8 @@ const updateCart = item => ({type: UPDATE_CART, item})
 
 const removeItem = item => ({type: REMOVE_ITEM, item})
 const addItem = item => ({type: ADD_ITEM, item})
+
+const getNewCart = cart => ({type: GET_NEW_CART, cart})
 
 /**
  * THUNK CREATORS
@@ -66,6 +69,15 @@ export const updateItemThunk = item => async dispatch => {
     newPro.product_Order = res.data.productOrder
 
     dispatch(updateCart(newPro))
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+export const getNewCartThunk = () => async dispatch => {
+  try {
+    const res = await axios.get('/api/cart/newCart')
+    dispatch(getNewCart(res.data))
   } catch (err) {
     console.error(err)
   }

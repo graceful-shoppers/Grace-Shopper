@@ -22,7 +22,6 @@ class ReviewForm extends React.Component {
     })
   }
   handleSubmit(event) {
-    console.log('in handle submit')
     event.preventDefault()
     const review = {
       productId: this.props.shovelId,

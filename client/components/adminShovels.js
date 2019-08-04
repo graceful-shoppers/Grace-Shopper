@@ -29,7 +29,6 @@ class AllShovelsView extends React.Component {
                 >
                   Delete
                 </button>
-                <button type="button">Availability</button>
               </div>
             </div>
           )
