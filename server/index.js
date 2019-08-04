@@ -68,6 +68,7 @@ const createApp = () => {
   app.use(passport.initialize())
   app.use(passport.session())
   //cart middleware
+
   app.use(async (req, res, next) => {
     let cart
 
