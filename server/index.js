@@ -137,8 +137,10 @@ const createApp = () => {
               req.sessionID
           )
 
-          await Session.create({
-            sid: req.sessionID
+          await Session.findOrCreate({
+            where: {
+              sid: req.sessionID
+            }
           })
 
           const newCart = await Order.create({
