@@ -1,7 +1,18 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getAllUsers} from '../store/usersAll'
+import styled from 'styled-components'
+import {BurgerLinkButton} from '../../public/styled-components/button'
+
+const AdminOptions = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+
+const LocalButton = styled(BurgerLinkButton)`
+  min-width: 100px;
+  background-color: tomato;
+`
 
 class MyAccount extends React.Component {
   constructor() {
@@ -16,24 +27,19 @@ class MyAccount extends React.Component {
 
   render() {
     return (
-      <div>
-        <button type="button">
-          <Link to="/adminPortal/allUsers">Review Users</Link>
-        </button>
-        <button type="button">
-          <Link to="/adminPortal/allShovels">Review Shovels</Link>
-        </button>
-        <button type="button">
-          <Link to="/adminPortal/allOrders">Review Orders</Link>
-        </button>
-      </div>
+      <AdminOptions>
+        <LocalButton to="/adminPortal/allUsers">Users</LocalButton>
+        <LocalButton to="/adminPortal/allShovels">Shovels</LocalButton>
+        <LocalButton to="/adminPortal/allOrders">Orders</LocalButton>
+      </AdminOptions>
     )
   }
 }
 
 const mapState = state => {
   return {
-    allUsers: state.allUsers
+    allUsers: state.allUsers,
+    allOrders: state.orders
   }
 }
 
