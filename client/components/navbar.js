@@ -107,11 +107,18 @@ class Navbar extends React.Component {
                 <div className="bar" />
               </HamburgerButton>
               <h2>Shoveler Title</h2>
-              <div>
-                <Link to="/cart">
-                  <img src="/cart.png" style={cartStyle} />
-                </Link>
-              </div>
+              <CartItems>
+                <ItemsCount>
+                  {this.props.cart.products
+                    ? this.props.cart.products.length
+                    : 0}
+                </ItemsCount>
+                <span>
+                  <Link to="/cart">
+                    <img src="/cart.png" style={{width: 50}} />
+                  </Link>
+                </span>
+              </CartItems>
             </Container>
           </HeaderDiv>
         </div>
@@ -141,17 +148,6 @@ class Navbar extends React.Component {
             ) : (
               <div />
             )}
-
-            <CartItems>
-              <ItemsCount>
-                {this.props.cart.products ? this.props.cart.products.length : 0}
-              </ItemsCount>
-              <span>
-                <Link to="/cart">
-                  <img src="/cart.png" style={{width: 50}} />
-                </Link>
-              </span>
-            </CartItems>
 
             <hr />
 
