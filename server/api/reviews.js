@@ -19,7 +19,7 @@ router.post('/', async (req, res, next) => {
     const review = await Review.create({
       text: req.body.text,
       rating: req.body.rating,
-      userId: req.user.dataValues.id,
+      // userId: req.user.dataValues.id,
       productId: req.body.productId
     })
     res.status(200).send(review)
