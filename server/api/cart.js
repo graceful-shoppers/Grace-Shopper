@@ -68,6 +68,10 @@ router.post('/', async (req, res, next) => {
 
 router.get('/', async (req, res, next) => {
   try {
+    console.log('cart is', req.cart)
+    console.log('session is', req.sessionID)
+    console.log('user is', req.user)
+
     res.json(req.cart)
   } catch (err) {
     next(err)

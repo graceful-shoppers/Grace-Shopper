@@ -34,6 +34,21 @@ const DropDown = styled.div`
   padding: 11px;
 `
 
+const CartItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 15px;
+`
+
+const ItemsCount = styled.div`
+  position: absolute;
+  padding-bottom: 7px;
+  padding-left: 7px;
+`
+
 const HeaderDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -60,6 +75,7 @@ class Navbar extends React.Component {
     this.state = {
       burger: false
     }
+
     this.burgerShow = this.burgerShow.bind(this)
   }
 
@@ -125,6 +141,21 @@ class Navbar extends React.Component {
             ) : (
               <div />
             )}
+          </div>
+
+          <CartItems>
+            <ItemsCount>
+              {this.props.cart.products ? this.props.cart.products.length : 0}
+            </ItemsCount>
+            <span>
+              <Link to="/cart">
+                <img src="/cart.png" style={{width: 50}} />
+              </Link>
+            </span>
+          </CartItems>
+        </HeaderDiv>
+        <hr />
+          
             <nav>
               {this.props.isLoggedIn ? (
                 <div />
@@ -140,6 +171,7 @@ class Navbar extends React.Component {
         ) : (
           <div />
         )}
+          
       </React.Fragment>
     )
   }
@@ -151,7 +183,8 @@ class Navbar extends React.Component {
 const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
-    isAdmin: state.user.isAdmin
+    isAdmin: state.user.isAdmin,
+    cart: state.cart
   }
 }
 

@@ -59,6 +59,10 @@ export class Cart extends React.Component {
     this.props.removeItem(product)
   }
 
+  componentDidMount() {
+    this.props.getCart()
+  }
+
   render() {
     let cart = this.props.cart
     let subTotal = 0

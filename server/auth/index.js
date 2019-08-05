@@ -16,14 +16,11 @@ router.post('/login', async (req, res, next) => {
     } else {
       req.user = user
       //check if this user has a cart with a session id
-      console.log('user is', req.user)
       const sessionCart = await Session.findOne({
         where: {
           sid: req.sessionID
         }
       })
-
-      console.log('prev cart', sessionCart)
 
       if (sessionCart) {
         await sessionCart.update({
