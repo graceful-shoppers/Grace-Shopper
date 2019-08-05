@@ -1,9 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {getAllShovels} from '../store/shovels'
+import {getAllShovels, getAllShovels2} from '../store/shovels'
 import styled from 'styled-components'
 import Review from './review'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 const ShovelsCont = styled.div`
   display: flex;
@@ -66,24 +67,76 @@ const AvgRating = props => {
   )
 }
 
+const ShovelDiv = props => {
+  return (
+    <div style={{width: '100%', textDecoration: 'none'}}>
+      <Link to={`/shovels/${props.shovel.id}`}>
+        <Shovel>
+          <ImageDiv>
+            <img src={props.shovel.imageUrl} style={{width: 100}} />
+          </ImageDiv>
+
+          <InfoDiv>
+            <h3>{props.shovel.title}</h3>
+            <AvgRating shovel={props.shovel} />
+            <h6>${props.shovel.price / 100}</h6>
+            {Math.random() > 0.3 ? (
+              <h6>Prime Shovel shipping</h6>
+            ) : (
+              <h6>Regular shipping </h6>
+            )}
+          </InfoDiv>
+        </Shovel>
+      </Link>
+    </div>
+  )
+}
+
 class AllShovelsView extends React.Component {
   constructor() {
     super()
 
     this.state = {
-      search: 'all'
+      search: 'all',
+      hasMore: true,
+      offset: 0,
+      shovels: []
     }
 
     this.selectShovels = this.selectShovels.bind(this)
     this.handleSearch = this.handleSearch.bind(this)
   }
 
+  fetchMoreData = () => {
+    setTimeout(() => {
+      this.selectShovels(null, undefined, this.state.offset + 25, true)
+
+      this.setState({
+        offset: this.state.offset + 25
+      })
+
+      if (this.state.offset === 175) {
+        this.setState({
+          hasMore: false
+        })
+      }
+    }, 500)
+  }
+
   componentDidMount() {
-    this.props.getShovels(this.state.search, 'all', 'none')
+    this.props.getShovels(this.state.search, 'all', 'none', 0)
+
+    this.setState({
+      shovels: this.props.shovels
+    })
   }
 
   handleSearch(evt) {
     evt.preventDefault()
+
+    this.setState({
+      shovels: this.state.shovels.concat(this.props.shovels)
+    })
     var searchName = evt.target.search.value
     this.setState({
       search: searchName
@@ -96,30 +149,54 @@ class AllShovelsView extends React.Component {
     this.selectShovels(null, searchName)
   }
 
-  selectShovels(evt, search) {
+  selectShovels(evt, search, offset, scroll) {
     var elem = document.getElementById('typeSelect')
     var type = elem.options[elem.selectedIndex].value
 
     var elem2 = document.getElementById('sortBySelect')
     var sort = elem2.options[elem2.selectedIndex].value
 
+    var OS = offset
+    if (!OS) {
+      OS = this.state.offset
+    }
+
     if (!search) {
       var searchName = document.getElementById('searchBar').value
       if (!searchName || searchName === undefined) {
         searchName = 'all'
       }
-      this.props.getShovels(searchName, type, sort)
+
+      if (scroll) {
+        this.props.getShovels(searchName, type, sort, OS)
+      } else {
+        this.setState({
+          offset: 0,
+          hasMore: true
+        })
+
+        this.props.getShovels2(searchName, type, sort, 0)
+      }
     } else if (search) {
       var newSearch = search
       if (!search || search === undefined) {
         newSearch = 'all'
       }
-      this.props.getShovels(newSearch, type, sort)
+
+      if (scroll) {
+        this.props.getShovels(newSearch, type, sort, OS)
+      } else {
+        this.setState({
+          offset: 0,
+          hasMore: true
+        })
+        this.props.getShovels2(newSearch, type, sort, 0)
+      }
     }
   }
 
   render() {
-    const shovels = this.props.shovels
+    var shovels = this.props.shovels
 
     return (
       <ShovelsCont>
@@ -152,33 +229,21 @@ class AllShovelsView extends React.Component {
         </FiltersDiv>
         <h6> Displaying {shovels.length} items</h6>
 
-        {shovels.map(shovel => {
-          return (
-            <div
-              style={{width: '100%', textDecoration: 'none'}}
-              key={shovel.id}
-            >
-              <Link to={`/shovels/${shovel.id}`}>
-                <Shovel>
-                  <ImageDiv>
-                    <img src={shovel.imageUrl} style={{width: 100}} />
-                  </ImageDiv>
-
-                  <InfoDiv>
-                    <h3>{shovel.title}</h3>
-                    <AvgRating shovel={shovel} />
-                    <h6>${shovel.price / 100}</h6>
-                    {Math.random() > 0.3 ? (
-                      <h6>Prime Shovel shipping</h6>
-                    ) : (
-                      <h6>Regular shipping </h6>
-                    )}
-                  </InfoDiv>
-                </Shovel>
-              </Link>
-            </div>
-          )
-        })}
+        <InfiniteScroll
+          dataLength={this.props.shovels.length} //This is important field to render the next data
+          next={this.fetchMoreData}
+          hasMore={this.state.hasMore}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{textAlign: 'center'}}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }
+        >
+          {shovels.map(shovel => {
+            return <ShovelDiv key={shovel.id} shovel={shovel} />
+          })}
+        </InfiniteScroll>
       </ShovelsCont>
     )
   }
@@ -193,8 +258,11 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getShovels: (title, type, sort) =>
-      dispatch(getAllShovels(title, type, sort))
+    getShovels: (title, type, sort, offset) =>
+      dispatch(getAllShovels(title, type, sort, offset)),
+
+    getShovels2: (title, type, sort, offset) =>
+      dispatch(getAllShovels2(title, type, sort, offset))
   }
 }
 

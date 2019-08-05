@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {Product, Review} = require('../db/models')
 const {Op} = require('sequelize')
 
-router.get('/get/:title/:type/:sort', async (req, res, next) => {
+router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
   try {
     var shovels
 
@@ -14,7 +14,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
       req.params.sort !== 'DESC'
     ) {
       shovels = await Product.findAll({
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
       //all categories, no sorting
     } else if (
@@ -24,7 +26,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
     ) {
       shovels = await Product.findAll({
         include: [{all: true}],
-        order: [['price', req.params.sort.toString()]]
+        order: [['price', req.params.sort.toString()]],
+        offset: req.params.offset,
+        limit: 25
       })
       //specific category, no sorting
     } else if (
@@ -36,7 +40,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
         where: {
           category: {[Op.contains]: [req.params.type]}
         },
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
       //specific category and sorting
     } else if (
@@ -49,7 +55,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
           category: {[Op.contains]: [req.params.type]}
         },
         order: [['price', req.params.sort.toString()]],
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
     } else if (
       req.params.title !== 'all' &&
@@ -62,7 +70,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
             [Op.iLike]: `%${req.params.title}%`
           }
         },
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
     } else if (
       req.params.title !== 'all' &&
@@ -76,7 +86,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
           },
           category: {[Op.contains]: [req.params.type]}
         },
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
     } else if (
       req.params.title !== 'all' &&
@@ -90,7 +102,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
           }
         },
         order: [['price', req.params.sort.toString()]],
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
     } else if (
       req.params.title !== 'all' &&
@@ -105,7 +119,9 @@ router.get('/get/:title/:type/:sort', async (req, res, next) => {
           category: {[Op.contains]: [req.params.type]}
         },
         order: [['price', req.params.sort.toString()]],
-        include: [{all: true}]
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
       })
     }
 
