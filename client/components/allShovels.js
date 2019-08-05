@@ -69,28 +69,53 @@ const AvgRating = props => {
 class AllShovelsView extends React.Component {
   constructor() {
     super()
+
+    this.state = {
+      search: 'all'
+    }
+
     this.selectShovels = this.selectShovels.bind(this)
-    // this.sortBy = this.sortBy.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
   }
 
   componentDidMount() {
-    this.props.getShovels('all')
+    this.props.getShovels(this.state.search, 'all', 'none')
   }
 
-  // sortBy() {
-  //   var elem = document.getElementById('typeSelect')
-  //   var type = elem.options[elem.selectedIndex].value
-  //   this.props.getShovels(type)
-  // }
+  handleSearch(evt) {
+    evt.preventDefault()
+    var searchName = evt.target.search.value
+    this.setState({
+      search: searchName
+    })
 
-  selectShovels() {
+    if (searchName === '') {
+      searchName = 'all'
+    }
+
+    this.selectShovels(null, searchName)
+  }
+
+  selectShovels(evt, search) {
     var elem = document.getElementById('typeSelect')
     var type = elem.options[elem.selectedIndex].value
 
     var elem2 = document.getElementById('sortBySelect')
     var sort = elem2.options[elem2.selectedIndex].value
 
-    this.props.getShovels(type, sort)
+    if (!search) {
+      var searchName = document.getElementById('searchBar').value
+      if (!searchName || searchName === undefined) {
+        searchName = 'all'
+      }
+      this.props.getShovels(searchName, type, sort)
+    } else if (search) {
+      var newSearch = search
+      if (!search || search === undefined) {
+        newSearch = 'all'
+      }
+      this.props.getShovels(newSearch, type, sort)
+    }
   }
 
   render() {
@@ -98,10 +123,16 @@ class AllShovelsView extends React.Component {
 
     return (
       <ShovelsCont>
+        <div>
+          <form onSubmit={this.handleSearch}>
+            <input id="searchBar" name="search" placeholder="search..." />
+            <button type="submit">search</button>
+          </form>
+        </div>
         <FiltersDiv>
           <div>
             <h6>Category:</h6>
-            <select id="typeSelect" onChange={this.selectShovels}>
+            <select id="typeSelect" onChange={() => this.selectShovels()}>
               <option value="all">All shovels</option>
               <option value="mouthShovel">Mouth shovels</option>
               <option value="kitchenShovel">Kitchen shovels</option>
@@ -123,28 +154,29 @@ class AllShovelsView extends React.Component {
 
         {shovels.map(shovel => {
           return (
-            <Link
-              to={`/shovels/${shovel.id}`}
+            <div
               style={{width: '100%', textDecoration: 'none'}}
               key={shovel.id}
             >
-              <Shovel>
-                <ImageDiv>
-                  <img src={shovel.imageUrl} style={{width: 100}} />
-                </ImageDiv>
+              <Link to={`/shovels/${shovel.id}`}>
+                <Shovel>
+                  <ImageDiv>
+                    <img src={shovel.imageUrl} style={{width: 100}} />
+                  </ImageDiv>
 
-                <InfoDiv>
-                  <h3>{shovel.title}</h3>
-                  <AvgRating shovel={shovel} />
-                  <h6>${shovel.price / 100}</h6>
-                  {Math.random() > 0.3 ? (
-                    <h6>Prime Shovel shipping</h6>
-                  ) : (
-                    <h6>Regular shipping </h6>
-                  )}
-                </InfoDiv>
-              </Shovel>
-            </Link>
+                  <InfoDiv>
+                    <h3>{shovel.title}</h3>
+                    <AvgRating shovel={shovel} />
+                    <h6>${shovel.price / 100}</h6>
+                    {Math.random() > 0.3 ? (
+                      <h6>Prime Shovel shipping</h6>
+                    ) : (
+                      <h6>Regular shipping </h6>
+                    )}
+                  </InfoDiv>
+                </Shovel>
+              </Link>
+            </div>
           )
         })}
       </ShovelsCont>
@@ -161,7 +193,8 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getShovels: (type, sort) => dispatch(getAllShovels(type, sort))
+    getShovels: (title, type, sort) =>
+      dispatch(getAllShovels(title, type, sort))
   }
 }
 

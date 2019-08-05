@@ -28,6 +28,13 @@ const CartItems = styled.div`
   justify-content: center;
   align-items: center;
   color: red;
+  font-size: 15px;
+`
+
+const ItemsCount = styled.div`
+  position: absolute;
+  padding-bottom: 7px;
+  padding-left: 7px;
 `
 
 const HeaderDiv = styled.div`
@@ -43,6 +50,7 @@ class Navbar extends React.Component {
     this.state = {
       burger: false
     }
+
     this.burgerShow = this.burgerShow.bind(this)
   }
 
@@ -112,10 +120,14 @@ class Navbar extends React.Component {
           </div>
 
           <CartItems>
-            {this.props.cart.products ? this.props.cart.products.length : 0}
-            <Link to="/cart">
-              <img src="/cart.png" style={{width: 50}} />
-            </Link>
+            <ItemsCount>
+              {this.props.cart.products ? this.props.cart.products.length : 0}
+            </ItemsCount>
+            <span>
+              <Link to="/cart">
+                <img src="/cart.png" style={{width: 50}} />
+              </Link>
+            </span>
           </CartItems>
         </HeaderDiv>
         <hr />
