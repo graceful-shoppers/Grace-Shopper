@@ -1,6 +1,5 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {getAllUsers} from '../store/usersAll'
+import {} from '../store/usersAll'
 import styled from 'styled-components'
 import {BurgerLinkButton} from '../../public/styled-components/button'
 
@@ -15,16 +14,6 @@ const LocalButton = styled(BurgerLinkButton)`
 `
 
 class MyAccount extends React.Component {
-  constructor() {
-    super()
-
-    this.componentDidMount = this.componentDidMount.bind(this)
-  }
-
-  componentDidMount() {
-    this.props.getAllUsers()
-  }
-
   render() {
     return (
       <AdminOptions>
@@ -36,17 +25,4 @@ class MyAccount extends React.Component {
   }
 }
 
-const mapState = state => {
-  return {
-    allUsers: state.allUsers,
-    allOrders: state.orders
-  }
-}
-
-const mapDispatch = dispatch => {
-  return {
-    getAllUsers: () => dispatch(getAllUsers())
-  }
-}
-
-export default connect(mapState, mapDispatch)(MyAccount)
+export default MyAccount
