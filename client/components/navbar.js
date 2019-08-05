@@ -26,12 +26,13 @@ const DropDown = styled.div`
   flex-direction: column;
   height: 100%;
   width: 75%;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity */
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 11px;
+  max-width: 340px;
 `
 
 const CartItems = styled.div`
@@ -41,6 +42,8 @@ const CartItems = styled.div`
   align-items: center;
   color: red;
   font-size: 15px;
+  width: 50;
+  padding-right: 10px;
 `
 
 const ItemsCount = styled.div`
@@ -77,6 +80,7 @@ class Navbar extends React.Component {
     }
 
     this.burgerShow = this.burgerShow.bind(this)
+    this.logoutOnclicks = this.logoutOnclicks.bind(this)
   }
 
   burgerShow() {
@@ -91,11 +95,12 @@ class Navbar extends React.Component {
     }
   }
 
+  logoutOnclicks() {
+    this.burgerShow()
+    this.props.handleClick()
+  }
+
   render() {
-    const cartStyle = {
-      width: 50,
-      padding: 6
-    }
     return (
       <React.Fragment>
         <div>
@@ -135,12 +140,27 @@ class Navbar extends React.Component {
             <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
               Shovels
             </BurgerLinkButton>
-            <BurgerLinkButton to="/myAccount" onClick={() => this.burgerShow()}>
-              My Account
-            </BurgerLinkButton>
-            <BurgerLinkButton to="#" onClick={this.props.handleClick}>
-              Logout
-            </BurgerLinkButton>
+            {this.props.isLoggedIn ? (
+              <BurgerLinkButton
+                to="/myAccount"
+                onClick={() => this.burgerShow()}
+              >
+                My Account
+              </BurgerLinkButton>
+            ) : (
+              <BurgerLinkButton to="/signup" onClick={() => this.burgerShow()}>
+                Sign Up
+              </BurgerLinkButton>
+            )}
+            {this.props.isLoggedIn ? (
+              <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
+                Logout
+              </BurgerLinkButton>
+            ) : (
+              <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
+                Login
+              </BurgerLinkButton>
+            )}
             {this.props.isAdmin ? (
               <LocalButton to="/adminPortal" onClick={() => this.burgerShow()}>
                 Admin Portal
@@ -148,20 +168,6 @@ class Navbar extends React.Component {
             ) : (
               <div />
             )}
-
-            <hr />
-
-            <nav>
-              {this.props.isLoggedIn ? (
-                <div />
-              ) : (
-                <div>
-                  {/* The navbar will show these links before you log in */}
-                  <Link to="/login">Login</Link>
-                  <Link to="/signup">Sign Up</Link>
-                </div>
-              )}
-            </nav>
           </DropDown>
         ) : (
           <div />
