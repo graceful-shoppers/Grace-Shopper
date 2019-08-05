@@ -17,6 +17,7 @@ import AdminEditShovel from './components/adminEditShovel'
 import AdminUsers from './components/adminUsers'
 import {getCartThunk} from './store/cart'
 import ResetPassword from './components/resetPassword'
+import AllOrders from './components/adminOrders'
 
 /**
  * COMPONENT
@@ -53,6 +54,7 @@ class Routes extends Component {
               component={AdminEditShovel}
             />
             <Route path="/adminPortal/allUsers" component={AdminUsers} />
+            <Route path="/adminPortal/allOrders" component={AllOrders} />
           </Switch>
         )}
         {isLoggedIn && passwordResetCheck && <ResetPassword />}

@@ -112,7 +112,8 @@ export default function(state = defaultCart, action) {
         return product
       })
       return {...state, products: newProductsArr}
-
+    case GET_NEW_CART:
+      return action.cart
     default:
       return state
   }

@@ -1,5 +1,25 @@
 const router = require('express').Router()
-const {Product, User} = require('../db/models')
+const {Product, User, Order} = require('../db/models')
+
+router.get('/orders/:type', async (req, res, next) => {
+  console.log(req.params.type)
+  try {
+    if (req.params.type === 'all') {
+      const orders = await Order.findAll({
+        include: [{model: User}]
+      })
+      res.json(orders)
+    } else {
+      const orders = await Order.findAll({
+        where: {status: req.params.type},
+        include: [{model: User}]
+      })
+      res.json(orders)
+    }
+  } catch (err) {
+    next(err)
+  }
+})
 
 router.put('/editShovel/:id', async (req, res, next) => {
   try {
@@ -26,6 +46,20 @@ router.put('/allUsers/:id', async (req, res, next) => {
     res.json(user)
   } catch (err) {
     next(err)
+  }
+})
+
+router.put('/allOrders/:id', async (req, res, next) => {
+  try {
+    const order = await Order.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    order.update(req.body)
+    res.json(order)
+  } catch (err) {
+    console.error(err)
   }
 })
 

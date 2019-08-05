@@ -6,7 +6,7 @@ import user from './user'
 import shovels from './shovels'
 import cart from './cart'
 import singleShovel from './singleShovel'
-import myAccountOrders from './myAccountOrders'
+import orders from './orders'
 import allUsers from './usersAll'
 
 import reviews from './reviews'
@@ -16,7 +16,7 @@ const reducer = combineReducers({
   shovels,
   singleShovel,
   cart,
-  myAccountOrders,
+  orders,
   allUsers,
   reviews
 })

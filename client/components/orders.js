@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getAllOrders} from '../store/myAccountOrders'
+import {getAllOrders} from '../store/orders'
 
 class Orders extends React.Component {
   componentDidMount() {
