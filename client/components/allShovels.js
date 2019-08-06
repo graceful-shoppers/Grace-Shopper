@@ -22,7 +22,7 @@ const FiltersDiv = styled.div`
 const Shovel = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 90%;
   height: 200px;
   // background-color: lightgrey;
   border: 1px solid black;
@@ -124,7 +124,7 @@ class AllShovelsView extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getShovels(this.state.search, 'all', 'none', 0)
+    this.props.getShovels2(this.state.search, 'all', 'none', 0)
 
     this.setState({
       shovels: this.props.shovels
