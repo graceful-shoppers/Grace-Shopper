@@ -8,7 +8,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 
 const ShovelCard = styled.div`
   width: '100%';
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 10px;
   margin: 4px;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
