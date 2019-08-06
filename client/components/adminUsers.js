@@ -3,79 +3,48 @@ import {connect} from 'react-redux'
 import {deleteUser, getAllUsers} from '../store/usersAll'
 import {editUserAdmin} from '../store/user'
 import styled from 'styled-components'
-
-// const size = {
-//   mobileS: '320px',
-//   mobileM: '375px',
-//   mobileL: '425px',
-//   tablet: '768px',
-//   laptop: '1024px',
-//   laptopL: '1440px',
-//   desktop: '2560px'
-// }
-
-// const device = {
-//   mobileS: `(min-width: ${size.mobileS})`,
-//   mobileM: `(min-width: ${size.mobileM})`,
-//   mobileL: `(min-width: ${size.mobileL})`,
-//   tablet: `(min-width: ${size.tablet})`,
-//   laptop: `(min-width: ${size.laptop})`,
-//   laptopL: `(min-width: ${size.laptopL})`,
-//   desktop: `(min-width: ${size.desktop})`,
-//   desktopL: `(min-width: ${size.desktop})`
-// }
-
-// &:last-child {
-//   @media ${device.tablet} {
-//     flex-grow: 0;
-//     min-width: 349px;
-//   }
-//   @media ${device.laptop} {
-//     flex-grow: 0;
-//     min-width: 309px;
-//   }
-//   @media ${device.laptopL} {
-//     flex-grow: 0;
-//     min-width: 447px;
-//   }
-//   @media ${device.desktop} {
-//     flex-grow: 1;
-//   }
-// }
+import {BasicButton, DeleteButton} from '../../public/styled-components/buttons'
 
 const EachUser = styled.div`
-  margin-top: 5px;
-  padding: 10px;
+  // padding: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 1px solid black;
   flex-basis: 22%;
   flex-grow: 1;
-  margin-left: 2.5px;
-  margin-right: 2.5px;
   min-width: 250px;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  text-align: left;
 `
 
 const UserListing = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-`
-
-const BasicButton = styled.button`
-  border: 1px solid black;
-  color: black;
-  font-size: 12px;
-`
-
-const DeleteButton = styled.button`
-  border: 1px solid black;
-  color: black;
-  background-color: tomato;
-  font-size: 12px;
+  flex-direction: column;
 `
 
 const UserEmail = styled.div`
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+`
+
+const UserListingHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 `
 
 class AllUsersView extends React.Component {
@@ -106,18 +75,29 @@ class AllUsersView extends React.Component {
 
     return (
       <UserListing>
+        <UserListingHeader>
+          <div>Email</div>
+          <div>Status</div>
+          <div>User Options</div>
+        </UserListingHeader>
         {allUsers.map(user => {
           return (
             <EachUser className="EachUser" key={user.id}>
+              <UserEmail>{user.email}</UserEmail>
+              {user.isAdmin ? (
+                <div>Administrator</div>
+              ) : (
+                <div>
+                  User{' '}
+                  <BasicButton
+                    type="button"
+                    onClick={() => this.promoteUser(user)}
+                  >
+                    Promote
+                  </BasicButton>
+                </div>
+              )}
               <div>
-                <UserEmail>{user.email}</UserEmail>
-                {user.isAdmin ? (
-                  <div>Administrator</div>
-                ) : (
-                  <div>
-                    <div>User</div>
-                  </div>
-                )}
                 <div>
                   <BasicButton
                     type="button"
@@ -125,14 +105,8 @@ class AllUsersView extends React.Component {
                   >
                     Reset Password
                   </BasicButton>
-                  {!user.isAdmin && (
-                    <BasicButton
-                      type="button"
-                      onClick={() => this.promoteUser(user)}
-                    >
-                      Promote
-                    </BasicButton>
-                  )}
+                </div>
+                <div>
                   <DeleteButton
                     type="button"
                     onClick={() => this.props.deleteUser(user.id)}
