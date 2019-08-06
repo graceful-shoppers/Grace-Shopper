@@ -124,7 +124,7 @@ class AllShovelsView extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getShovels(this.state.search, 'all', 'none', 0)
+    this.props.getShovels2(this.state.search, 'all', 'none', 0)
 
     this.setState({
       shovels: this.props.shovels
