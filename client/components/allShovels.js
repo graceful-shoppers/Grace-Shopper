@@ -179,7 +179,6 @@ class AllShovelsView extends React.Component {
       OS = this.state.offset
     }
 
-
     if (!search) {
       var searchName = document.getElementById('searchBar').value
       if (!searchName || searchName === undefined) {

@@ -19,6 +19,10 @@ import ResetPassword from './components/resetPassword'
 import AllOrders from './components/adminOrders'
 import NotFound from './components/notFound'
 import Pirate from './components/pirate'
+import MediaQuery from 'react-responsive'
+import Splash from './components/Splash'
+import SplashTest from './components/SplashPara'
+import SplashScroll from './components/SplashScroll'
 
 /**
  * COMPONENT
@@ -34,7 +38,7 @@ class Routes extends Component {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
-
+        <Route path="/home" component={UserHome} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route exact path="/checkout" component={Checkout} />
@@ -43,7 +47,7 @@ class Routes extends Component {
           <Switch>
             {/* Routes placed here are only available after logging in */}
             <Route exact path="/home" component={UserHome} />
-            <Route exact path="/" component={UserHome} />
+            <Route exact path="/" component={SplashTest} />
             <Route exact path="/shovels" component={AllShovelsView} />
             <Route path="/shovels/:shovelId" component={SingleShovel} />
             <Route exact path="/cart" component={CartView} />
