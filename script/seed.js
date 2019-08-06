@@ -33,6 +33,12 @@ async function seed() {
     )
   }
 
+  const adminUser = await User.create({
+    emai: 'disney@world.com',
+    password: '1234',
+    isAdmin: true
+  })
+
   //create products
   let products = []
 
