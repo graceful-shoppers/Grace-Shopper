@@ -4,7 +4,6 @@ import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {Login, Signup, UserHome} from './components'
 import {me} from './store'
-import {getAllShovels} from './store/shovels'
 import AllShovelsView from './components/allShovels'
 import Checkout from './components/checkout'
 import SingleShovel from './components/singleShovel'
@@ -18,6 +17,10 @@ import AdminUsers from './components/adminUsers'
 import {getCartThunk} from './store/cart'
 import ResetPassword from './components/resetPassword'
 import AllOrders from './components/adminOrders'
+import NotFound from './components/notFound'
+import Pirate from './components/pirate'
+import MediaQuery from 'react-responsive'
+import AdminUsersMobile from './components/adminUsersMobile'
 
 /**
  * COMPONENT
@@ -41,7 +44,8 @@ class Routes extends Component {
         {!passwordResetCheck && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
+            <Route exact path="/home" component={UserHome} />
+            <Route exact path="/" component={UserHome} />
             <Route exact path="/shovels" component={AllShovelsView} />
             <Route path="/shovels/:shovelId" component={SingleShovel} />
             <Route exact path="/cart" component={CartView} />
@@ -54,12 +58,14 @@ class Routes extends Component {
               component={AdminEditShovel}
             />
             <Route path="/adminPortal/allUsers" component={AdminUsers} />
+            {/* <Route path="/adminPortal/allUsers" component={AdminUsersMobile} /> */}
             <Route path="/adminPortal/allOrders" component={AllOrders} />
+            <Route path="/pirate" component={Pirate} />
+            <Route path="/" component={NotFound} />
           </Switch>
         )}
+
         {isLoggedIn && passwordResetCheck && <ResetPassword />}
-        {/* Displays our Login component as a fallback */}
-        <Route component={Login} />
       </Switch>
     )
   }
@@ -81,7 +87,6 @@ const mapDispatch = dispatch => {
   return {
     loadInitialData() {
       dispatch(me())
-      // dispatch(getAllShovels('all', 'all'))
       dispatch(getCartThunk())
     }
   }
