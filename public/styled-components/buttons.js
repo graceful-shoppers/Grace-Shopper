@@ -16,12 +16,13 @@ export const BurgerLinkButton = styled(Link)`
 export const BasicButton = styled.button`
   border: 1px solid black;
   color: black;
-  font-size: 12px;
+  background-color: limegreen;
+  font-size: 16px;
 `
 
 export const DeleteButton = styled.button`
   border: 1px solid black;
   color: black;
   background-color: tomato;
-  font-size: 12px;
+  font-size: 16px;
 `
