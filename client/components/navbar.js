@@ -14,11 +14,19 @@ const HamburgerButton = styled.div`
   .bar {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: rgb(66, 245, 179);
     margin: 6px 0;
     transition: 0.4s;
     padding-left: 5px;
   }
+`
+
+const Navvy = styled.div`
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  backgroundcolor: black;
+  color: rgb(66, 245, 179);
 `
 
 const DropDown = styled.div`
@@ -27,10 +35,10 @@ const DropDown = styled.div`
   height: 100%;
   width: 75%;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
   padding: 2px;
   max-width: 340px;
 `
@@ -40,7 +48,7 @@ const CartItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: red;
+  color: pink;
   font-size: 15px;
   width: 50;
   padding-right: 10px;
@@ -58,6 +66,7 @@ const HeaderDiv = styled.div`
   justify-content: space-between;
   border: 3px solid black;
   align-items: center;
+  background-color: black;
 `
 
 const Container = styled.div`
@@ -103,7 +112,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div>
+        <Navvy>
           <HeaderDiv>
             <Container>
               <HamburgerButton onClick={() => this.burgerShow()}>
@@ -126,7 +135,7 @@ class Navbar extends React.Component {
               </CartItems>
             </Container>
           </HeaderDiv>
-        </div>
+        </Navvy>
         {this.state.burger ? (
           <DropDown>
             <HamburgerButton onClick={() => this.burgerShow()}>
