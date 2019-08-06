@@ -22,7 +22,6 @@ const changeOrder = order => ({type: CHANGE_ORDER, order})
  * THUNK CREATORS
  */
 export const getAllOrders = type => async dispatch => {
-  console.log(type)
   try {
     const res = await axios.get(`/api/adminPortal/orders/${type}`)
     dispatch(getOrders(res.data))

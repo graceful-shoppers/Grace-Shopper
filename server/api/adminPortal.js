@@ -1,8 +1,19 @@
 const router = require('express').Router()
 const {Product, User, Order} = require('../db/models')
 
-router.get('/orders/:type', async (req, res, next) => {
-  console.log(req.params.type)
+const adminCheck = (req, res, next) => {
+  if (!req.user.dataValues.isAdmin) {
+    const error = new Error()
+    error.message = 'ACCESS NOT ALLOWED'
+    // error.status = 401
+    res.redirect(401, '/pirate')
+    next(error)
+  } else {
+    next()
+  }
+}
+
+router.get('/orders/:type', adminCheck, async (req, res, next) => {
   try {
     if (req.params.type === 'all') {
       const orders = await Order.findAll({
@@ -21,7 +32,7 @@ router.get('/orders/:type', async (req, res, next) => {
   }
 })
 
-router.put('/editShovel/:id', async (req, res, next) => {
+router.put('/editShovel/:id', adminCheck, async (req, res, next) => {
   try {
     const shovel = await Product.findOne({
       where: {
@@ -35,7 +46,7 @@ router.put('/editShovel/:id', async (req, res, next) => {
   }
 })
 
-router.put('/allUsers/:id', async (req, res, next) => {
+router.put('/allUsers/:id', adminCheck, async (req, res, next) => {
   try {
     const user = await User.findOne({
       where: {
@@ -49,7 +60,7 @@ router.put('/allUsers/:id', async (req, res, next) => {
   }
 })
 
-router.put('/allOrders/:id', async (req, res, next) => {
+router.put('/allOrders/:id', adminCheck, async (req, res, next) => {
   try {
     const order = await Order.findOne({
       where: {
@@ -63,7 +74,7 @@ router.put('/allOrders/:id', async (req, res, next) => {
   }
 })
 
-router.delete('/shovels/:id', async (req, res, next) => {
+router.delete('/shovels/:id', adminCheck, async (req, res, next) => {
   try {
     const test = await Product.destroy({
       where: {
@@ -76,7 +87,7 @@ router.delete('/shovels/:id', async (req, res, next) => {
   }
 })
 
-router.delete('/allUsers/:id', async (req, res, next) => {
+router.delete('/allUsers/:id', adminCheck, async (req, res, next) => {
   try {
     const deleteUser = await User.destroy({
       where: {

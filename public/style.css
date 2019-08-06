@@ -3,7 +3,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 a {

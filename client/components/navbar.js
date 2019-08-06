@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import styled from 'styled-components'
-import {BurgerLinkButton} from '../../public/styled-components/button'
+import {BurgerLinkButton} from '../../public/styled-components/buttons'
 
 const HamburgerButton = styled.div`
   display: inline-block;
@@ -31,7 +31,7 @@ const DropDown = styled.div`
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 11px;
+  padding: 2px;
   max-width: 340px;
 `
 
@@ -63,7 +63,7 @@ const HeaderDiv = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
 `
 
 const LocalButton = styled(BurgerLinkButton)`
