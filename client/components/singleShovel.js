@@ -42,6 +42,7 @@ const Input = styled.input`
   height: 55px;
   width: 100px;
   font-size: 18px;
+  font-family: AppleGothic;
 `
 
 const Button = styled.button`
