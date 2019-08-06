@@ -19,8 +19,6 @@ import ResetPassword from './components/resetPassword'
 import AllOrders from './components/adminOrders'
 import NotFound from './components/notFound'
 import Pirate from './components/pirate'
-import MediaQuery from 'react-responsive'
-import AdminUsersMobile from './components/adminUsersMobile'
 
 /**
  * COMPONENT
