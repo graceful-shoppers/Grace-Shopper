@@ -1,8 +1,5 @@
-/* eslint-disable max-statements */
-/* eslint-disable handle-callback-err */
 'use strict'
 const faker = require('faker')
-const fs = require('fs')
 const db = require('../server/db')
 const {
   User,
@@ -17,11 +14,7 @@ async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  let randIndex = function(arr) {
-    return Math.floor(Math.random() * arr.length)
-  }
-
-  // create users
+  //create users
   const users = []
   for (let i = 0; i < 50; i++) {
     users.push(
@@ -34,41 +27,42 @@ async function seed() {
   }
 
   //create products
-  let products = []
+  const products = []
+  const categories = [
+    'snowShovel',
+    'yardShovel',
+    'kitchenShovel',
+    'mouthShovel'
+  ]
+  let totalCat = categories.length
+  let randIndex = function(arr) {
+    return Math.floor(Math.random() * arr.length)
+  }
 
-  function dirReader() {
-    return fs.readdirSync(
-      __dirname + '/../shoveler/apify_storage/datasets/default',
-      'utf8'
+  let randomArr = function() {
+    let arr = []
+    for (let i = 0; i < Math.floor(Math.random() * 4) + 1; i++) {
+      const cata = categories[randIndex(categories)]
+      if (!arr.includes(cata)) {
+        arr.push(cata)
+      }
+    }
+    return arr
+  }
+
+  for (let i = 0; i < 200; i++) {
+    products.push(
+      await Product.create({
+        title: faker.lorem.word(),
+        price: faker.random.number(),
+        category: randomArr(),
+        imageUrl: '/defaultShovel.png',
+        description: faker.company.catchPhraseDescriptor(),
+        quantity: Math.floor(Math.random() * 9)
+      })
     )
   }
-
-  function fileReader(fileArr) {
-    return fileArr.map(file => {
-      const data = fs.readFileSync(
-        __dirname + `/../shoveler/apify_storage/datasets/default/${file}`
-      )
-      products.push(JSON.parse(data))
-    })
-  }
-
-  fileReader(dirReader())
-
-  products = await Promise.all(
-    await products.map(async prod => {
-      try {
-        if (prod.quantity === 0) {
-          prod.availability = false
-        }
-        const addedProd = await Product.create(prod)
-        return addedProd
-      } catch (err) {
-        console.error(err)
-      }
-    })
-  )
-
-  // create sessions
+  //create sessions
 
   const sessArr = []
 
@@ -81,63 +75,36 @@ async function seed() {
 
   //create orders
   const orders = []
-  const nonCartStatus = ['Processing', 'Cancelled', 'Completed']
+  const status = ['Created', 'Processing', 'Cancelled', 'Completed']
 
   for (let i = 0; i < 100; i++) {
-    let randiUser = randIndex(users) + 1
-    const userOrder = await Order.findOne({
+    let what = await Order.findOrCreate({
       where: {
-        userId: randiUser,
-        status: 'Created'
+        status: status[randIndex(status)],
+        subtotal: null,
+        userId: randIndex(users) + 1
       }
     })
-    let userOrderToPush
-    if (!userOrder) {
-      userOrderToPush = await Order.create({
-        userId: randiUser,
-        status: 'Created'
-      })
-    } else {
-      userOrderToPush = await Order.create({
-        userId: randiUser,
-        status: nonCartStatus[randIndex(nonCartStatus)]
-      })
-    }
-
-    let randiSesh = sessArr[randIndex(sessArr)]
-    const sessOrder = await Order.findOne({
+    let hah = await Order.findOrCreate({
       where: {
-        sid: randiSesh,
-        status: 'Created'
+        status: status[randIndex(status)],
+        subtotal: null,
+        sid: sessArr[randIndex(sessArr)]
       }
     })
-    let seshOrderToPush
-    if (!sessOrder) {
-      seshOrderToPush = await Order.create({
-        sid: randiSesh,
-        status: 'Created'
-      })
-    } else {
-      seshOrderToPush = await Order.create({
-        sid: randiSesh,
-        status: nonCartStatus[randIndex(nonCartStatus)]
-      })
-    }
-    orders.push(userOrderToPush)
-    orders.push(seshOrderToPush)
   }
 
   //create productOrder
   const prodOrd = []
   const orderArr = await Order.findAll()
-  for (let i = 0; i <= 500; i++) {
+  for (let i = 0; i <= 100; i++) {
     await ProductOrder.findOrCreate({
       where: {
         orderId: Math.floor(Math.random() * orderArr.length + 1),
         productId: randIndex(products) + 1
       },
       defaults: {
-        price: products[randIndex(products)].price,
+        price: products[randIndex(products)].dataValues.price,
         quantity: Math.floor(Math.random() * 10)
       }
     })
@@ -145,7 +112,7 @@ async function seed() {
 
   //create reviews
 
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 500; i++) {
     await Review.create({
       text: faker.lorem.sentences(),
       rating: Math.floor(Math.random() * 5) + 1,
@@ -153,6 +120,13 @@ async function seed() {
       productId: randIndex(products) + 1
     })
   }
+
+  // await Review.create({
+  //   text: 'its really cool',
+  //   rating: 3,
+  //   userId: 1,
+  //   productId: 1
+  // })
 
   console.log(`seeded ${users.length} users and ${products.length} products`)
   console.log(`seeded successfully`)
