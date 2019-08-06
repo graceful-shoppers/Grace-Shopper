@@ -1,0 +1,21 @@
+{
+  "id": "r8UBHaxL8l3jgvA",
+  "url":
+    "https://www.homedepot.com/p/Ames-Jackson-27-in-D-Handle-Pony-Contractor-Spade-Shovel-12302/202101508",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Ames-Jackson-27-in-D-Handle-Pony-Contractor-Spade-Shovel-12302/202101508",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Ames-Jackson-27-in-D-Handle-Pony-Contractor-Spade-Shovel-12302/202101508",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.688Z"
+}

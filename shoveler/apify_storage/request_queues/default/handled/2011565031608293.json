@@ -1,0 +1,21 @@
+{
+  "id": "OnHDYZlj1Ui7Csx",
+  "url":
+    "https://www.homedepot.com/p/Chefright-Brushed-Stainless-Quick-Scoop-Red-Spatula-Tongs-Set-of-2-CHEF-PLA1779-2/310779355",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Chefright-Brushed-Stainless-Quick-Scoop-Red-Spatula-Tongs-Set-of-2-CHEF-PLA1779-2/310779355",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Chefright-Brushed-Stainless-Quick-Scoop-Red-Spatula-Tongs-Set-of-2-CHEF-PLA1779-2/310779355",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:18.314Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "FbIQMOhE2URzB7j",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-19-in-Wood-Handle-General-Purpose-Mini-Round-Point-Shovel-84-674/304286654",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-19-in-Wood-Handle-General-Purpose-Mini-Round-Point-Shovel-84-674/304286654",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-19-in-Wood-Handle-General-Purpose-Mini-Round-Point-Shovel-84-674/304286654",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.497Z"
+}

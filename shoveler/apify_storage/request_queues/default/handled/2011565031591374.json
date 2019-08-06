@@ -1,0 +1,21 @@
+{
+  "id": "fgzTYkOUY9tUDe8",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Silicone-Red-Spatula-Set-of-3-2208014/301321237",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Silicone-Red-Spatula-Set-of-3-2208014/301321237",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Silicone-Red-Spatula-Set-of-3-2208014/301321237",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:07.171Z"
+}

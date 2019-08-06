@@ -1,0 +1,21 @@
+{
+  "id": "KaLIbfOPVl68yxN",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-57-5-in-American-Ash-Long-Handle-Ceremonial-Shovel-72611/205347980",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-57-5-in-American-Ash-Long-Handle-Ceremonial-Shovel-72611/205347980",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-57-5-in-American-Ash-Long-Handle-Ceremonial-Shovel-72611/205347980",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:51.242Z"
+}

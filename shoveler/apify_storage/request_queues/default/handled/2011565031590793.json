@@ -1,0 +1,21 @@
+{
+  "id": "eg9regDrqzGfJyH",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-47-5-in-Wood-Handle-Trenching-Shovel-2594600/204476143",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-47-5-in-Wood-Handle-Trenching-Shovel-2594600/204476143",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-47-5-in-Wood-Handle-Trenching-Shovel-2594600/204476143",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:54.739Z"
+}

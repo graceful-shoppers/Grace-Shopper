@@ -1,0 +1,21 @@
+{
+  "id": "kJKdGyRr2yNUbad",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Tools-and-Gadgets-Red-Lazy-Flexi-Turner-and-Scraping-Spoon-Set-47651/308689404",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Tools-and-Gadgets-Red-Lazy-Flexi-Turner-and-Scraping-Spoon-Set-47651/308689404",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Tools-and-Gadgets-Red-Lazy-Flexi-Turner-and-Scraping-Spoon-Set-47651/308689404",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:06.394Z"
+}

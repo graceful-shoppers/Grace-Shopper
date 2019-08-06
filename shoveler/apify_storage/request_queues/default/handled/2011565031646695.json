@@ -1,0 +1,21 @@
+{
+  "id": "6rF0IWXIZetNhym",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Square-Point-Shovel-14-264/304286469",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Square-Point-Shovel-14-264/304286469",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Square-Point-Shovel-14-264/304286469",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:48.680Z"
+}

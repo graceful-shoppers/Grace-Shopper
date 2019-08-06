@@ -1,0 +1,21 @@
+{
+  "id": "R3MvECdPCUXZsuE",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-24-in-Steel-Snow-Pusher-with-Fiberglass-D-Grip-Handle-92817/206746839",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-24-in-Steel-Snow-Pusher-with-Fiberglass-D-Grip-Handle-92817/206746839",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-24-in-Steel-Snow-Pusher-with-Fiberglass-D-Grip-Handle-92817/206746839",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:30.209Z"
+}

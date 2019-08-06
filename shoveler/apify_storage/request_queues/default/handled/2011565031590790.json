@@ -1,0 +1,21 @@
+{
+  "id": "g94s48UjWuzrJja",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-44-in-Fiberglass-Handle-Clean-Out-Shovel-47035/206099848",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-44-in-Fiberglass-Handle-Clean-Out-Shovel-47035/206099848",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-44-in-Fiberglass-Handle-Clean-Out-Shovel-47035/206099848",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:54.364Z"
+}

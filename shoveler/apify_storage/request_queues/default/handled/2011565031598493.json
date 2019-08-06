@@ -1,0 +1,21 @@
+{
+  "id": "7UqLyTMFQGERnJy",
+  "url":
+    "https://www.homedepot.com/p/Sun-Joe-Switchstik-5-Piece-Interchangeable-Lawn-and-Garden-Tool-SJ-HS101/301202029",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Sun-Joe-Switchstik-5-Piece-Interchangeable-Lawn-and-Garden-Tool-SJ-HS101/301202029",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Sun-Joe-Switchstik-5-Piece-Interchangeable-Lawn-and-Garden-Tool-SJ-HS101/301202029",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:13.738Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "nYDf0ekoRWFoipU",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-RootSlayer-Nomad-Shovel-22311/303354568",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-RootSlayer-Nomad-Shovel-22311/303354568",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-RootSlayer-Nomad-Shovel-22311/303354568",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.308Z"
+}

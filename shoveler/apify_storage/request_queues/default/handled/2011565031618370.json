@@ -1,0 +1,21 @@
+{
+  "id": "VZ0oDVNvJFUqLWB",
+  "url":
+    "https://www.homedepot.com/p/Orbit-18-in-Snow-Shovel-with-Metal-Edge-80026/203650536",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Orbit-18-in-Snow-Shovel-with-Metal-Edge-80026/203650536",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Orbit-18-in-Snow-Shovel-with-Metal-Edge-80026/203650536",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:29.705Z"
+}

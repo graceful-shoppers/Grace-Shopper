@@ -1,0 +1,21 @@
+{
+  "id": "ccIj6h5YoguruEz",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Wood-Handle-Closed-Back-Square-Point-Shovel-28-148/304286475",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Wood-Handle-Closed-Back-Square-Point-Shovel-28-148/304286475",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Wood-Handle-Closed-Back-Square-Point-Shovel-28-148/304286475",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:38.022Z"
+}

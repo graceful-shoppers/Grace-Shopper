@@ -1,0 +1,21 @@
+{
+  "id": "gdUW1JFsfaHUC5m",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Floral-Round-Point-Shovel-69033/203153070",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Floral-Round-Point-Shovel-69033/203153070",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Floral-Round-Point-Shovel-69033/203153070",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:43.266Z"
+}

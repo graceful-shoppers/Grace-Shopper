@@ -1,0 +1,21 @@
+{
+  "id": "seB7miZ8H7MGa3S",
+  "url":
+    "https://www.homedepot.com/p/English-Garden-39-In-D-Handle-Stainless-Steel-Border-Spade-R494/207144863",
+  "loadedUrl":
+    "https://www.homedepot.com/p/English-Garden-39-In-D-Handle-Stainless-Steel-Border-Spade-R494/207144863",
+  "uniqueKey":
+    "https://www.homedepot.com/p/English-Garden-39-In-D-Handle-Stainless-Steel-Border-Spade-R494/207144863",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:36.347Z"
+}

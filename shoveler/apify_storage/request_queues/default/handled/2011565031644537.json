@@ -1,0 +1,21 @@
+{
+  "id": "3dGeYfQQKiHUzTJ",
+  "url":
+    "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77?browsestoreoption=2&Nao=216&Ns=None",
+  "loadedUrl":
+    "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77?browsestoreoption=2&Nao=216&Ns=None",
+  "uniqueKey":
+    "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77?Nao=216&Ns=None&browsestoreoption=2",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "enqueue",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:46.269Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "3rUF5FxQgFdngfB",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-43-in-Root-Slayer-Round-Head-Shovel-22211/306605843",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-43-in-Root-Slayer-Round-Head-Shovel-22211/306605843",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-43-in-Root-Slayer-Round-Head-Shovel-22211/306605843",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.702Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "jlR3NNlLGV83KUB",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Polymer-Blade-Non-Sparking-Scoop-72031/203153079",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Polymer-Blade-Non-Sparking-Scoop-72031/203153079",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Polymer-Blade-Non-Sparking-Scoop-72031/203153079",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:37.010Z"
+}

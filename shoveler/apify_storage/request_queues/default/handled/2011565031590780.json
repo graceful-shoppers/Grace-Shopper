@@ -1,0 +1,21 @@
+{
+  "id": "g7mDZJ1Aakc4S2N",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Round-Point-Shovel-2593600/204476051",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Round-Point-Shovel-2593600/204476051",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Round-Point-Shovel-2593600/204476051",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:52.787Z"
+}

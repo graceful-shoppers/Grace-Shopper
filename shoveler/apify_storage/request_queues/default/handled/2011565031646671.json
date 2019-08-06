@@ -1,0 +1,21 @@
+{
+  "id": "vr9Jqt7TXCtRbjx",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-Pro-Stainless-Steel-Floral-Shovel-208/305310291",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-Pro-Stainless-Steel-Floral-Shovel-208/305310291",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-40-in-Pro-Stainless-Steel-Floral-Shovel-208/305310291",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:46.815Z"
+}

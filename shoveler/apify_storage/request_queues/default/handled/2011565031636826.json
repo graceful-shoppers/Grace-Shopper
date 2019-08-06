@@ -1,0 +1,21 @@
+{
+  "id": "tJfBnFL0byJw5VE",
+  "url":
+    "https://www.homedepot.com/p/Dewit-Long-Hndl-Perennial-Spade-31-0926/302000110",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Dewit-Long-Hndl-Perennial-Spade-31-0926/302000110",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Dewit-Long-Hndl-Perennial-Spade-31-0926/302000110",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:36.916Z"
+}

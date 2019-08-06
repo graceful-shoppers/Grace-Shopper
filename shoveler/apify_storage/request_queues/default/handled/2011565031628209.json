@@ -1,0 +1,21 @@
+{
+  "id": "QZmidGUSSB4Hboo",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Ash-Handle-General-Purpose-Aluminum-Scoop-Shovel-84-701/304286461",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Ash-Handle-General-Purpose-Aluminum-Scoop-Shovel-84-701/304286461",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Ash-Handle-General-Purpose-Aluminum-Scoop-Shovel-84-701/304286461",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:33.213Z"
+}

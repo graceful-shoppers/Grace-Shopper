@@ -1,0 +1,37 @@
+[
+  {
+    "url":
+      "https://www.homedepot.com/b/Outdoors-Garden-Center-Garden-Tools-Snow-Ice-Snow-Shovels-Ice-Scrapers/Snow-Shovel/N-5yc1vZbx86Z1z0yl7a",
+    "userData": {
+      "type": "enqueue",
+      "label": "host",
+      "host": "homedepot"
+    }
+  },
+  {
+    "url": "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77",
+    "userData": {
+      "type": "enqueue",
+      "label": "host",
+      "host": "homedepot"
+    }
+  },
+  {
+    "url":
+      "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spatulas/N-5yc1vZceyx",
+    "userData": {
+      "type": "enqueue",
+      "label": "host",
+      "host": "homedepot"
+    }
+  },
+  {
+    "url":
+      "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spoons-Ladles/N-5yc1vZc7fl",
+    "userData": {
+      "type": "enqueue",
+      "label": "host",
+      "host": "homedepot"
+    }
+  }
+]

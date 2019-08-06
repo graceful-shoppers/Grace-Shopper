@@ -1,0 +1,21 @@
+{
+  "id": "mbFK5yIlIpkIE45",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Serving-Spoon-Set-of-12-441003/204658458",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Serving-Spoon-Set-of-12-441003/204658458",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Serving-Spoon-Set-of-12-441003/204658458",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.040Z"
+}

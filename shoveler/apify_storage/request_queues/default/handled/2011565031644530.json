@@ -1,0 +1,21 @@
+{
+  "id": "ew5z3Cu5RBNcNhE",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Econo-Square-Point-Shovel-84-221/304286449",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Econo-Square-Point-Shovel-84-221/304286449",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Econo-Square-Point-Shovel-84-221/304286449",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:46.719Z"
+}

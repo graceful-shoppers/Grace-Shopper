@@ -1,0 +1,21 @@
+{
+  "id": "lr0Mes90gMfrRKw",
+  "url":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spatulas/N-5yc1vZceyx",
+  "loadedUrl":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spatulas/N-5yc1vZceyx",
+  "uniqueKey":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spatulas/N-5yc1vZceyx",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "enqueue",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:51.305Z"
+}

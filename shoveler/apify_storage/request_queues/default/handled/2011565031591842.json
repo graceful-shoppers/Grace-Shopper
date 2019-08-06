@@ -1,0 +1,18 @@
+{
+  "id": "vueFaf7kuHkB4LU",
+  "url": "https://www.homedepot.com/p/Berndes-Spoon-9082/300331455",
+  "loadedUrl": "https://www.homedepot.com/p/Berndes-Spoon-9082/300331455",
+  "uniqueKey": "https://www.homedepot.com/p/Berndes-Spoon-9082/300331455",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:08.957Z"
+}

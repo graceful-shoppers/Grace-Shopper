@@ -1,0 +1,21 @@
+{
+  "id": "i2tAR2z6mqQE8Qp",
+  "url":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Slotted-Turner-Ceramic-Handle-985100384M/310825059",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Slotted-Turner-Ceramic-Handle-985100384M/310825059",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Slotted-Turner-Ceramic-Handle-985100384M/310825059",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:19.735Z"
+}

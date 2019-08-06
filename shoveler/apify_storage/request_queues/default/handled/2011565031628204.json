@@ -1,0 +1,21 @@
+{
+  "id": "h6m0J1kncYibQpT",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Trenching-Shovel-47026/205350371",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Trenching-Shovel-47026/205350371",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Trenching-Shovel-47026/205350371",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.619Z"
+}

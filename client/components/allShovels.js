@@ -6,7 +6,14 @@ import styled from 'styled-components'
 import Review from './review'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
-const ShovelsCont = styled.div`
+const ShovelCard = styled.div`
+  width: '100%';
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+`
+export const ShovelsCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,29 +29,40 @@ const FiltersDiv = styled.div`
 const Shovel = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 200px;
-  // background-color: lightgrey;
-  border: 1px solid black;
-
-  // border-bottom: 1px solid black;
+  width: 300px;
+  height: 220px;
 `
 
 const ImageDiv = styled.div`
   display; flex;
+  flex-direction: column;
+  justify-content: center
   width: 50%;
 `
 
 const InfoDiv = styled.div`
   display; flex;
   width: 50%;
+  color: #1A1A1A;
 `
-
+export const StyledInfiniteScroll = styled(InfiniteScroll)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`
 const RatingDiv = styled.div`
   display: flex;
   flex-direction: row;
   // margin: 10px;
 `
+
+const Image = styled.img`
+  border-radius: 10px 0px 0px 0px;
+  margin: 10px;
+  margin-top: 40px;
+`
+
+const StyledLink = styled(Link)``
 
 const AvgRating = props => {
   var avg = 0
@@ -69,26 +87,26 @@ const AvgRating = props => {
 
 const ShovelDiv = props => {
   return (
-    <div style={{width: '100%', textDecoration: 'none'}}>
-      <Link to={`/shovels/${props.shovel.id}`}>
+    <ShovelCard>
+      <StyledLink to={`/shovels/${props.shovel.id}`}>
         <Shovel>
           <ImageDiv>
-            <img src={props.shovel.imageUrl} style={{width: 100}} />
+            <Image src={props.shovel.imageUrl} style={{width: 100}} />
           </ImageDiv>
 
           <InfoDiv>
-            <h3>{props.shovel.title}</h3>
+            <h5>{props.shovel.title}</h5>
             <AvgRating shovel={props.shovel} />
             <h6>${props.shovel.price / 100}</h6>
-            {Math.random() > 0.3 ? (
+            {/* {Math.random() > 0.3 ? (
               <h6>Prime Shovel shipping</h6>
             ) : (
               <h6>Regular shipping </h6>
-            )}
+            )} */}
           </InfoDiv>
         </Shovel>
-      </Link>
-    </div>
+      </StyledLink>
+    </ShovelCard>
   )
 }
 
@@ -115,7 +133,7 @@ class AllShovelsView extends React.Component {
         offset: this.state.offset + 25
       })
 
-      if (this.state.offset === 175) {
+      if (this.state.offset >= 300) {
         this.setState({
           hasMore: false
         })
@@ -124,7 +142,7 @@ class AllShovelsView extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getShovels(this.state.search, 'all', 'none', 0)
+    this.props.getShovels2(this.state.search, 'all', 'none', 0)
 
     this.setState({
       shovels: this.props.shovels
@@ -229,7 +247,7 @@ class AllShovelsView extends React.Component {
         </FiltersDiv>
         <h6> Displaying {shovels.length} items</h6>
 
-        <InfiniteScroll
+        <StyledInfiniteScroll
           dataLength={this.props.shovels.length} //This is important field to render the next data
           next={this.fetchMoreData}
           hasMore={this.state.hasMore}
@@ -243,7 +261,7 @@ class AllShovelsView extends React.Component {
           {shovels.map(shovel => {
             return <ShovelDiv key={shovel.id} shovel={shovel} />
           })}
-        </InfiniteScroll>
+        </StyledInfiniteScroll>
       </ShovelsCont>
     )
   }

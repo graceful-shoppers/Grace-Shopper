@@ -1,0 +1,21 @@
+{
+  "id": "lL0ttHDS4EjA9D1",
+  "url":
+    "https://www.homedepot.com/p/Hisco-Renegade-Grain-Scoop-with-Steel-Blade-and-26-in-Ash-Wood-D-Handle-HISGS8D-W/205402326",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-Renegade-Grain-Scoop-with-Steel-Blade-and-26-in-Ash-Wood-D-Handle-HISGS8D-W/205402326",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-Renegade-Grain-Scoop-with-Steel-Blade-and-26-in-Ash-Wood-D-Handle-HISGS8D-W/205402326",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:35.906Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Xsb6oWB7wwpcHJ7",
+  "url":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Red-Spatula-and-Spoonula-Set-of-2-59565/205195690",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Red-Spatula-and-Spoonula-Set-of-2-59565/205195690",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Red-Spatula-and-Spoonula-Set-of-2-59565/205195690",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:22.470Z"
+}

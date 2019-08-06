@@ -1,0 +1,21 @@
+{
+  "id": "KyCKSE5Sosarfky",
+  "url":
+    "https://www.homedepot.com/p/English-Garden-41-in-D-Handle-Stainless-Steel-Digging-Spade-R490/207144861",
+  "loadedUrl":
+    "https://www.homedepot.com/p/English-Garden-41-in-D-Handle-Stainless-Steel-Digging-Spade-R490/207144861",
+  "uniqueKey":
+    "https://www.homedepot.com/p/English-Garden-41-in-D-Handle-Stainless-Steel-Digging-Spade-R490/207144861",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.565Z"
+}

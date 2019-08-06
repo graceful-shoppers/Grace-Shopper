@@ -1,0 +1,21 @@
+{
+  "id": "c9aVTc8cnmEmBIa",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Brown-Buffet-Spoons-Set-of-12-447001/204658500",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Brown-Buffet-Spoons-Set-of-12-447001/204658500",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Brown-Buffet-Spoons-Set-of-12-447001/204658500",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:22.401Z"
+}

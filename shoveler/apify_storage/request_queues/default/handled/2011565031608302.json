@@ -1,0 +1,21 @@
+{
+  "id": "BtTKSKAMfQjSRCb",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Lazy-Spoon-and-Ladle-Set-of-2-51682/100657930",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Lazy-Spoon-and-Ladle-Set-of-2-51682/100657930",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Lazy-Spoon-and-Ladle-Set-of-2-51682/100657930",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:19.290Z"
+}

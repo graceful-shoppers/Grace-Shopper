@@ -1,0 +1,21 @@
+{
+  "id": "tEdm7jnfmazhGz9",
+  "url":
+    "https://www.homedepot.com/p/True-Temper-24-in-Aluminum-Snow-Pusher-1640000/100155078",
+  "loadedUrl":
+    "https://www.homedepot.com/p/True-Temper-24-in-Aluminum-Snow-Pusher-1640000/100155078",
+  "uniqueKey":
+    "https://www.homedepot.com/p/True-Temper-24-in-Aluminum-Snow-Pusher-1640000/100155078",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:00.992Z"
+}

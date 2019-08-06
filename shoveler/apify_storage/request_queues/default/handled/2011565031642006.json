@@ -1,0 +1,21 @@
+{
+  "id": "TbMksuBoeIzG4gT",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-14-in-Gauge-Hollow-Back-Blade-Heavy-Duty-Garden-Spade-72108/203153049",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-14-in-Gauge-Hollow-Back-Blade-Heavy-Duty-Garden-Spade-72108/203153049",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-14-in-Gauge-Hollow-Back-Blade-Heavy-Duty-Garden-Spade-72108/203153049",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:41.990Z"
+}

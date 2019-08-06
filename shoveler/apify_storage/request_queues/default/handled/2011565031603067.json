@@ -1,0 +1,21 @@
+{
+  "id": "G2XOkwp8FC6rAZ9",
+  "url":
+    "https://www.homedepot.com/p/True-Temper-AutoBoss-Snow-Trunk-Shovel-1588400/202491406",
+  "loadedUrl":
+    "https://www.homedepot.com/p/True-Temper-AutoBoss-Snow-Trunk-Shovel-1588400/202491406",
+  "uniqueKey":
+    "https://www.homedepot.com/p/True-Temper-AutoBoss-Snow-Trunk-Shovel-1588400/202491406",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:16.339Z"
+}

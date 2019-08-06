@@ -120,12 +120,14 @@ class Navbar extends React.Component {
                 <div className="bar" />
                 <div className="bar" />
               </HamburgerButton>
-              <h2>Shoveler Title</h2>
+              <h2>Graceful Shoveler</h2>
               <CartItems>
                 <ItemsCount>
-                  {this.props.cart.products
-                    ? this.props.cart.products.length
-                    : 0}
+                  <Link to="/cart">
+                    {this.props.cart.products
+                      ? this.props.cart.products.length
+                      : 0}
+                  </Link>
                 </ItemsCount>
                 <span>
                   <Link to="/cart">

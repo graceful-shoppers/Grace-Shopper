@@ -1,0 +1,21 @@
+{
+  "id": "QmKjhMME7fKbh7M",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Steel-Coal-Scoop-72199/203153091",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Steel-Coal-Scoop-72199/203153091",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Back-Blade-Steel-Coal-Scoop-72199/203153091",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:47.597Z"
+}

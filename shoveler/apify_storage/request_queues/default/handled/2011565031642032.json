@@ -1,0 +1,21 @@
+{
+  "id": "eGEB52jQaw096Sn",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Closed-Back-Round-Point-Shovel-28-141/304286450",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Closed-Back-Round-Point-Shovel-28-141/304286450",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Closed-Back-Round-Point-Shovel-28-141/304286450",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:44.096Z"
+}

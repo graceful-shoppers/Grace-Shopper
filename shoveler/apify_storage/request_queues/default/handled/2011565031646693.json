@@ -1,0 +1,21 @@
+{
+  "id": "u6aPnmSPYU4RMbi",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Round-Point-Shovel-14-262/304286454",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Round-Point-Shovel-14-262/304286454",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-47-in-Wood-Handle-Professional-Round-Point-Shovel-14-262/304286454",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:48.052Z"
+}

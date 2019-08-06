@@ -1,0 +1,21 @@
+{
+  "id": "8HFkur27jjXFGXs",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Red-Spoonula-Set-of-3-55780/202574959",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Red-Spoonula-Set-of-3-55780/202574959",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Red-Spoonula-Set-of-3-55780/202574959",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:05.901Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "mD7uz1J0Pce5MfM",
+  "url":
+    "https://www.homedepot.com/p/Rubbermaid-Commercial-Products-Rubber-Spatula-in-Red-RCP1964RED/204669625",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rubbermaid-Commercial-Products-Rubber-Spatula-in-Red-RCP1964RED/204669625",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rubbermaid-Commercial-Products-Rubber-Spatula-in-Red-RCP1964RED/204669625",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:04.183Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "J6LDmfZD2anqBOQ",
+  "url":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Pasta-Spoon-045425/304847103",
+  "loadedUrl":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Pasta-Spoon-045425/304847103",
+  "uniqueKey":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Pasta-Spoon-045425/304847103",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:12.141Z"
+}

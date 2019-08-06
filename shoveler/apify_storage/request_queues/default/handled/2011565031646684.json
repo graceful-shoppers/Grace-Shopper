@@ -1,0 +1,21 @@
+{
+  "id": "zZhIarFKOHvxzjM",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-29-in-Root-Slayer-Mini-Digger-22411/308718603",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-29-in-Root-Slayer-Mini-Digger-22411/308718603",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-29-in-Root-Slayer-Mini-Digger-22411/308718603",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:47.866Z"
+}

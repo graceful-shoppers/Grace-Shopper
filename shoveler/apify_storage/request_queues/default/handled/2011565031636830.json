@@ -1,0 +1,21 @@
+{
+  "id": "nwTeq92MPZXLQ9q",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-15-in-12-Gauge-Steel-Spade-with-D-Grip-Handle-92601/205347965",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-15-in-12-Gauge-Steel-Spade-with-D-Grip-Handle-92601/205347965",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-15-in-12-Gauge-Steel-Spade-with-D-Grip-Handle-92601/205347965",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:37.714Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "o4Em15VuYGMktZ1",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-44-in-Root-Slayer-Perennial-Shovel-23311/308718730",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-44-in-Root-Slayer-Perennial-Shovel-23311/308718730",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-44-in-Root-Slayer-Perennial-Shovel-23311/308718730",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.009Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "hQudY4CsBz0DBRD",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Nylon-Paddle-Scraper-Spatula-4035500/203948270",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Nylon-Paddle-Scraper-Spatula-4035500/203948270",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Nylon-Paddle-Scraper-Spatula-4035500/203948270",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:03.213Z"
+}

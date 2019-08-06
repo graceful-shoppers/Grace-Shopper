@@ -1,0 +1,21 @@
+{
+  "id": "54Q1MbJgsi1vUVZ",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-10-in-Fiberglass-Handle-Trenching-Shovel-47138/100345996",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-10-in-Fiberglass-Handle-Trenching-Shovel-47138/100345996",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-10-in-Fiberglass-Handle-Trenching-Shovel-47138/100345996",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.324Z"
+}

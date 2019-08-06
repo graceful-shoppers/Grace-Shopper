@@ -1,0 +1,21 @@
+{
+  "id": "m4XxtjqXMimACjq",
+  "url":
+    "https://www.homedepot.com/p/Root-Assassin-58-in-Steel-Root-Assassin-Shovel-Saw-RA-003/310096907",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Root-Assassin-58-in-Steel-Root-Assassin-Shovel-Saw-RA-003/310096907",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Root-Assassin-58-in-Steel-Root-Assassin-Shovel-Saw-RA-003/310096907",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.162Z"
+}

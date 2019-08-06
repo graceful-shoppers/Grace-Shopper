@@ -1,0 +1,21 @@
+{
+  "id": "GyBj25mztK0WxC4",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-27-in-D-Handle-Transfer-Shovel-55221/205352516",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-27-in-D-Handle-Transfer-Shovel-55221/205352516",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-27-in-D-Handle-Transfer-Shovel-55221/205352516",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:35.039Z"
+}

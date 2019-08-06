@@ -1,0 +1,21 @@
+{
+  "id": "7s3Y2wFJbvpNsiL",
+  "url":
+    "https://www.homedepot.com/p/CASL-Brands-47-in-Steel-Shock-Absorbing-Ice-Chopper-with-Extra-Thick-Blade-RIC-857/305438513",
+  "loadedUrl":
+    "https://www.homedepot.com/p/CASL-Brands-47-in-Steel-Shock-Absorbing-Ice-Chopper-with-Extra-Thick-Blade-RIC-857/305438513",
+  "uniqueKey":
+    "https://www.homedepot.com/p/CASL-Brands-47-in-Steel-Shock-Absorbing-Ice-Chopper-with-Extra-Thick-Blade-RIC-857/305438513",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:30.485Z"
+}

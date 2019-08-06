@@ -1,0 +1,21 @@
+{
+  "id": "rdLliDB1uCGyUFi",
+  "url":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Kids-Wonder-Woman-Snow-Glove-Combo-DCW72560K-K-00/306809467",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Kids-Wonder-Woman-Snow-Glove-Combo-DCW72560K-K-00/306809467",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Kids-Wonder-Woman-Snow-Glove-Combo-DCW72560K-K-00/306809467",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.689Z"
+}

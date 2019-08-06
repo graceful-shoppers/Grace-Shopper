@@ -1,0 +1,21 @@
+{
+  "id": "rQJH1tr3hvXj9E2",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-Long-Handle-92515/205347960",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-Long-Handle-92515/205347960",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-Long-Handle-92515/205347960",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:13.456Z"
+}

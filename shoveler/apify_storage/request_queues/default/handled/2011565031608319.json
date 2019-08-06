@@ -1,0 +1,21 @@
+{
+  "id": "zXArXcHh2pdGFrs",
+  "url":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Spoonula-in-Red-59738/205195717",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Spoonula-in-Red-59738/205195717",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Cake-Boss-Silicone-Spoonula-in-Red-59738/205195717",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:21.761Z"
+}

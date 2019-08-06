@@ -1,0 +1,21 @@
+{
+  "id": "vJuFKicK9naUiQC",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-Edge-24-in-Poly-Blade-Snow-Pusher-and-Ice-Chopper-Blue-SJEG24/203851119",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-Edge-24-in-Poly-Blade-Snow-Pusher-and-Ice-Chopper-Blue-SJEG24/203851119",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-Edge-24-in-Poly-Blade-Snow-Pusher-and-Ice-Chopper-Blue-SJEG24/203851119",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:02.126Z"
+}

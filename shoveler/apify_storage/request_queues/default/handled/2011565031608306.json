@@ -1,0 +1,21 @@
+{
+  "id": "HhSm9Y6hhG7WIfz",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Chinese-Turner-2800020/301297880",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Chinese-Turner-2800020/301297880",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Chinese-Turner-2800020/301297880",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:19.721Z"
+}

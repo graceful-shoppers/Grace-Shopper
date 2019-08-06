@@ -1,0 +1,21 @@
+{
+  "id": "0MGv8Zbcz5YSs57",
+  "url":
+    "https://www.homedepot.com/p/Hisco-Renegade-4-in-Step-Trench-Shovel-with-46-in-Ash-Wood-Handle-HIST4-4W/205402329",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-Renegade-4-in-Step-Trench-Shovel-with-46-in-Ash-Wood-Handle-HIST4-4W/205402329",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-Renegade-4-in-Step-Trench-Shovel-with-46-in-Ash-Wood-Handle-HIST4-4W/205402329",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:40.310Z"
+}

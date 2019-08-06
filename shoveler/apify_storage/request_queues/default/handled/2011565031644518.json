@@ -1,0 +1,21 @@
+{
+  "id": "7qZQrFLpgBDZqCN",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-Root-Slayer-Trio-Shovel-Set-37711/308799484",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-Root-Slayer-Trio-Shovel-Set-37711/308799484",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-Root-Slayer-Trio-Shovel-Set-37711/308799484",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.468Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "iPR5sUX6sFlSUOF",
+  "url":
+    "https://www.homedepot.com/p/Fiskars-46-in-D-Handle-Transplanting-Spade-96546925J/202681785",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Fiskars-46-in-D-Handle-Transplanting-Spade-96546925J/202681785",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Fiskars-46-in-D-Handle-Transplanting-Spade-96546925J/202681785",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:14.269Z"
+}
