@@ -6,6 +6,8 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
   try {
     var shovels
 
+    console.log('type is', req.params.type)
+
     //default search
     if (
       req.params.title === 'all' &&
@@ -36,9 +38,12 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
       req.params.type !== 'all' &&
       (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
     ) {
+      console.log('here')
       shovels = await Product.findAll({
         where: {
-          category: {[Op.contains]: [req.params.type]}
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          }
         },
         include: [{all: true}],
         offset: req.params.offset,
@@ -52,7 +57,9 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     ) {
       shovels = await Product.findAll({
         where: {
-          category: {[Op.contains]: [req.params.type]}
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          }
         },
         order: [['price', req.params.sort.toString()]],
         include: [{all: true}],
@@ -84,7 +91,9 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
           title: {
             [Op.iLike]: `%${req.params.title}%`
           },
-          category: {[Op.contains]: [req.params.type]}
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          }
         },
         include: [{all: true}],
         offset: req.params.offset,
@@ -116,7 +125,9 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
           title: {
             [Op.iLike]: `%${req.params.title}%`
           },
-          category: {[Op.contains]: [req.params.type]}
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          }
         },
         order: [['price', req.params.sort.toString()]],
         include: [{all: true}],
