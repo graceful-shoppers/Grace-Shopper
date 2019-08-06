@@ -1,7 +1,7 @@
 import React from 'react'
 import {} from '../store/usersAll'
 import styled from 'styled-components'
-import {BurgerLinkButton} from '../../public/styled-components/button'
+import {BurgerLinkButton} from '../../public/styled-components/buttons'
 
 const AdminOptions = styled.div`
   display: flex;
