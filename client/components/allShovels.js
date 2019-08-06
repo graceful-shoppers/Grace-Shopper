@@ -133,7 +133,7 @@ class AllShovelsView extends React.Component {
         offset: this.state.offset + 25
       })
 
-      if (this.state.offset === 175) {
+      if (this.state.offset >= 300) {
         this.setState({
           hasMore: false
         })
@@ -178,6 +178,7 @@ class AllShovelsView extends React.Component {
     if (!OS) {
       OS = this.state.offset
     }
+
 
     if (!search) {
       var searchName = document.getElementById('searchBar').value

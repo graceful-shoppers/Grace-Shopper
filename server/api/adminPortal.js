@@ -3,10 +3,12 @@ const {Product, User, Order} = require('../db/models')
 
 const adminCheck = (req, res, next) => {
   if (!req.user.dataValues.isAdmin) {
+    console.log('here')
     const error = new Error()
     error.message = 'ACCESS NOT ALLOWED'
     // error.status = 401
-    res.redirect(401, '/pirate')
+    res.redirect(401, 'back')
+    console.log('redirected')
     next(error)
   } else {
     next()
@@ -15,6 +17,7 @@ const adminCheck = (req, res, next) => {
 
 router.get('/orders/:type', adminCheck, async (req, res, next) => {
   try {
+    console.log('accessed')
     if (req.params.type === 'all') {
       const orders = await Order.findAll({
         include: [{model: User}]
