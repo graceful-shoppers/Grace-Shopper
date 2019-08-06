@@ -13,6 +13,7 @@ const ShovelCard = styled.div`
   margin: 4px;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 `
+
 const ShovelsCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,8 +30,12 @@ const FiltersDiv = styled.div`
 const Shovel = styled.div`
   display: flex;
   flex-direction: row;
-  width: 300px;
-  height: 220px;
+  width: 90%;
+  height: 200px;
+  // background-color: lightgrey;
+  border: 1px solid black;
+
+  // border-bottom: 1px solid black;
 `
 
 const ImageDiv = styled.div`
