@@ -13,7 +13,6 @@ const ShovelCard = styled.div`
   margin: 4px;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 `
-
 const ShovelsCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,12 +29,8 @@ const FiltersDiv = styled.div`
 const Shovel = styled.div`
   display: flex;
   flex-direction: row;
-  width: 90%;
-  height: 200px;
-  // background-color: lightgrey;
-  border: 1px solid black;
-
-  // border-bottom: 1px solid black;
+  width: 300px;
+  height: 220px;
 `
 
 const ImageDiv = styled.div`
@@ -138,7 +133,7 @@ class AllShovelsView extends React.Component {
         offset: this.state.offset + 25
       })
 
-      if (this.state.offset === 175) {
+      if (this.state.offset >= 300) {
         this.setState({
           hasMore: false
         })
@@ -183,6 +178,7 @@ class AllShovelsView extends React.Component {
     if (!OS) {
       OS = this.state.offset
     }
+
 
     if (!search) {
       var searchName = document.getElementById('searchBar').value
