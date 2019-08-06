@@ -1,0 +1,21 @@
+{
+  "id": "tGmnIWntEYLbHVP",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-30-in-Wood-D-Handle-Digging-Shovel-43069/205350357",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-30-in-Wood-D-Handle-Digging-Shovel-43069/205350357",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-30-in-Wood-D-Handle-Digging-Shovel-43069/205350357",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:27.762Z"
+}

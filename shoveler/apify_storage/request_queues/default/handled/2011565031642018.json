@@ -1,0 +1,21 @@
+{
+  "id": "PSRNufnPVX8VeYh",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-Certified-Non-Conductive-Square-Point-Shovel-with-Fiberglass-Handle-and-D-Grip-76-142/206005994",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-Certified-Non-Conductive-Square-Point-Shovel-with-Fiberglass-Handle-and-D-Grip-76-142/206005994",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-Certified-Non-Conductive-Square-Point-Shovel-with-Fiberglass-Handle-and-D-Grip-76-142/206005994",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:42.965Z"
+}

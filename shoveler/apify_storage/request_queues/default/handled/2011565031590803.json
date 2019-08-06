@@ -1,0 +1,21 @@
+{
+  "id": "7Bwrvs8DV5jLjk2",
+  "url":
+    "https://www.homedepot.com/p/Fiskars-47-in-D-Handle-Digging-Shovel-96696925J/202681775",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Fiskars-47-in-D-Handle-Digging-Shovel-96696925J/202681775",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Fiskars-47-in-D-Handle-Digging-Shovel-96696925J/202681775",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:56.893Z"
+}

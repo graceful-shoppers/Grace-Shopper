@@ -1,0 +1,21 @@
+{
+  "id": "kwAVKogI535tdpv",
+  "url":
+    "https://www.homedepot.com/p/Eric-Carle-The-Very-Hungry-Caterpillar-30-in-Kids-4-Piece-Garden-Tool-Set-Hoe-Shovel-Leaf-Rake-Garden-Rake-96506/304775589",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Eric-Carle-The-Very-Hungry-Caterpillar-30-in-Kids-4-Piece-Garden-Tool-Set-Hoe-Shovel-Leaf-Rake-Garden-Rake-96506/304775589",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Eric-Carle-The-Very-Hungry-Caterpillar-30-in-Kids-4-Piece-Garden-Tool-Set-Hoe-Shovel-Leaf-Rake-Garden-Rake-96506/304775589",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:44.660Z"
+}

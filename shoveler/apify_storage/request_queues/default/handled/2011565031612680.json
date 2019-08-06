@@ -1,0 +1,21 @@
+{
+  "id": "XAG2PzRgbSuXMWv",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Serve-Set-2212308/306939397",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Serve-Set-2212308/306939397",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Serve-Set-2212308/306939397",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.870Z"
+}

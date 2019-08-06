@@ -1,0 +1,21 @@
+{
+  "id": "0Lv3XVB2roS8pR5",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-18-in-Snow-Shovel-Attachment-for-SwitchStik-System-SJ-HS18SNOW/306213147",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-18-in-Snow-Shovel-Attachment-for-SwitchStik-System-SJ-HS18SNOW/306213147",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-18-in-Snow-Shovel-Attachment-for-SwitchStik-System-SJ-HS18SNOW/306213147",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.665Z"
+}

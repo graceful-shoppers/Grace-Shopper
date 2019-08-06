@@ -1,0 +1,21 @@
+{
+  "id": "E10Q1OQUks4Fj3O",
+  "url":
+    "https://www.homedepot.com/p/Orbit-24-in-Pusher-Snow-Shovel-80052/203650548",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Orbit-24-in-Pusher-Snow-Shovel-80052/203650548",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Orbit-24-in-Pusher-Snow-Shovel-80052/203650548",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:29.398Z"
+}

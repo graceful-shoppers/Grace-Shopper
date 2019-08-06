@@ -1,0 +1,21 @@
+{
+  "id": "7KPXaZYNH5tQGU8",
+  "url":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Slotted-Spatula-045265/304847011",
+  "loadedUrl":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Slotted-Spatula-045265/304847011",
+  "uniqueKey":
+    "https://www.homedepot.com/p/1829-Carl-Schmidt-Sohn-PRO-X-Stainless-Steel-15-5-in-Slotted-Spatula-045265/304847011",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:21.547Z"
+}

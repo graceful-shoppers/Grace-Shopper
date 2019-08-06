@@ -1,0 +1,21 @@
+{
+  "id": "HHgHeMGKsGfCEVM",
+  "url":
+    "https://www.homedepot.com/p/Ames-24-5-in-D-Handle-Aluminum-Scoop-2672100/204476146",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Ames-24-5-in-D-Handle-Aluminum-Scoop-2672100/204476146",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Ames-24-5-in-D-Handle-Aluminum-Scoop-2672100/204476146",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:53.121Z"
+}

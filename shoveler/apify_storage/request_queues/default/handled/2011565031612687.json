@@ -1,0 +1,21 @@
+{
+  "id": "hndtIyqttUNQLYc",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Buffet-Spoons-Set-of-12-445003/204658490",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Buffet-Spoons-Set-of-12-445003/204658490",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Black-Buffet-Spoons-Set-of-12-445003/204658490",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.810Z"
+}

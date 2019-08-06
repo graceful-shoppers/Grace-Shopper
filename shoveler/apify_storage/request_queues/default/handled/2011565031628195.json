@@ -1,0 +1,21 @@
+{
+  "id": "sqG6HDFjwPPKU6b",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-14-in-Drain-Spade-with-American-Ash-Long-Handle-72530/205428342",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-14-in-Drain-Spade-with-American-Ash-Long-Handle-72530/205428342",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-14-in-Drain-Spade-with-American-Ash-Long-Handle-72530/205428342",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.359Z"
+}

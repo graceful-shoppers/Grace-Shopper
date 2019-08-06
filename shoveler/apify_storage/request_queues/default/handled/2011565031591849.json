@@ -1,0 +1,21 @@
+{
+  "id": "r2uKvhz8CNhcQuE",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Studio-12-5-in-Silicone-and-Stainless-Steel-Serving-Spoon-1101853/302150945",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Studio-12-5-in-Silicone-and-Stainless-Steel-Serving-Spoon-1101853/302150945",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Studio-12-5-in-Silicone-and-Stainless-Steel-Serving-Spoon-1101853/302150945",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:10.281Z"
+}

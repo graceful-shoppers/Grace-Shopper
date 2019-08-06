@@ -1,0 +1,21 @@
+{
+  "id": "bEhZu6995lBmnJx",
+  "url":
+    "https://www.homedepot.com/p/Martha-Stewart-Living-40-in-3-Piece-Stainless-Steel-Tool-Set-with-Shovel-Garden-Fork-Spade-MTS-DGT3/308594769",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Martha-Stewart-Living-40-in-3-Piece-Stainless-Steel-Tool-Set-with-Shovel-Garden-Fork-Spade-MTS-DGT3/308594769",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Martha-Stewart-Living-40-in-3-Piece-Stainless-Steel-Tool-Set-with-Shovel-Garden-Fork-Spade-MTS-DGT3/308594769",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:35.810Z"
+}

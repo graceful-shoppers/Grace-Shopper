@@ -1,0 +1,21 @@
+{
+  "id": "UqG7UBleVC0fLkD",
+  "url":
+    "https://www.homedepot.com/p/Fiskars-51-in-Aluminum-Handle-Steel-Blade-3-2-lb-Snow-Scoop-Shovel-341000-1001/301005064",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Fiskars-51-in-Aluminum-Handle-Steel-Blade-3-2-lb-Snow-Scoop-Shovel-341000-1001/301005064",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Fiskars-51-in-Aluminum-Handle-Steel-Blade-3-2-lb-Snow-Scoop-Shovel-341000-1001/301005064",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:00.680Z"
+}

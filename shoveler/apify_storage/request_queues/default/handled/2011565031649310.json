@@ -1,0 +1,21 @@
+{
+  "id": "zs4CPM3TcCevfLo",
+  "url":
+    "https://www.homedepot.com/p/Hisco-14-Gauge-Round-Point-Shovel-with-27-in-Fiberglass-D-handle-HIRPSB14D/303568107",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-14-Gauge-Round-Point-Shovel-with-27-in-Fiberglass-D-handle-HIRPSB14D/303568107",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-14-Gauge-Round-Point-Shovel-with-27-in-Fiberglass-D-handle-HIRPSB14D/303568107",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:50.348Z"
+}

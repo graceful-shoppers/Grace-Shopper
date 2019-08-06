@@ -1,0 +1,21 @@
+{
+  "id": "6Ei3qBaBjMcycHr",
+  "url":
+    "https://www.homedepot.com/p/CASL-Brands-22-in-Steel-Handle-Snow-Shovel-RIC-174/305438515",
+  "loadedUrl":
+    "https://www.homedepot.com/p/CASL-Brands-22-in-Steel-Handle-Snow-Shovel-RIC-174/305438515",
+  "uniqueKey":
+    "https://www.homedepot.com/p/CASL-Brands-22-in-Steel-Handle-Snow-Shovel-RIC-174/305438515",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:33.448Z"
+}

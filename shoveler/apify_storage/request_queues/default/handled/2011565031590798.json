@@ -1,0 +1,21 @@
+{
+  "id": "LyvQELHypV7s1mH",
+  "url":
+    "https://www.homedepot.com/p/Root-Assassin-48-in-4-lb-Steel-Root-Shovel-Garden-Tool-RA001/300588721",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Root-Assassin-48-in-4-lb-Steel-Root-Shovel-Garden-Tool-RA001/300588721",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Root-Assassin-48-in-4-lb-Steel-Root-Shovel-Garden-Tool-RA001/300588721",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:56.427Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Pg9FaEBJMHdHvc3",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Purple-ATJ401M-PRP/303783134",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Purple-ATJ401M-PRP/303783134",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Purple-ATJ401M-PRP/303783134",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:33.316Z"
+}

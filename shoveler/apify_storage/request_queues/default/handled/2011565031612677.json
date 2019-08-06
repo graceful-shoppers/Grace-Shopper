@@ -1,0 +1,21 @@
+{
+  "id": "g1Qgwq2AFf3GIja",
+  "url":
+    "https://www.homedepot.com/p/Wallace-Antique-Baroque-Silver-18-10-Stainless-Steel-Gravy-Ladle-5204557/308440764",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Wallace-Antique-Baroque-Silver-18-10-Stainless-Steel-Gravy-Ladle-5204557/308440764",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Wallace-Antique-Baroque-Silver-18-10-Stainless-Steel-Gravy-Ladle-5204557/308440764",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:23.161Z"
+}

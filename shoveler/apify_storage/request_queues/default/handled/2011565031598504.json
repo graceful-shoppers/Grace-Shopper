@@ -1,0 +1,21 @@
+{
+  "id": "Y5E66KwWWGwIIe4",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-13-in-Industrial-All-Steel-Spade-163105000/205350344",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-13-in-Industrial-All-Steel-Spade-163105000/205350344",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-13-in-Industrial-All-Steel-Spade-163105000/205350344",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:14.647Z"
+}

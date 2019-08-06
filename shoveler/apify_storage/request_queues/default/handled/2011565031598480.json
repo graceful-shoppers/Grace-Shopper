@@ -1,0 +1,21 @@
+{
+  "id": "7mcFJIr17htIPDE",
+  "url":
+    "https://www.homedepot.com/p/Sun-Joe-SJHH1902-Hori-Hori-Garden-Landscaping-Digging-Tool-with-Stainless-Steel-Blade-SJHH1902/205783172",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Sun-Joe-SJHH1902-Hori-Hori-Garden-Landscaping-Digging-Tool-with-Stainless-Steel-Blade-SJHH1902/205783172",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Sun-Joe-SJHH1902-Hori-Hori-Garden-Landscaping-Digging-Tool-with-Stainless-Steel-Blade-SJHH1902/205783172",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:12.530Z"
+}

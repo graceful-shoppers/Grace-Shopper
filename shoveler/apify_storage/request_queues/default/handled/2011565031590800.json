@@ -1,0 +1,21 @@
+{
+  "id": "L9SInDe2K1ENbWa",
+  "url":
+    "https://www.homedepot.com/p/Fiskars-47-in-Garden-Spade-Shovel-96676933J/202681793",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Fiskars-47-in-Garden-Spade-Shovel-96676933J/202681793",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Fiskars-47-in-Garden-Spade-Shovel-96676933J/202681793",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:56.383Z"
+}

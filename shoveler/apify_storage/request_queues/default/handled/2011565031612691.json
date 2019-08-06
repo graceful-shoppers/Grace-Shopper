@@ -1,0 +1,21 @@
+{
+  "id": "xh33AHcttozZwZ6",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Green-Buffet-Spoons-Set-of-12-446008/204658499",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Green-Buffet-Spoons-Set-of-12-446008/204658499",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-Green-Buffet-Spoons-Set-of-12-446008/204658499",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.421Z"
+}

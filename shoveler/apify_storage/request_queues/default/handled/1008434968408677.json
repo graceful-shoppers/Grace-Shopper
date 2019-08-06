@@ -1,0 +1,21 @@
+{
+  "id": "bhUOeGRCVKxLCyz",
+  "url":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spoons-Ladles/N-5yc1vZc7fl",
+  "loadedUrl":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spoons-Ladles/N-5yc1vZc7fl",
+  "uniqueKey":
+    "https://www.homedepot.com/b/Kitchen-Kitchenware-Kitchen-Utensils-Spoons-Ladles/N-5yc1vZc7fl",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "enqueue",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:51.766Z"
+}

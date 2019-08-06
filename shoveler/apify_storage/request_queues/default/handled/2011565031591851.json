@@ -1,0 +1,21 @@
+{
+  "id": "q9BuPh9qD6Njl2k",
+  "url":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Serving-Spoon-Ceramic-Handle-985100380M/310825020",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Serving-Spoon-Ceramic-Handle-985100380M/310825020",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Decorated-Serving-Spoon-Ceramic-Handle-985100380M/310825020",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:10.694Z"
+}

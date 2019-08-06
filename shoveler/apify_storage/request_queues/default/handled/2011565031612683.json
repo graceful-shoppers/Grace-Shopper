@@ -1,0 +1,21 @@
+{
+  "id": "wPezhU1Ag4YYCt9",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Buffet-Spoons-Set-of-12-446002/204658494",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Buffet-Spoons-Set-of-12-446002/204658494",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Buffet-Spoons-Set-of-12-446002/204658494",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:23.665Z"
+}

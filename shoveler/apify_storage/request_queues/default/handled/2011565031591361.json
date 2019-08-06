@@ -1,0 +1,21 @@
+{
+  "id": "nhHQSaH489hXJ78",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Blue-Turner-51210/100605331",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Blue-Turner-51210/100605331",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Blue-Turner-51210/100605331",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:05.182Z"
+}

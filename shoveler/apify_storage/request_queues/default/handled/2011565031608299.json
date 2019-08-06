@@ -1,0 +1,21 @@
+{
+  "id": "KC3v5sePeNIGyVb",
+  "url":
+    "https://www.homedepot.com/p/GIR-Ultimate-11-in-Silicone-Spatula-in-Red-GIRSPU0203RED/300351170",
+  "loadedUrl":
+    "https://www.homedepot.com/p/GIR-Ultimate-11-in-Silicone-Spatula-in-Red-GIRSPU0203RED/300351170",
+  "uniqueKey":
+    "https://www.homedepot.com/p/GIR-Ultimate-11-in-Silicone-Spatula-in-Red-GIRSPU0203RED/300351170",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:19.167Z"
+}

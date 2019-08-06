@@ -1,0 +1,21 @@
+{
+  "id": "VZ1V2qeF9yg2qDT",
+  "url":
+    "https://www.homedepot.com/p/Hisco-Renegade-Coal-Scoop-with-Steel-Blade-and-37-in-Ash-Wood-D-Handle-HISC2MD-W/205402325",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-Renegade-Coal-Scoop-with-Steel-Blade-and-37-in-Ash-Wood-D-Handle-HISC2MD-W/205402325",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-Renegade-Coal-Scoop-with-Steel-Blade-and-37-in-Ash-Wood-D-Handle-HISC2MD-W/205402325",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:40.384Z"
+}

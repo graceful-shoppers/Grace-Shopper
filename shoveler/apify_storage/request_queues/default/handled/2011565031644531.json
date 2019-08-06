@@ -1,0 +1,21 @@
+{
+  "id": "dK0JjoPDOP4vLOT",
+  "url":
+    "https://www.homedepot.com/p/Peter-Rabbit-Large-Plastic-Shovel-24175/305448979",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Peter-Rabbit-Large-Plastic-Shovel-24175/305448979",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Peter-Rabbit-Large-Plastic-Shovel-24175/305448979",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:46.190Z"
+}

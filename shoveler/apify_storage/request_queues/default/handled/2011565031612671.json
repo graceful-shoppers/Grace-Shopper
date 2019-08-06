@@ -1,0 +1,21 @@
+{
+  "id": "1QFjByYsiO7xZkL",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Pink-Soup-Set-2212312/307246993",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Pink-Soup-Set-2212312/307246993",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Leo-2-Piece-Pink-Soup-Set-2212312/307246993",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:22.817Z"
+}

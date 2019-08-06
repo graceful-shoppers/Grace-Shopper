@@ -1,0 +1,21 @@
+{
+  "id": "wlfXaV9kC27T9EX",
+  "url":
+    "https://www.homedepot.com/p/Hisco-Renegade-3-in-Classic-Trench-Shovel-with-48-in-Ash-Wood-Handle-HITS481L-W/205402332",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-Renegade-3-in-Classic-Trench-Shovel-with-48-in-Ash-Wood-Handle-HITS481L-W/205402332",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-Renegade-3-in-Classic-Trench-Shovel-with-48-in-Ash-Wood-Handle-HITS481L-W/205402332",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:38.500Z"
+}

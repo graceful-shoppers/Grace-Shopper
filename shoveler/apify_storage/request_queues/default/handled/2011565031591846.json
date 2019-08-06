@@ -1,0 +1,21 @@
+{
+  "id": "jREDuyZ7hevIUUq",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Grey-Serving-Ladle-3950102/306315633",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Grey-Serving-Ladle-3950102/306315633",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Grey-Serving-Ladle-3950102/306315633",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:09.568Z"
+}

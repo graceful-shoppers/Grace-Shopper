@@ -1,0 +1,21 @@
+{
+  "id": "MakDXedEOPKdWTm",
+  "url":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-16-in-Hollow-Back-Blade-Drain-Spade-72095/203153035",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-16-in-Hollow-Back-Blade-Drain-Spade-72095/203153035",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-16-in-Hollow-Back-Blade-Drain-Spade-72095/203153035",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:39.515Z"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "04te4VWFXrrPoqN",
+  "url": "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77",
+  "loadedUrl": "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77",
+  "uniqueKey": "https://www.homedepot.com/b/Shovel/N-5yc1vZ1z0yl77",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "enqueue",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:50.788Z"
+}

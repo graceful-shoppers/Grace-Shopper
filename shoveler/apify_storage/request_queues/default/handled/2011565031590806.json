@@ -1,0 +1,21 @@
+{
+  "id": "iDGyV5QypmtXSKD",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-36-in-D-Handle-Aluminum-Scoop-53173/205352515",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-36-in-D-Handle-Aluminum-Scoop-53173/205352515",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-36-in-D-Handle-Aluminum-Scoop-53173/205352515",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:57.310Z"
+}

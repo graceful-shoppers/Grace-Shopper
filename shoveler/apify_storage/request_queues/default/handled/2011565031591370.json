@@ -1,0 +1,21 @@
+{
+  "id": "VC89fBmLJEsMrnF",
+  "url":
+    "https://www.homedepot.com/p/GIR-Ultimate-Spoonula-Silicone-Spoonula-in-Red-GIRSUU203RED/301721789",
+  "loadedUrl":
+    "https://www.homedepot.com/p/GIR-Ultimate-Spoonula-Silicone-Spoonula-in-Red-GIRSUU203RED/301721789",
+  "uniqueKey":
+    "https://www.homedepot.com/p/GIR-Ultimate-Spoonula-Silicone-Spoonula-in-Red-GIRSUU203RED/301721789",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:06.248Z"
+}

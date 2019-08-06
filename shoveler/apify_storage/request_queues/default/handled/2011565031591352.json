@@ -1,0 +1,21 @@
+{
+  "id": "qloWj48q2alKis9",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-13-5-in-Spatula-with-4-5-x-7-5-in-Red-Nylon-Blade-Case-of-6-4035005/203948266",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-13-5-in-Spatula-with-4-5-x-7-5-in-Red-Nylon-Blade-Case-of-6-4035005/203948266",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-13-5-in-Spatula-with-4-5-x-7-5-in-Red-Nylon-Blade-Case-of-6-4035005/203948266",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:04.051Z"
+}

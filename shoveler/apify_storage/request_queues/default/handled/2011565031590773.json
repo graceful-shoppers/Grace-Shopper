@@ -1,0 +1,21 @@
+{
+  "id": "yEKokn8tFWj8yxA",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-49-in-Fiberglass-Handle-Super-Socket-Digging-Shovel-2594400/204476140",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-49-in-Fiberglass-Handle-Super-Socket-Digging-Shovel-2594400/204476140",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-49-in-Fiberglass-Handle-Super-Socket-Digging-Shovel-2594400/204476140",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:52.910Z"
+}

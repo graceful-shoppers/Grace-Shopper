@@ -1,0 +1,21 @@
+{
+  "id": "0LqiC1eCmhszxZE",
+  "url":
+    "https://www.homedepot.com/p/Hutzler-Olive-Wood-Serving-Salad-Spoons-Set-of-2-3135-2/302721857",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hutzler-Olive-Wood-Serving-Salad-Spoons-Set-of-2-3135-2/302721857",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hutzler-Olive-Wood-Serving-Salad-Spoons-Set-of-2-3135-2/302721857",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:09.251Z"
+}

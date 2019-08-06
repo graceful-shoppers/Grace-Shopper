@@ -1,0 +1,21 @@
+{
+  "id": "eNKL4ZGseBygCOQ",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-Heavy-Duty-12-Gauge-Caprock-Shovel-with-Steel-Handle-92701/206191931",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-Heavy-Duty-12-Gauge-Caprock-Shovel-with-Steel-Handle-92701/206191931",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-Heavy-Duty-12-Gauge-Caprock-Shovel-with-Steel-Handle-92701/206191931",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:13.365Z"
+}

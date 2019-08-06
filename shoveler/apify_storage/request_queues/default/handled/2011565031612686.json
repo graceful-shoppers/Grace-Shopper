@@ -1,0 +1,21 @@
+{
+  "id": "RCIAMkEN7C2eYyc",
+  "url":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Serving-Spoon-Set-of-12-441002/204658457",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Serving-Spoon-Set-of-12-441002/204658457",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Carlisle-Polycarbonate-White-Serving-Spoon-Set-of-12-441002/204658457",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.008Z"
+}

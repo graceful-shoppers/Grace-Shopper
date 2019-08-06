@@ -1,0 +1,21 @@
+{
+  "id": "soK964CR7Bz0rva",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Digging-Shovel-45657/205350365",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Digging-Shovel-45657/205350365",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-48-in-Wood-Handle-Digging-Shovel-45657/205350365",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:26.078Z"
+}

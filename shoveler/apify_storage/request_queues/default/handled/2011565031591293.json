@@ -1,0 +1,21 @@
+{
+  "id": "IBiocMBkgZ0yeuW",
+  "url":
+    "https://www.homedepot.com/p/True-Temper-24-in-Industrial-Grade-Snow-Pusher-with-Versa-Grip-1662400/303212058",
+  "loadedUrl":
+    "https://www.homedepot.com/p/True-Temper-24-in-Industrial-Grade-Snow-Pusher-with-Versa-Grip-1662400/303212058",
+  "uniqueKey":
+    "https://www.homedepot.com/p/True-Temper-24-in-Industrial-Grade-Snow-Pusher-with-Versa-Grip-1662400/303212058",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:00.524Z"
+}

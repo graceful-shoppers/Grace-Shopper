@@ -1,0 +1,21 @@
+{
+  "id": "tCXRPGmpssLP2DI",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-28-in-Mini-O-Shovel-27202/309735904",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-28-in-Mini-O-Shovel-27202/309735904",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-28-in-Mini-O-Shovel-27202/309735904",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:46.187Z"
+}

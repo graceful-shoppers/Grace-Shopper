@@ -1,0 +1,21 @@
+{
+  "id": "zjRm26naf635mAe",
+  "url":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Turner-Decorated-Ceramic-Handle-985100383M/310825047",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Turner-Decorated-Ceramic-Handle-985100383M/310825047",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Studio-California-Maefield-Turner-Decorated-Ceramic-Handle-985100383M/310825047",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:20.883Z"
+}

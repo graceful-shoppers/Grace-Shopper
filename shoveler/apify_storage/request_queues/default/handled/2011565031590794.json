@@ -1,0 +1,21 @@
+{
+  "id": "cRxeEnNEPnrmqDn",
+  "url":
+    "https://www.homedepot.com/p/Fiskars-8-63-in-Long-Handled-Digging-Shovel-96685935J/202681767",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Fiskars-8-63-in-Long-Handled-Digging-Shovel-96685935J/202681767",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Fiskars-8-63-in-Long-Handled-Digging-Shovel-96685935J/202681767",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:55.155Z"
+}

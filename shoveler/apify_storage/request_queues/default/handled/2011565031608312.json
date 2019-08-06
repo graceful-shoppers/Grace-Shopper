@@ -1,0 +1,21 @@
+{
+  "id": "ZxI30k3yEh5fEwk",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Studio-11-5-in-Black-Nylon-Turner-1102058/306608546",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Studio-11-5-in-Black-Nylon-Turner-1102058/306608546",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Studio-11-5-in-Black-Nylon-Turner-1102058/306608546",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:20.812Z"
+}

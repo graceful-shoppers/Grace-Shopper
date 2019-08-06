@@ -1,0 +1,21 @@
+{
+  "id": "wgHpWceWt5JARng",
+  "url":
+    "https://www.homedepot.com/p/Hisco-14-in-Drain-Spade-Sharp-Shooter-with-47-in-Fiberglass-Double-Grip-Handle-HISSSB14L/303567884",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-14-in-Drain-Spade-Sharp-Shooter-with-47-in-Fiberglass-Double-Grip-Handle-HISSSB14L/303567884",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-14-in-Drain-Spade-Sharp-Shooter-with-47-in-Fiberglass-Double-Grip-Handle-HISSSB14L/303567884",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:49.843Z"
+}

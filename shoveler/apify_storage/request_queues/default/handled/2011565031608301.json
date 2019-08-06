@@ -1,0 +1,21 @@
+{
+  "id": "p96fiKOHMEpEm8E",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Eclipse-Stainless-Steel-Slotted-Turner-3700051/302737342",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Eclipse-Stainless-Steel-Slotted-Turner-3700051/302737342",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Eclipse-Stainless-Steel-Slotted-Turner-3700051/302737342",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:20.024Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Gy6G0LViz6GyeRP",
+  "url":
+    "https://www.homedepot.com/p/Ames-16-in-D-Handle-Drain-Spade-2531700/204476045",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Ames-16-in-D-Handle-Drain-Spade-2531700/204476045",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Ames-16-in-D-Handle-Drain-Spade-2531700/204476045",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:54.920Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "pPW8s2J8y5ptJ6E",
+  "url":
+    "https://www.homedepot.com/p/Stalwart-Telescoping-Snow-Shovel-in-Blue-HW6000012/308337014",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Stalwart-Telescoping-Snow-Shovel-in-Blue-HW6000012/308337014",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Stalwart-Telescoping-Snow-Shovel-in-Blue-HW6000012/308337014",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.732Z"
+}

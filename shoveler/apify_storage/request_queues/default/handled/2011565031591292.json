@@ -1,0 +1,21 @@
+{
+  "id": "YxsxjSRuli0d3J4",
+  "url":
+    "https://www.homedepot.com/p/Rugg-Manufacturing-18-in-Ergonomic-Steel-Handle-and-Poly-Combo-with-Wearstrip-Snow-Shovel-26PBSW1/203814969",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rugg-Manufacturing-18-in-Ergonomic-Steel-Handle-and-Poly-Combo-with-Wearstrip-Snow-Shovel-26PBSW1/203814969",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rugg-Manufacturing-18-in-Ergonomic-Steel-Handle-and-Poly-Combo-with-Wearstrip-Snow-Shovel-26PBSW1/203814969",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:00.310Z"
+}

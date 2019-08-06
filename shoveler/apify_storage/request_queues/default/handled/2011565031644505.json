@@ -1,0 +1,21 @@
+{
+  "id": "x2wSDZYUFcSa5zc",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-45-in-Root-Slayer-Shovel-22011/301237556",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-45-in-Root-Slayer-Shovel-22011/301237556",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-45-in-Root-Slayer-Shovel-22011/301237556",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:44.612Z"
+}

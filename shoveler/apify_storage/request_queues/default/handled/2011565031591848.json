@@ -1,0 +1,21 @@
+{
+  "id": "0Otu36TQw8NdrYM",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Stainless-Steel-Skimmer-and-Rice-Spoon-Set-of-2-2211869/302136862",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Stainless-Steel-Skimmer-and-Rice-Spoon-Set-of-2-2211869/302136862",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Duet-Stainless-Steel-Skimmer-and-Rice-Spoon-Set-of-2-2211869/302136862",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:10.045Z"
+}

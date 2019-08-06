@@ -1,0 +1,21 @@
+{
+  "id": "KPh6iC4L2m0ACzt",
+  "url":
+    "https://www.homedepot.com/p/Hisco-Renegade-14-Gauge-Round-Point-Caprock-Irrigation-Shovel-with-47-in-Ash-Wood-Handle-HIIRSLH-W/205402318",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Hisco-Renegade-14-Gauge-Round-Point-Caprock-Irrigation-Shovel-with-47-in-Ash-Wood-Handle-HIIRSLH-W/205402318",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Hisco-Renegade-14-Gauge-Round-Point-Caprock-Irrigation-Shovel-with-47-in-Ash-Wood-Handle-HIIRSLH-W/205402318",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.548Z"
+}

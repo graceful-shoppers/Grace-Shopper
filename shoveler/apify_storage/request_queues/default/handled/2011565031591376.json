@@ -1,0 +1,21 @@
+{
+  "id": "Bj4jPWjY9Cgpuyk",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Angled-Turner-1104812/301321133",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Angled-Turner-1104812/301321133",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Angled-Turner-1104812/301321133",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:06.894Z"
+}

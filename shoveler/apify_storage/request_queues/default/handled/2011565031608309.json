@@ -1,0 +1,21 @@
+{
+  "id": "uXJiQ2mfuekv3dU",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Orange-Spatula-Set-of-3-51202/100605329",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Orange-Spatula-Set-of-3-51202/100605329",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Nylon-Orange-Spatula-Set-of-3-51202/100605329",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:20.182Z"
+}

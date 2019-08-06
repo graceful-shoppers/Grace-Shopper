@@ -1,0 +1,21 @@
+{
+  "id": "QUFy37e2myPnxam",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Solid-Shank-Blade-Heavy-Duty-Drain-Spade-72104/203153045",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Solid-Shank-Blade-Heavy-Duty-Drain-Spade-72104/203153045",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-16-in-Solid-Shank-Blade-Heavy-Duty-Drain-Spade-72104/203153045",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:41.724Z"
+}
