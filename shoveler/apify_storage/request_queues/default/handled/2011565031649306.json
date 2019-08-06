@@ -1,0 +1,21 @@
+{
+  "id": "XAXRkTTcg9Ucvrl",
+  "url":
+    "https://www.homedepot.com/p/Jackson-Kodiak-J-250-29-in-D-Handle-Round-Point-Shovel-13096/206178731",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Jackson-Kodiak-J-250-29-in-D-Handle-Round-Point-Shovel-13096/206178731",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Jackson-Kodiak-J-250-29-in-D-Handle-Round-Point-Shovel-13096/206178731",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:49.417Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "nVySb2Bi87Xj336",
+  "url":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Spongebob-Snow-Shovel-Complete-SS60K-K-00/306227648",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Spongebob-Snow-Shovel-Complete-SS60K-K-00/306227648",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Spongebob-Snow-Shovel-Complete-SS60K-K-00/306227648",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:29.541Z"
+}

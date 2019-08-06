@@ -1,0 +1,21 @@
+{
+  "id": "9dlg9gxMNtKLMMN",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Ash-Handle-Eastern-Aluminum-Scoop-Shovel-84-698/304286457",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Ash-Handle-Eastern-Aluminum-Scoop-Shovel-84-698/304286457",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-27-in-Ash-Handle-Eastern-Aluminum-Scoop-Shovel-84-698/304286457",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:44.143Z"
+}

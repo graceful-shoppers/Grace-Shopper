@@ -1,0 +1,21 @@
+{
+  "id": "CDjCCqxWoddfGXs",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72076/203153014",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72076/203153014",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-D-Grip-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72076/203153014",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:39.594Z"
+}

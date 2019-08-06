@@ -1,0 +1,21 @@
+{
+  "id": "JTCSvy1peAsgNhd",
+  "url":
+    "https://www.homedepot.com/p/Dewit-Junior-Spade-T-Handle-31-3173/302000113",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Dewit-Junior-Spade-T-Handle-31-3173/302000113",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Dewit-Junior-Spade-T-Handle-31-3173/302000113",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:35.171Z"
+}

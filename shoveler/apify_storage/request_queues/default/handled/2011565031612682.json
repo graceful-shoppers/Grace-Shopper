@@ -1,0 +1,21 @@
+{
+  "id": "CguYRF2TccoVkiP",
+  "url":
+    "https://www.homedepot.com/p/Rachael-Ray-Silicone-Blue-Lazy-Slotted-Spoon-56918/204304056",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Rachael-Ray-Silicone-Blue-Lazy-Slotted-Spoon-56918/204304056",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Rachael-Ray-Silicone-Blue-Lazy-Slotted-Spoon-56918/204304056",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:23.924Z"
+}

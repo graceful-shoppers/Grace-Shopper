@@ -1,0 +1,21 @@
+{
+  "id": "nde4PgHE8phBgm7",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Pink-Serving-Spoon-3950089/303830743",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Pink-Serving-Spoon-3950089/303830743",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Leo-Pink-Serving-Spoon-3950089/303830743",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:24.784Z"
+}

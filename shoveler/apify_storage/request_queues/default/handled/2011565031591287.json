@@ -1,0 +1,21 @@
+{
+  "id": "n3baxKEipqaVDTe",
+  "url":
+    "https://www.homedepot.com/p/True-Temper-18-in-Steel-Snow-Shovel-1640700/203907927",
+  "loadedUrl":
+    "https://www.homedepot.com/p/True-Temper-18-in-Steel-Snow-Shovel-1640700/203907927",
+  "uniqueKey":
+    "https://www.homedepot.com/p/True-Temper-18-in-Steel-Snow-Shovel-1640700/203907927",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:59.628Z"
+}

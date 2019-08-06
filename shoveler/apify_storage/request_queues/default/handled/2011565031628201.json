@@ -1,0 +1,21 @@
+{
+  "id": "b3o58zPLRhATIVH",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-28-in-Hardwood-Handle-Econo-Aluminum-Scoop-Shovel-28-101/304286479",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-28-in-Hardwood-Handle-Econo-Aluminum-Scoop-Shovel-28-101/304286479",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-28-in-Hardwood-Handle-Econo-Aluminum-Scoop-Shovel-28-101/304286479",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.799Z"
+}

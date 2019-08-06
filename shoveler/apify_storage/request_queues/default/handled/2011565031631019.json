@@ -1,0 +1,21 @@
+{
+  "id": "GAlU5c11Di0VWpK",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Blue-ATJ401M-SJB/303783122",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Blue-ATJ401M-SJB/303783122",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-All-Purpose-Aluminum-Telescoping-Compact-Utility-Shovel-Blue-ATJ401M-SJB/303783122",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:33.423Z"
+}

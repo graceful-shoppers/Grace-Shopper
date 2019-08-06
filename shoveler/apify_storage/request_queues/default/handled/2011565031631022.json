@@ -1,0 +1,21 @@
+{
+  "id": "A0HB88qr3NRiG7D",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Gray-SJ-SHLV01-GRY/304985361",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Gray-SJ-SHLV01-GRY/304985361",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Gray-SJ-SHLV01-GRY/304985361",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:33.638Z"
+}

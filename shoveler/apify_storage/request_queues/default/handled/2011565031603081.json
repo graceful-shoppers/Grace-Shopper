@@ -1,0 +1,21 @@
+{
+  "id": "yJRY75dLWc2DPNx",
+  "url":
+    "https://www.homedepot.com/p/CASL-Brands-18-in-Steel-Handle-Polypropylene-Blade-Ergonomic-Snow-Shovel-RIC-181/305438516",
+  "loadedUrl":
+    "https://www.homedepot.com/p/CASL-Brands-18-in-Steel-Handle-Polypropylene-Blade-Ergonomic-Snow-Shovel-RIC-181/305438516",
+  "uniqueKey":
+    "https://www.homedepot.com/p/CASL-Brands-18-in-Steel-Handle-Polypropylene-Blade-Ergonomic-Snow-Shovel-RIC-181/305438516",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:17.883Z"
+}

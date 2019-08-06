@@ -1,0 +1,18 @@
+{
+  "id": "mU0WtHMyo2rzfSc",
+  "url": "https://www.homedepot.com/p/GEFU-Turner-BBQ-89245/307439835",
+  "loadedUrl": "https://www.homedepot.com/p/GEFU-Turner-BBQ-89245/307439835",
+  "uniqueKey": "https://www.homedepot.com/p/GEFU-Turner-BBQ-89245/307439835",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:21.956Z"
+}

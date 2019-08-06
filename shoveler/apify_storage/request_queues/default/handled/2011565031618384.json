@@ -1,0 +1,21 @@
+{
+  "id": "u336PB3c2GeERaF",
+  "url":
+    "https://www.homedepot.com/p/Orbit-11-in-Mini-Snow-Shovel-80079/203650534",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Orbit-11-in-Mini-Snow-Shovel-80079/203650534",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Orbit-11-in-Mini-Snow-Shovel-80079/203650534",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:30.811Z"
+}

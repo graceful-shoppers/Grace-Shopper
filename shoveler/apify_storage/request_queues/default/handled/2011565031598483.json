@@ -1,0 +1,21 @@
+{
+  "id": "qnJlBvspkYo0atG",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-3-in-Trench-Shovel-with-Fiberglass-Long-Handle-92719/205347970",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-3-in-Trench-Shovel-with-Fiberglass-Long-Handle-92719/205347970",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-3-in-Trench-Shovel-with-Fiberglass-Long-Handle-92719/205347970",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:12.808Z"
+}

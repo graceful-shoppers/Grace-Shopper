@@ -1,0 +1,21 @@
+{
+  "id": "MHIgMjQ5zFiXakj",
+  "url":
+    "https://www.homedepot.com/p/Razor-Back-43-in-Fiberglass-Handle-Trenching-Shovel-47033/205350372",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Razor-Back-43-in-Fiberglass-Handle-Trenching-Shovel-47033/205350372",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Razor-Back-43-in-Fiberglass-Handle-Trenching-Shovel-47033/205350372",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:14.793Z"
+}

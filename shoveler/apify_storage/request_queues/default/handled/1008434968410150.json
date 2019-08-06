@@ -1,0 +1,21 @@
+{
+  "id": "5vRavkBc7RqVhkV",
+  "url":
+    "https://www.homedepot.com/b/Outdoors-Garden-Center-Garden-Tools-Snow-Ice-Snow-Shovels-Ice-Scrapers/Snow-Shovel/N-5yc1vZbx86Z1z0yl7a",
+  "loadedUrl":
+    "https://www.homedepot.com/b/Outdoors-Garden-Center-Garden-Tools-Snow-Ice-Snow-Shovels-Ice-Scrapers/Snow-Shovel/N-5yc1vZbx86Z1z0yl7a",
+  "uniqueKey":
+    "https://www.homedepot.com/b/Outdoors-Garden-Center-Garden-Tools-Snow-Ice-Snow-Shovels-Ice-Scrapers/Snow-Shovel/N-5yc1vZbx86Z1z0yl7a",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "enqueue",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T18:59:51.269Z"
+}

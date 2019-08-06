@@ -1,0 +1,21 @@
+{
+  "id": "hO5AOwtTOhvjPKS",
+  "url":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Aluminium-Scoop-72157/203153083",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Aluminium-Scoop-72157/203153083",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-27-in-Fiberglass-Handle-Aluminium-Scoop-72157/203153083",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:38.915Z"
+}

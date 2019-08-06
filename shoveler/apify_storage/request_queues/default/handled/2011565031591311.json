@@ -1,0 +1,21 @@
+{
+  "id": "ySr61WwP3eAYUkd",
+  "url":
+    "https://www.homedepot.com/p/Nordic-Plow-36-in-W-Plastic-Perfect-Shovel-NAP-PS36/205581398",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nordic-Plow-36-in-W-Plastic-Perfect-Shovel-NAP-PS36/205581398",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nordic-Plow-36-in-W-Plastic-Perfect-Shovel-NAP-PS36/205581398",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:02.627Z"
+}

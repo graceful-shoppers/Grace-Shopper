@@ -1,0 +1,21 @@
+{
+  "id": "aKO2W369TVGY5ED",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Red-SJ-SHLV01-RED/304268833",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Red-SJ-SHLV01-RED/304268833",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-Shovelution-18-in-Strain-Reducing-Snow-Shovel-with-Spring-Assist-Handle-in-Red-SJ-SHLV01-RED/304268833",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:02.885Z"
+}

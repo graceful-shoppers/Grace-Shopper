@@ -1,0 +1,21 @@
+{
+  "id": "NXKkUfkaVogfNsb",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-Jumbo-Telescoping-Snow-Broom-Plus-Ice-Scraper-SJBLZD-JMB-SJB/307839442",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-Jumbo-Telescoping-Snow-Broom-Plus-Ice-Scraper-SJBLZD-JMB-SJB/307839442",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-Jumbo-Telescoping-Snow-Broom-Plus-Ice-Scraper-SJBLZD-JMB-SJB/307839442",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:15.883Z"
+}

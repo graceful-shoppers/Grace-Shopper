@@ -1,0 +1,21 @@
+{
+  "id": "qEk2WTFD4ds8deS",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-33-in-Wood-Handle-Contractor-Grade-Drain-Spade-28-106/304286485",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-33-in-Wood-Handle-Contractor-Grade-Drain-Spade-28-106/304286485",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-33-in-Wood-Handle-Contractor-Grade-Drain-Spade-28-106/304286485",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:38.111Z"
+}

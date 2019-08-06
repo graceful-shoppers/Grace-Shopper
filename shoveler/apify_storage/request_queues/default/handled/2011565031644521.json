@@ -1,0 +1,21 @@
+{
+  "id": "fRoT6LNcflwHF7f",
+  "url":
+    "https://www.homedepot.com/p/W-W-Mfg-King-of-Spades-8-in-W-x-3-in-D-x-50-in-H-13-in-Steel-Long-Handle-Shovel-Head-Spade-LHS13/202102705",
+  "loadedUrl":
+    "https://www.homedepot.com/p/W-W-Mfg-King-of-Spades-8-in-W-x-3-in-D-x-50-in-H-13-in-Steel-Long-Handle-Shovel-Head-Spade-LHS13/202102705",
+  "uniqueKey":
+    "https://www.homedepot.com/p/W-W-Mfg-King-of-Spades-8-in-W-x-3-in-D-x-50-in-H-13-in-Steel-Long-Handle-Shovel-Head-Spade-LHS13/202102705",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:45.465Z"
+}

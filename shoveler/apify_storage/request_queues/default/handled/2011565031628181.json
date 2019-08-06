@@ -1,0 +1,21 @@
+{
+  "id": "iLjXAHxFchUCqv4",
+  "url":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Square-Point-Garden-Spade-84-226/304286476",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Square-Point-Garden-Spade-84-226/304286476",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bon-Tool-48-in-Wood-Handle-Square-Point-Garden-Spade-84-226/304286476",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:31.785Z"
+}

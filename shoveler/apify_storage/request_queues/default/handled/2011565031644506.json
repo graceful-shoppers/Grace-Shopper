@@ -1,0 +1,21 @@
+{
+  "id": "oE5A88kZStiULxB",
+  "url":
+    "https://www.homedepot.com/p/Radius-Garden-58-in-Root-Slayer-XL-Shovel-22511/303354762",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Radius-Garden-58-in-Root-Slayer-XL-Shovel-22511/303354762",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Radius-Garden-58-in-Root-Slayer-XL-Shovel-22511/303354762",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:44.691Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "9Pb1YlgO5BzZl65",
+  "url":
+    "https://www.homedepot.com/p/Snow-Joe-Illum-N-Broom-LED-Lighted-4-In-1-Snow-Broom-and-Ice-Scraper-Refurbished-Blue-SJBLZD-LED-RM/301314207",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Snow-Joe-Illum-N-Broom-LED-Lighted-4-In-1-Snow-Broom-and-Ice-Scraper-Refurbished-Blue-SJBLZD-LED-RM/301314207",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Snow-Joe-Illum-N-Broom-LED-Lighted-4-In-1-Snow-Broom-and-Ice-Scraper-Refurbished-Blue-SJBLZD-LED-RM/301314207",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.330Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "dDQWIweGNo8NRl1",
+  "url":
+    "https://www.homedepot.com/p/Nupla-18-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Blade-Floral-Round-Point-Shovel-69034/203153072",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-18-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Blade-Floral-Round-Point-Shovel-69034/203153072",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-18-in-D-Grip-Fiberglass-Handle-16-in-Gauge-Hollow-Blade-Floral-Round-Point-Shovel-69034/203153072",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:43.643Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "FCrLKEGmdLZy8Gk",
+  "url":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Batman-Shovel-Fleece-Glove-Combo-SFB72560K-K-00/306671048",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Batman-Shovel-Fleece-Glove-Combo-SFB72560K-K-00/306671048",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Midwest-Gloves-Gear-Batman-Shovel-Fleece-Glove-Combo-SFB72560K-K-00/306671048",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:28.483Z"
+}

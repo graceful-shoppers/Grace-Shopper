@@ -1,0 +1,21 @@
+{
+  "id": "B4tx0LtBKnFtUyN",
+  "url":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Slotted-Turner-1109510/301321657",
+  "loadedUrl":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Slotted-Turner-1109510/301321657",
+  "uniqueKey":
+    "https://www.homedepot.com/p/BergHOFF-Cubo-Nylon-Slotted-Turner-1109510/301321657",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:18.558Z"
+}

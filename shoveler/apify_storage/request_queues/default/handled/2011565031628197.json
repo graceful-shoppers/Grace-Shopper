@@ -1,0 +1,21 @@
+{
+  "id": "SHPWSOC9alkEiq0",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-D-Grip-Handle-92510/205347962",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-D-Grip-Handle-92510/205347962",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-12-Gauge-Round-Point-Shovel-with-Fiberglass-D-Grip-Handle-92510/205347962",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:32.082Z"
+}

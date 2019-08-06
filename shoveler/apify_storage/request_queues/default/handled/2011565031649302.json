@@ -1,0 +1,21 @@
+{
+  "id": "cJDSL0UNb84mB2U",
+  "url":
+    "https://www.homedepot.com/p/Ames-Kodiak-48-in-Steel-Round-Point-Shovel-13098/202101514",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Ames-Kodiak-48-in-Steel-Round-Point-Shovel-13098/202101514",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Ames-Kodiak-48-in-Steel-Round-Point-Shovel-13098/202101514",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:49.386Z"
+}

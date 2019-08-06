@@ -1,0 +1,21 @@
+{
+  "id": "wUVV27hNSZL796q",
+  "url":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Round-Point-Shovel-72061/203153004",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Round-Point-Shovel-72061/203153004",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Round-Point-Shovel-72061/203153004",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:38.211Z"
+}

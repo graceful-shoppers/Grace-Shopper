@@ -1,0 +1,21 @@
+{
+  "id": "7NW1HMqndPZuTVN",
+  "url":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-Square-Point-Shovel-with-American-Ash-D-Grip-Handle-72520/205347949",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-Square-Point-Shovel-with-American-Ash-D-Grip-Handle-72520/205347949",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Bully-Tools-14-Gauge-Square-Point-Shovel-with-American-Ash-D-Grip-Handle-72520/205347949",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:34.874Z"
+}

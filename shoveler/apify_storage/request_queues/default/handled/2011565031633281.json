@@ -1,0 +1,21 @@
+{
+  "id": "svKS7mPVzRvW1n7",
+  "url":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72075/203153012",
+  "loadedUrl":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72075/203153012",
+  "uniqueKey":
+    "https://www.homedepot.com/p/Nupla-48-in-Fiberglass-Handle-Heavy-Duty-Square-Point-Shovel-72075/203153012",
+  "method": "GET",
+  "payload": null,
+  "noRetry": false,
+  "retryCount": 0,
+  "errorMessages": null,
+  "headers": {},
+  "userData": {
+    "type": "detail",
+    "label": "host",
+    "host": "homedepot"
+  },
+  "handledAt": "2019-08-05T19:00:35.801Z"
+}
