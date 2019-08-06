@@ -48,7 +48,7 @@ const Button = styled.button`
   font-size: 18px;
   font-family: AppleGothic;
   border-radius: 15px;
-  background-color: blue;
+  background-color: #2b9fd9
   color: white;
   padding: 1em;
   margin: 2%
