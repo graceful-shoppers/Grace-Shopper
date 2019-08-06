@@ -13,7 +13,7 @@ const ShovelCard = styled.div`
   margin: 4px;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 `
-const ShovelsCont = styled.div`
+export const ShovelsCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,7 @@ const InfoDiv = styled.div`
   width: 50%;
   color: #1A1A1A;
 `
-const StyledInfiniteScroll = styled(InfiniteScroll)`
+export const StyledInfiniteScroll = styled(InfiniteScroll)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

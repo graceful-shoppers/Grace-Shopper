@@ -18,6 +18,9 @@ const EachUser = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   text-align: left;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 `
 
 const UserListing = styled.div`
@@ -45,6 +48,11 @@ const UserListingHeader = styled.div`
   padding-bottom: 6px;
   border-left: 1px solid black;
   border-right: 1px solid black;
+`
+const FontSizeDiv = styled.div`
+  font-size: 18px;
+  white-space: nowrap;
+  width: 60%;
 `
 
 class AllUsersView extends React.Component {
@@ -76,18 +84,21 @@ class AllUsersView extends React.Component {
     return (
       <UserListing>
         <UserListingHeader>
-          <div>Email</div>
-          <div>Status</div>
-          <div>User Options</div>
+          <FontSizeDiv>Email</FontSizeDiv>
+          <FontSizeDiv>Status</FontSizeDiv>
+          <FontSizeDiv>User Options</FontSizeDiv>
         </UserListingHeader>
         {allUsers.map(user => {
           return (
             <EachUser className="EachUser" key={user.id}>
-              <UserEmail>{user.email}</UserEmail>
+              <UserEmail className="tooltip">
+                {user.email}
+                <span className="tooltiptext">{user.email}</span>
+              </UserEmail>
               {user.isAdmin ? (
-                <div>Administrator</div>
+                <FontSizeDiv>Administrator</FontSizeDiv>
               ) : (
-                <div>
+                <FontSizeDiv>
                   User{' '}
                   <BasicButton
                     type="button"
@@ -95,7 +106,7 @@ class AllUsersView extends React.Component {
                   >
                     Promote
                   </BasicButton>
-                </div>
+                </FontSizeDiv>
               )}
               <div>
                 <div>
