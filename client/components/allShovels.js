@@ -43,6 +43,7 @@ const ImageDiv = styled.div`
 const InfoDiv = styled.div`
   display; flex;
   width: 50%;
+  color: #1A1A1A;
 `
 const StyledInfiniteScroll = styled(InfiniteScroll)`
   display: flex;
@@ -60,6 +61,8 @@ const Image = styled.img`
   margin: 10px;
   margin-top: 40px;
 `
+
+const StyledLink = styled(Link)``
 
 const AvgRating = props => {
   var avg = 0
@@ -85,7 +88,7 @@ const AvgRating = props => {
 const ShovelDiv = props => {
   return (
     <ShovelCard>
-      <Link to={`/shovels/${props.shovel.id}`}>
+      <StyledLink to={`/shovels/${props.shovel.id}`}>
         <Shovel>
           <ImageDiv>
             <Image src={props.shovel.imageUrl} style={{width: 100}} />
@@ -102,7 +105,7 @@ const ShovelDiv = props => {
             )} */}
           </InfoDiv>
         </Shovel>
-      </Link>
+      </StyledLink>
     </ShovelCard>
   )
 }

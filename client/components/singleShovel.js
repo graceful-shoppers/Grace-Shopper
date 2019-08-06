@@ -15,6 +15,57 @@ const SingleShovelDiv = styled.div`
 // const SingleReview = props => {
 //   return <div />
 // }
+const Image = styled.img`
+  @media (min-width: 768px) {
+    max-width: 20vw;
+  }
+  max-width: 75vw;
+  height: auto;
+`
+
+const Flex = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`
+
+const Padding = styled.div`
+  @media (min-width: 768px) {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+  }
+  padding: 4%;
+`
+
+const Input = styled.input`
+  height: 55px;
+  width: 100px;
+  font-size: 18px;
+`
+
+const Button = styled.button`
+  font-size: 18px;
+  font-family: AppleGothic;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  padding: 1em;
+  margin: 2%
+  &:hover {
+    box-shadow: 0px 0px 5px black;
+  }
+  &:focus {
+    outline: 0;
+  }
+`
+
+const P = styled.p``
+
+const FormContainer = styled.div`
+  display: inline-block;
+  text-align: center;
+`
 
 export class SingleShovel extends React.Component {
   constructor() {
@@ -49,16 +100,21 @@ export class SingleShovel extends React.Component {
   render() {
     const shovel = this.props.selectedShovel
     return (
-      <div className="shovel">
+      <Padding>
         <SingleShovelDiv>
-          <h3>{shovel.title}</h3>
-          <h6>${shovel.price / 100}</h6>
-          <img src={shovel.imageUrl} />
-          <form onSubmit={evt => this.handleClick(evt, shovel)}>
-            <input placeholder="quantity" name="quantity" />
-            <button type="submit">Add to cart</button>
-          </form>
-          <p>{shovel.description}</p>
+          <h2>{shovel.title}</h2>
+          <h3>${shovel.price / 100}</h3>
+          <Flex>
+            <Image src={shovel.imageUrl} />
+
+            <P>{shovel.description}</P>
+          </Flex>
+          <FormContainer>
+            <form onSubmit={evt => this.handleClick(evt, shovel)}>
+              <Input placeholder="Quantity" name="quantity" />
+              <Button type="submit">Add to cart</Button>
+            </form>
+          </FormContainer>
         </SingleShovelDiv>
 
         <h3> Reviews </h3>
@@ -75,7 +131,7 @@ export class SingleShovel extends React.Component {
         })}
 
         <ReviewForm shovelId={shovel.id} />
-      </div>
+      </Padding>
     )
   }
 }
