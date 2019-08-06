@@ -6,12 +6,12 @@ const db = require('../db')
 const app = require('../index')
 const Product = db.model('product')
 
-describe('Shovel routes', () => {
+xdescribe('Shovel routes', () => {
   beforeEach(() => {
     return db.sync({force: true})
   })
 
-  describe('/api/shovels/', () => {
+  xdescribe('/api/shovels/', () => {
     const Shovel1 = {
       title: 'good shovel',
       description: "it's seriously good, I'm not kidding",
@@ -37,14 +37,14 @@ describe('Shovel routes', () => {
       return Product.create(Shovel2)
     })
 
-    it('GET /api/shovels/:id', async () => {
+    xit('GET /api/shovels/:id', async () => {
       const res = await request(app)
         .get('/api/shovels/1')
         .expect(200)
 
       expect(res.body.title).to.be.equal('good shovel')
     })
-    it('GET /api/shovels/get/:type', async () => {
+    xit('GET /api/shovels/get/:type', async () => {
       const res = await request(app)
         .get('/api/shovels/get/all')
         .expect(200)

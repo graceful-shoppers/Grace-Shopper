@@ -20,17 +20,17 @@ describe('User model', () => {
         })
       })
 
-      it('returns true if the password is correct', () => {
+      xit('returns true if the password is correct', () => {
         expect(cody.correctPassword('bones')).to.be.equal(true)
       })
 
-      it('returns false if the password is incorrect', () => {
+      xit('returns false if the password is incorrect', () => {
         expect(cody.correctPassword('bonez')).to.be.equal(false)
       })
     }) // end describe('correctPassword')
   }) // end describe('instanceMethods')
-  describe('validators', () => {
-    describe('email', () => {
+  xdescribe('validators', () => {
+    xdescribe('email', () => {
       let cody
       let brody
       beforeEach(async () => {
@@ -44,7 +44,7 @@ describe('User model', () => {
           password: 'bones'
         }
       })
-      it('throws an error if the email is already in the database', async () => {
+      xit('throws an error if the email is already in the database', async () => {
         return await User.create(brody).then(
           () => {
             throw new Error('validation should fail when email is not unique')
