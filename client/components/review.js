@@ -10,6 +10,7 @@ const Review = props => {
         value={props.value}
       />
       <p>{props.text}</p>
+      <hr />
     </div>
   )
 }
