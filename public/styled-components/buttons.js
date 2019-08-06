@@ -18,6 +18,7 @@ export const BasicButton = styled.button`
   color: black;
   background-color: limegreen;
   font-size: 16px;
+  border-radius: 5px;
 `
 
 export const DeleteButton = styled.button`
@@ -25,4 +26,5 @@ export const DeleteButton = styled.button`
   color: black;
   background-color: tomato;
   font-size: 16px;
+  border-radius: 5px;
 `

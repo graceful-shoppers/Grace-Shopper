@@ -56,7 +56,6 @@ class Routes extends Component {
               component={AdminEditShovel}
             />
             <Route path="/adminPortal/allUsers" component={AdminUsers} />
-            {/* <Route path="/adminPortal/allUsers" component={AdminUsersMobile} /> */}
             <Route path="/adminPortal/allOrders" component={AllOrders} />
             <Route path="/pirate" component={Pirate} />
             <Route path="/" component={NotFound} />

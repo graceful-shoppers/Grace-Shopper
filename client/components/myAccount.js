@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Head = styled.div`
   width: 100%;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-top: 10px;
 `
 
@@ -15,9 +15,10 @@ class MyAccount extends React.Component {
     return (
       <div>
         <Head>My Account</Head>
-        <h3>
+        <hr />
+        <div>
           <Orders />
-        </h3>
+        </div>
       </div>
     )
   }
