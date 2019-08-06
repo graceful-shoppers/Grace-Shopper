@@ -37,12 +37,6 @@ async function seed() {
   let products = []
 
   function dirReader() {
-    console.log(
-      fs.readdirSync(
-        __dirname + '/../shoveler/apify_storage/datasets/default',
-        'utf8'
-      )
-    )
     return fs.readdirSync(
       __dirname + '/../shoveler/apify_storage/datasets/default',
       'utf8'
@@ -60,8 +54,6 @@ async function seed() {
 
   fileReader(dirReader())
 
-  console.log(products)
-
   products = await Promise.all(
     await products.map(async prod => {
       try {
@@ -75,8 +67,6 @@ async function seed() {
       }
     })
   )
-
-  console.log(products)
 
   // create sessions
 
