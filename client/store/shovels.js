@@ -26,10 +26,16 @@ const removeShovel = shovelId => ({type: REMOVE_SHOVEL, shovelId})
  * THUNK CREATORS
  */
 
-export const getAllShovels2 = (title, type, sort, offset) => async dispatch => {
+export const getAllShovels2 = (
+  title,
+  type,
+  sort,
+  offset,
+  brand
+) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/shovels/get/${title}/${type}/${sort}/${offset}`
+      `/api/shovels/get/${title}/${type}/${sort}/${offset}/${brand}`
     )
     dispatch(getShovels2(res.data))
   } catch (err) {
@@ -37,10 +43,16 @@ export const getAllShovels2 = (title, type, sort, offset) => async dispatch => {
   }
 }
 
-export const getAllShovels = (title, type, sort, offset) => async dispatch => {
+export const getAllShovels = (
+  title,
+  type,
+  sort,
+  offset,
+  brand
+) => async dispatch => {
   try {
     const res = await axios.get(
-      `/api/shovels/get/${title}/${type}/${sort}/${offset}`
+      `/api/shovels/get/${title}/${type}/${sort}/${offset}/${brand}`
     )
     dispatch(getShovels(res.data))
   } catch (err) {

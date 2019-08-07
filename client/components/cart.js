@@ -108,6 +108,13 @@ const ItemInfoDiv = styled.div`
   flex-direction: column;
   width: 50%;
 
+  #brand {
+    font-size: 10px;
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
   #title {
     font-size: 14px;
     @media (min-width: 768px) {
@@ -222,6 +229,7 @@ const CartItem = props => {
         </ItemImgDiv>
 
         <ItemInfoDiv>
+          <span id="brand">{props.product.brand}</span>
           <span id="title">{props.product.title}</span>
           <br />
           <span id="price">Price: ${props.product.price / 100}</span>

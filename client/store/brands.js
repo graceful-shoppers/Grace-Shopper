@@ -22,8 +22,18 @@ const getBrands = brands => ({type: GET_BRANDS, brands})
 
 export const getBrandsThunk = () => {
   return async dispatch => {
-    const brands = await axios.get(`/api/shovels/brands`)
-    dispatch(getBrands(brands.data))
+    var res = await axios.get(`/api/shovels/brands`)
+
+    var brands = res.data
+
+    var uniqueBrands = []
+    for (let i = 0; i < brands.length; i++) {
+      if (!uniqueBrands.includes(brands[i].brand)) {
+        uniqueBrands.push(brands[i].brand)
+      }
+    }
+
+    dispatch(getBrands(uniqueBrands))
   }
 }
 
