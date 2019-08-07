@@ -48,7 +48,7 @@ const CartItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: pink;
+  color: white;
   font-size: 15px;
   width: 50;
   padding-right: 10px;
