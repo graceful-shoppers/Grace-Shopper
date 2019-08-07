@@ -24,6 +24,7 @@ import Splash from './components/Splash'
 import SplashTest from './components/SplashPara'
 import SplashScroll from './components/SplashScroll'
 import styled from 'styled-components'
+import {getBrandsThunk} from './store/brands'
 
 const MarginDiv = styled.div`
   padding-top: 104px;
@@ -76,39 +77,41 @@ class Routes extends Component {
             </Switch>
           )}
 
-        {!passwordResetCheck && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            <Route exact path="/home" component={UserHome} />
-            <Route exact path="/" component={SplashTest} />
-            <Route exact path="/shovels" component={AllShovelsView} />
-            <Route path="/shovels/:shovelId" component={SingleShovel} />
-            <Route exact path="/cart" component={CartView} />
-            <Route exact path="/myAccount" component={MyAccount} />
-            <Route exact path="/myAccount/orders" component={Orders} />
-            {this.props.user.isAdmin && (
-              <Route exact path="/adminPortal" component={AdminPortal} />
-            )}
-            {this.props.user.isAdmin && (
-              <Route path="/adminPortal/allShovels" component={AdminShovels} />
-            )}
-            {this.props.user.isAdmin && (
-              <Route
-                path="/adminPortal/editShovel/:shovelId"
-                component={AdminEditShovel}
-              />
-            )}
-            {this.props.user.isAdmin && (
-              <Route path="/adminPortal/allUsers" component={AdminUsers} />
-            )}
-            {this.props.user.isAdmin && (
-              <Route path="/adminPortal/allOrders" component={AllOrders} />
-            )}
-            <Route path="/pirate" component={Pirate} />
-            <Route path="/" component={NotFound} />
-          </Switch>
-        )}
-
+          {!passwordResetCheck && (
+            <Switch>
+              {/* Routes placed here are only available after logging in */}
+              <Route exact path="/home" component={UserHome} />
+              <Route exact path="/" component={SplashTest} />
+              <Route exact path="/shovels" component={AllShovelsView} />
+              <Route path="/shovels/:shovelId" component={SingleShovel} />
+              <Route exact path="/cart" component={CartView} />
+              <Route exact path="/myAccount" component={MyAccount} />
+              <Route exact path="/myAccount/orders" component={Orders} />
+              {this.props.user.isAdmin && (
+                <Route exact path="/adminPortal" component={AdminPortal} />
+              )}
+              {this.props.user.isAdmin && (
+                <Route
+                  path="/adminPortal/allShovels"
+                  component={AdminShovels}
+                />
+              )}
+              {this.props.user.isAdmin && (
+                <Route
+                  path="/adminPortal/editShovel/:shovelId"
+                  component={AdminEditShovel}
+                />
+              )}
+              {this.props.user.isAdmin && (
+                <Route path="/adminPortal/allUsers" component={AdminUsers} />
+              )}
+              {this.props.user.isAdmin && (
+                <Route path="/adminPortal/allOrders" component={AllOrders} />
+              )}
+              <Route path="/pirate" component={Pirate} />
+              <Route path="/" component={NotFound} />
+            </Switch>
+          )}
 
           {isLoggedIn && passwordResetCheck && <ResetPassword />}
         </Switch>
@@ -134,6 +137,7 @@ const mapDispatch = dispatch => {
     loadInitialData() {
       dispatch(me())
       dispatch(getCartThunk())
+      dispatch(getBrandsThunk())
     }
   }
 }
