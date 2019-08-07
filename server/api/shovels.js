@@ -2,16 +2,14 @@ const router = require('express').Router()
 const {Product, Review} = require('../db/models')
 const {Op} = require('sequelize')
 
-router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
+router.get('/get/:title/:type/:sort/:offset/:brand', async (req, res, next) => {
   try {
     var shovels
-
-    console.log('type is', req.params.type)
-
     //default search
     if (
       req.params.title === 'all' &&
       req.params.type === 'all' &&
+      req.params.brand === 'all' &&
       req.params.sort !== 'ASC' &&
       req.params.sort !== 'DESC'
     ) {
@@ -23,6 +21,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
       //all categories, no sorting
     } else if (
       req.params.title === 'all' &&
+      req.params.brand === 'all' &&
       req.params.type === 'all' &&
       (req.params.sort === 'ASC' || req.params.sort === 'DESC')
     ) {
@@ -36,9 +35,9 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title === 'all' &&
       req.params.type !== 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
     ) {
-      console.log('here')
       shovels = await Product.findAll({
         where: {
           category: {
@@ -53,6 +52,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title === 'all' &&
       req.params.type !== 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort === 'ASC' || req.params.sort === 'DESC')
     ) {
       shovels = await Product.findAll({
@@ -69,6 +69,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title !== 'all' &&
       req.params.type === 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
     ) {
       shovels = await Product.findAll({
@@ -84,6 +85,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title !== 'all' &&
       req.params.type !== 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
     ) {
       shovels = await Product.findAll({
@@ -102,6 +104,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title !== 'all' &&
       req.params.type === 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort === 'ASC' || req.params.sort === 'DESC')
     ) {
       shovels = await Product.findAll({
@@ -118,6 +121,7 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     } else if (
       req.params.title !== 'all' &&
       req.params.type !== 'all' &&
+      req.params.brand === 'all' &&
       (req.params.sort === 'ASC' || req.params.sort === 'DESC')
     ) {
       shovels = await Product.findAll({
@@ -127,6 +131,142 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
           },
           category: {
             [Op.iLike]: `%${req.params.type}%`
+          }
+        },
+        order: [['price', req.params.sort.toString()]],
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title === 'all' &&
+      req.params.type === 'all' &&
+      req.params.brand !== 'all' &&
+      req.params.sort === 'none'
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title !== 'all' &&
+      req.params.type === 'all' &&
+      req.params.brand !== 'all' &&
+      req.params.sort === 'none'
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          title: {
+            [Op.iLike]: `%${req.params.title}%`
+          },
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title === 'all' &&
+      req.params.type !== 'all' &&
+      req.params.brand !== 'all' &&
+      req.params.sort === 'none'
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          },
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title !== 'all' &&
+      req.params.type !== 'all' &&
+      req.params.brand !== 'all' &&
+      req.params.sort === 'none'
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          title: {
+            [Op.iLike]: `%${req.params.title}%`
+          },
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          },
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title === 'all' &&
+      req.params.type === 'all' &&
+      req.params.brand !== 'all' &&
+      (req.params.sort === 'ASC' || req.params.sort === 'DESC')
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        order: [['price', req.params.sort.toString()]],
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title !== 'all' &&
+      req.params.type !== 'all' &&
+      req.params.brand !== 'all' &&
+      (req.params.sort === 'ASC' || req.params.sort === 'DESC')
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          title: {
+            [Op.iLike]: `%${req.params.title}%`
+          },
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          },
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
+          }
+        },
+        order: [['price', req.params.sort.toString()]],
+        include: [{all: true}],
+        offset: req.params.offset,
+        limit: 25
+      })
+    } else if (
+      req.params.title === 'all' &&
+      req.params.type !== 'all' &&
+      req.params.brand !== 'all' &&
+      (req.params.sort === 'ASC' || req.params.sort === 'DESC')
+    ) {
+      shovels = await Product.findAll({
+        where: {
+          category: {
+            [Op.iLike]: `%${req.params.type}%`
+          },
+          brand: {
+            [Op.iLike]: `%${req.params.brand}%`
           }
         },
         order: [['price', req.params.sort.toString()]],
@@ -135,8 +275,19 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
         limit: 25
       })
     }
-
     res.json(shovels)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.get('/brands', async (req, res, next) => {
+  try {
+    const brands = await Product.findAll({
+      attributes: ['brand']
+    })
+
+    res.send(brands)
   } catch (err) {
     next(err)
   }
