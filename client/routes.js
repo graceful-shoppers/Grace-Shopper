@@ -75,6 +75,7 @@ class Routes extends Component {
             </Switch>
           )}
 
+
           {isLoggedIn && passwordResetCheck && <ResetPassword />}
         </Switch>
       </MarginDiv>

@@ -53,7 +53,9 @@ const FontSizeDiv = styled.div`
   font-size: 18px;
   white-space: nowrap;
   width: 60%;
-`
+  display: flex:
+  flex-direction: column;
+  `
 
 class AllUsersView extends React.Component {
   constructor() {
@@ -99,7 +101,7 @@ class AllUsersView extends React.Component {
                 <FontSizeDiv>Administrator</FontSizeDiv>
               ) : (
                 <FontSizeDiv>
-                  User{' '}
+                  <div> User </div>
                   <BasicButton
                     type="button"
                     onClick={() => this.promoteUser(user)}
@@ -108,7 +110,7 @@ class AllUsersView extends React.Component {
                   </BasicButton>
                 </FontSizeDiv>
               )}
-              <div>
+              <FontSizeDiv>
                 <div>
                   <BasicButton
                     type="button"
@@ -125,7 +127,7 @@ class AllUsersView extends React.Component {
                     Delete
                   </DeleteButton>
                 </div>
-              </div>
+              </FontSizeDiv>
             </EachUser>
           )
         })}
