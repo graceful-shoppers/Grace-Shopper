@@ -98,11 +98,6 @@ const ShovelDiv = props => {
             <h5>{props.shovel.title}</h5>
             <AvgRating shovel={props.shovel} />
             <h6>${props.shovel.price / 100}</h6>
-            {/* {Math.random() > 0.3 ? (
-              <h6>Prime Shovel shipping</h6>
-            ) : (
-              <h6>Regular shipping </h6>
-            )} */}
           </InfoDiv>
         </Shovel>
       </StyledLink>
@@ -133,7 +128,7 @@ class AllShovelsView extends React.Component {
         offset: this.state.offset + 25
       })
 
-      if (this.state.offset >= 300) {
+      if (this.state.offset >= 306) {
         this.setState({
           hasMore: false
         })
@@ -225,6 +220,17 @@ class AllShovelsView extends React.Component {
           </form>
         </div>
         <FiltersDiv>
+          <div>
+            <h6>Category:</h6>
+            <select id="typeSelect" onChange={() => this.selectShovels()}>
+              <option value="all">All shovels</option>
+              <option value="mouthShovel">Mouth shovels</option>
+              <option value="kitchenShovel">Kitchen shovels</option>
+              <option value="snowShovel">Snow shovels</option>
+              <option value="yardShovel">Yard shovels</option>
+            </select>
+          </div>
+
           <div>
             <h6>Category:</h6>
             <select id="typeSelect" onChange={() => this.selectShovels()}>

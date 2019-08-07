@@ -31,12 +31,7 @@ const Product = db.define('product', {
     }
   },
   category: {
-    type: Sequelize.ENUM(
-      'yardShovel',
-      'kitchenShovel',
-      'mouthShovel',
-      'snowShovel'
-    )
+    type: Sequelize.STRING
   },
   availability: {
     type: Sequelize.BOOLEAN,

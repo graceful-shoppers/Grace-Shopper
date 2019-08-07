@@ -29,6 +29,12 @@ const Delete = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 10%;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    margin-left: 14rem;
+    margin-right: 3rem;
+  }
 `
 
 const Update = styled.button`
@@ -101,13 +107,41 @@ const ItemInfoDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  #title {
+    font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  #price {
+    font-size: 12px;
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
 `
 
 const ModifyItemDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+`
+
+const StyledImg = styled.img`
+  width: 75px;
+  height: 75px;
+
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 `
 
 const Quantity = styled.label`
@@ -184,12 +218,13 @@ const CartItem = props => {
     <CartItemDiv>
       <CartCardDiv onClick={() => props.viewItem(props.product)}>
         <ItemImgDiv>
-          <img src={props.product.imageUrl} style={{height: 100, width: 100}} />
+          <StyledImg src={props.product.imageUrl} />
         </ItemImgDiv>
 
         <ItemInfoDiv>
-          <h2>{props.product.title}</h2>
-          <h5>Price: ${props.product.price / 100}</h5>
+          <span id="title">{props.product.title}</span>
+          <br />
+          <span id="price">Price: ${props.product.price / 100}</span>
         </ItemInfoDiv>
       </CartCardDiv>
 

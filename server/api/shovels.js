@@ -5,9 +5,6 @@ const {Op} = require('sequelize')
 router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
   try {
     var shovels
-
-    console.log('type is', req.params.type)
-
     //default search
     if (
       req.params.title === 'all' &&
@@ -38,7 +35,6 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
       req.params.type !== 'all' &&
       (req.params.sort !== 'ASC' && req.params.sort !== 'DESC')
     ) {
-      console.log('here')
       shovels = await Product.findAll({
         where: {
           category: {
@@ -137,6 +133,17 @@ router.get('/get/:title/:type/:sort/:offset', async (req, res, next) => {
     }
 
     res.json(shovels)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.get('/brands', async (req, res, next) => {
+  try {
+    const brands = await Product.findAll({
+      attributes: ['brand']
+    })
+    res.send(brands)
   } catch (err) {
     next(err)
   }

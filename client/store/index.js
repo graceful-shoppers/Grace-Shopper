@@ -8,6 +8,7 @@ import cart from './cart'
 import singleShovel from './singleShovel'
 import orders from './orders'
 import allUsers from './usersAll'
+import brands from './brands'
 
 import reviews from './reviews'
 
@@ -18,7 +19,8 @@ const reducer = combineReducers({
   cart,
   orders,
   allUsers,
-  reviews
+  reviews,
+  brands
 })
 
 const middleware = composeWithDevTools(

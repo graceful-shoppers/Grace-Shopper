@@ -23,6 +23,7 @@ import MediaQuery from 'react-responsive'
 import Splash from './components/Splash'
 import SplashTest from './components/SplashPara'
 import SplashScroll from './components/SplashScroll'
+import {getBrandsThunk} from './store/brands'
 
 /**
  * COMPONENT
@@ -89,6 +90,7 @@ const mapDispatch = dispatch => {
     loadInitialData() {
       dispatch(me())
       dispatch(getCartThunk())
+      dispatch(getBrandsThunk())
     }
   }
 }
