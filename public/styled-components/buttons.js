@@ -7,7 +7,7 @@ export const BurgerLinkButton = styled(Link)`
   font-size: 16px;
   text-align: center;
   margin-top: 2px;
-  background-color: plum;
+  background-color: rgb(66, 245, 179);
   padding-top: 5px;
   padding-bottom: 5px;
   border: 1px solid black;
