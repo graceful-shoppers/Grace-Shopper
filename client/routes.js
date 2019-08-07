@@ -35,6 +35,7 @@ class Routes extends Component {
   render() {
     const {isLoggedIn} = this.props
     const passwordResetCheck = this.props.user.needPasswordReset
+    console.log(this.props)
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -53,15 +54,24 @@ class Routes extends Component {
             <Route exact path="/cart" component={CartView} />
             <Route exact path="/myAccount" component={MyAccount} />
             <Route exact path="/myAccount/orders" component={Orders} />
-            <Route exact path="/adminPortal" component={AdminPortal} />
-            <Route path="/adminPortal/allShovels" component={AdminShovels} />
-            <Route
-              path="/adminPortal/editShovel/:shovelId"
-              component={AdminEditShovel}
-            />
-            <Route path="/adminPortal/allUsers" component={AdminUsers} />
-            {/* <Route path="/adminPortal/allUsers" component={AdminUsersMobile} /> */}
-            <Route path="/adminPortal/allOrders" component={AllOrders} />
+            {this.props.user.isAdmin && (
+              <Route exact path="/adminPortal" component={AdminPortal} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allShovels" component={AdminShovels} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route
+                path="/adminPortal/editShovel/:shovelId"
+                component={AdminEditShovel}
+              />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allUsers" component={AdminUsers} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allOrders" component={AllOrders} />
+            )}
             <Route path="/pirate" component={Pirate} />
             <Route path="/" component={NotFound} />
           </Switch>
