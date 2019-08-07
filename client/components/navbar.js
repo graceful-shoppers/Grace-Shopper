@@ -43,6 +43,22 @@ const DropDown = styled.div`
   max-width: 340px;
 `
 
+const DropDownItemsCont = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 5;
+  justify-content: centered;
+  // align-items: center;
+  align-content: center;
+  top: 30%;
+  bottom: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+`
+
 const CartItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -145,40 +161,48 @@ class Navbar extends React.Component {
               <div className="bar" />
               <div className="bar" />
             </HamburgerButton>
-            <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
-              Home
-            </BurgerLinkButton>
-            <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
-              Shovels
-            </BurgerLinkButton>
-            {this.props.isLoggedIn ? (
-              <BurgerLinkButton
-                to="/myAccount"
-                onClick={() => this.burgerShow()}
-              >
-                My Account
+            <DropDownItemsCont>
+              <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
+                Home
               </BurgerLinkButton>
-            ) : (
-              <BurgerLinkButton to="/signup" onClick={() => this.burgerShow()}>
-                Sign Up
+              <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
+                Shovels
               </BurgerLinkButton>
-            )}
-            {this.props.isLoggedIn ? (
-              <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
-                Logout
-              </BurgerLinkButton>
-            ) : (
-              <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
-                Login
-              </BurgerLinkButton>
-            )}
-            {this.props.isAdmin ? (
-              <LocalButton to="/adminPortal" onClick={() => this.burgerShow()}>
-                Admin Portal
-              </LocalButton>
-            ) : (
-              <div />
-            )}
+              {this.props.isLoggedIn ? (
+                <BurgerLinkButton
+                  to="/myAccount"
+                  onClick={() => this.burgerShow()}
+                >
+                  My Account
+                </BurgerLinkButton>
+              ) : (
+                <BurgerLinkButton
+                  to="/signup"
+                  onClick={() => this.burgerShow()}
+                >
+                  Sign Up
+                </BurgerLinkButton>
+              )}
+              {this.props.isLoggedIn ? (
+                <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
+                  Logout
+                </BurgerLinkButton>
+              ) : (
+                <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
+                  Login
+                </BurgerLinkButton>
+              )}
+              {this.props.isAdmin ? (
+                <LocalButton
+                  to="/adminPortal"
+                  onClick={() => this.burgerShow()}
+                >
+                  Admin Portal
+                </LocalButton>
+              ) : (
+                <div />
+              )}
+            </DropDownItemsCont>
           </DropDown>
         ) : (
           <div />
