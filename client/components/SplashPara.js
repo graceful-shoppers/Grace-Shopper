@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 // const Container = styled.div`
 //   width: 100%;
@@ -48,8 +49,9 @@ const ShovelPanelText = styled.div`
 `
 
 const MainContainer = styled.div`
+  scroll-behavior: smooth;
   perspective: 1px;
-  transform-style: preserve-3d;
+  // transform-style: preserve-3d;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -71,17 +73,21 @@ const Content = styled.div`
 `
 const ParallaxContainer = styled.div`
   display: flex;
-  flex-direction: column;
   flex: 1 0 auto;
   position: relative;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   transform: translateZ(-1px) scale(2);
   background: url(${props => props.img});
   background-color: rgb(250, 228, 216);
   background-size: cover;
+`
+const LinkButt = styled.div`
+  width: 30%;
+  margin: auto;
+  border-radius: 50%;
 `
 
 {
@@ -98,6 +104,18 @@ const Splash = props => {
   return (
     <div>
       <MainContainer>
+        <ParallaxContainer img="assets/snowStuff.jpg">
+          <ImgCont src="assets/snowShovel.png" />
+        </ParallaxContainer>
+        <ContentContainer>
+          <Content>
+            <SplashText>
+              be<br /> SOMEONE...
+            </SplashText>
+          </Content>
+        </ContentContainer>
+      </MainContainer>
+      <MainContainer>
         <ParallaxContainer img="https://miro.medium.com/max/1838/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg">
           <ImgRotateLeft270
             className="hehe"
@@ -112,23 +130,27 @@ const Splash = props => {
         </ContentContainer>
       </MainContainer>
       <MainContainer>
-        <ParallaxContainer img="assets/snowStuff.jpg">
-          <ImgCont src="assets/snowShovel.png" />
-        </ParallaxContainer>
-        <ContentContainer>
-          <Content>
-            <SplashText>
-              be <br /> SOMEONE...
-            </SplashText>
-          </Content>
-        </ContentContainer>
-      </MainContainer>
-      <MainContainer>
         <ParallaxContainer img="assets/spoon.jpg" />
         <ContentContainer>
           <Content>
             <SplashText>
-              do <br /> EVERYTHING
+              <br />
+              <br />
+              do<br /> EVERYTHING<br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <Link to="/shovels">
+                <LinkButt>start here</LinkButt>
+              </Link>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </SplashText>
           </Content>
         </ContentContainer>
