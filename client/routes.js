@@ -23,8 +23,15 @@ import MediaQuery from 'react-responsive'
 import Splash from './components/Splash'
 import SplashTest from './components/SplashPara'
 import SplashScroll from './components/SplashScroll'
+import styled from 'styled-components'
 import {getBrandsThunk} from './store/brands'
 
+const MarginDiv = styled.div`
+  padding-top: 104px;
+  @media (min-width: 337px) {
+    padding-top: 77px;
+  }
+`
 /**
  * COMPONENT
  */
@@ -37,38 +44,41 @@ class Routes extends Component {
     const {isLoggedIn} = this.props
     const passwordResetCheck = this.props.user.needPasswordReset
     return (
-      <Switch>
-        {/* Routes placed here are available to all visitors */}
-        <Route path="/home" component={UserHome} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route exact path="/checkout" component={Checkout} />
+      <MarginDiv>
+        <Switch>
+          {/* Routes placed here are available to all visitors */}
+          <Route path="/home" component={UserHome} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route exact path="/checkout" component={Checkout} />
 
-        {!passwordResetCheck && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            <Route exact path="/home" component={UserHome} />
-            <Route exact path="/" component={SplashTest} />
-            <Route exact path="/shovels" component={AllShovelsView} />
-            <Route path="/shovels/:shovelId" component={SingleShovel} />
-            <Route exact path="/cart" component={CartView} />
-            <Route exact path="/myAccount" component={MyAccount} />
-            <Route exact path="/myAccount/orders" component={Orders} />
-            <Route exact path="/adminPortal" component={AdminPortal} />
-            <Route path="/adminPortal/allShovels" component={AdminShovels} />
-            <Route
-              path="/adminPortal/editShovel/:shovelId"
-              component={AdminEditShovel}
-            />
-            <Route path="/adminPortal/allUsers" component={AdminUsers} />
-            <Route path="/adminPortal/allOrders" component={AllOrders} />
-            <Route path="/pirate" component={Pirate} />
-            <Route path="/" component={NotFound} />
-          </Switch>
-        )}
+          {!passwordResetCheck && (
+            <Switch>
+              {/* Routes placed here are only available after logging in */}
+              <Route exact path="/home" component={UserHome} />
+              <Route exact path="/" component={SplashTest} />
+              <Route exact path="/shovels" component={AllShovelsView} />
+              <Route path="/shovels/:shovelId" component={SingleShovel} />
+              <Route exact path="/cart" component={CartView} />
+              <Route exact path="/myAccount" component={MyAccount} />
+              <Route exact path="/myAccount/orders" component={Orders} />
+              <Route exact path="/adminPortal" component={AdminPortal} />
+              <Route path="/adminPortal/allShovels" component={AdminShovels} />
+              <Route
+                path="/adminPortal/editShovel/:shovelId"
+                component={AdminEditShovel}
+              />
+              <Route path="/adminPortal/allUsers" component={AdminUsers} />
+              {/* <Route path="/adminPortal/allUsers" component={AdminUsersMobile} /> */}
+              <Route path="/adminPortal/allOrders" component={AllOrders} />
+              <Route path="/pirate" component={Pirate} />
+              <Route path="/" component={NotFound} />
+            </Switch>
+          )}
 
-        {isLoggedIn && passwordResetCheck && <ResetPassword />}
-      </Switch>
+          {isLoggedIn && passwordResetCheck && <ResetPassword />}
+        </Switch>
+      </MarginDiv>
     )
   }
 }
