@@ -9,6 +9,7 @@ const OrderList = styled.div`
   font-size: 15px;
   padding: 2px;
   flex-direction: row;
+  border-bottom: 1px solid gray;
 `
 const ProductImg = styled.img`
   width: 75px;
@@ -26,7 +27,6 @@ const RowContainer = styled.div`
 `
 const Main = styled.div`
   padding: 10px;
-  border: 2px solid black;
 `
 
 class Orders extends React.Component {
