@@ -29,18 +29,47 @@ const Navvy = styled.div`
   color: rgb(66, 245, 179);
 `
 
-const DropDown = styled.div`
+const DropDownCont = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
-  width: 75%;
+  // width: 100%;
   position: fixed;
   z-index: 5;
   left: 0;
   top: 0;
   background-color: black;
-  padding: 2px;
+  // padding: 2px;
   max-width: 340px;
+`
+
+const DropDown = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  background-color: black;
+  // padding: 2px;
+  max-width: 340px;
+`
+
+const Opac = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: black;
+  // padding: 2px;
+  max-width: 340px;
+  opacity: 0.5;
 `
 
 const CartItems = styled.div`
@@ -138,48 +167,58 @@ class Navbar extends React.Component {
             </Container>
           </HeaderDiv>
         </Navvy>
+
         {this.state.burger ? (
-          <DropDown>
-            <HamburgerButton onClick={() => this.burgerShow()}>
-              <div className="bar" />
-              <div className="bar" />
-              <div className="bar" />
-            </HamburgerButton>
-            <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
-              Home
-            </BurgerLinkButton>
-            <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
-              Shovels
-            </BurgerLinkButton>
-            {this.props.isLoggedIn ? (
-              <BurgerLinkButton
-                to="/myAccount"
-                onClick={() => this.burgerShow()}
-              >
-                My Account
+          <DropDownCont>
+            <DropDown>
+              <HamburgerButton onClick={() => this.burgerShow()}>
+                <div className="bar" />
+                <div className="bar" />
+                <div className="bar" />
+              </HamburgerButton>
+              <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
+                Home
               </BurgerLinkButton>
-            ) : (
-              <BurgerLinkButton to="/signup" onClick={() => this.burgerShow()}>
-                Sign Up
+              <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
+                Shovels
               </BurgerLinkButton>
-            )}
-            {this.props.isLoggedIn ? (
-              <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
-                Logout
-              </BurgerLinkButton>
-            ) : (
-              <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
-                Login
-              </BurgerLinkButton>
-            )}
-            {this.props.isAdmin ? (
-              <LocalButton to="/adminPortal" onClick={() => this.burgerShow()}>
-                Admin Portal
-              </LocalButton>
-            ) : (
-              <div />
-            )}
-          </DropDown>
+              {this.props.isLoggedIn ? (
+                <BurgerLinkButton
+                  to="/myAccount"
+                  onClick={() => this.burgerShow()}
+                >
+                  My Account
+                </BurgerLinkButton>
+              ) : (
+                <BurgerLinkButton
+                  to="/signup"
+                  onClick={() => this.burgerShow()}
+                >
+                  Sign Up
+                </BurgerLinkButton>
+              )}
+              {this.props.isLoggedIn ? (
+                <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
+                  Logout
+                </BurgerLinkButton>
+              ) : (
+                <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
+                  Login
+                </BurgerLinkButton>
+              )}
+              {this.props.isAdmin ? (
+                <LocalButton
+                  to="/adminPortal"
+                  onClick={() => this.burgerShow()}
+                >
+                  Admin Portal
+                </LocalButton>
+              ) : (
+                <div />
+              )}
+            </DropDown>
+            <Opac />
+          </DropDownCont>
         ) : (
           <div />
         )}

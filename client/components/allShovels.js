@@ -95,6 +95,7 @@ const ShovelDiv = props => {
           </ImageDiv>
 
           <InfoDiv>
+            <span>{props.shovel.brand}</span>
             <h5>{props.shovel.title}</h5>
             <AvgRating shovel={props.shovel} />
             <h6>${props.shovel.price / 100}</h6>
@@ -133,7 +134,7 @@ class AllShovelsView extends React.Component {
       this.setState({
         offset: this.state.offset + 25
       })
-    }, 500)
+    }, 1000)
   }
 
   componentDidMount() {
