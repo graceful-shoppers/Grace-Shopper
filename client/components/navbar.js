@@ -81,6 +81,7 @@ const CartItems = styled.div`
   font-size: 15px;
   width: 50;
   padding-right: 10px;
+  padding-top: 15px;
 `
 
 const ItemsCount = styled.div`
@@ -150,20 +151,19 @@ class Navbar extends React.Component {
                 <div className="bar" />
               </HamburgerButton>
               <h2>Graceful Shoveler</h2>
-              <CartItems>
-                <ItemsCount>
-                  <Link to="/cart">
+
+              <Link to="/cart">
+                <CartItems>
+                  <ItemsCount>
                     {this.props.cart.products
                       ? this.props.cart.products.length
                       : 0}
-                  </Link>
-                </ItemsCount>
-                <span>
-                  <Link to="/cart">
+                  </ItemsCount>
+                  <span>
                     <img src="/cart.png" style={{width: 50}} />
-                  </Link>
-                </span>
-              </CartItems>
+                  </span>
+                </CartItems>
+              </Link>
             </Container>
           </HeaderDiv>
         </Navvy>
