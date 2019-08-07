@@ -35,7 +35,6 @@ class Routes extends Component {
   render() {
     const {isLoggedIn} = this.props
     const passwordResetCheck = this.props.user.needPasswordReset
-    console.log(this.props)
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}

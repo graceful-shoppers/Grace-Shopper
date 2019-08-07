@@ -73,7 +73,16 @@ router.put('/allOrders/:id', adminCheck, async (req, res, next) => {
     order.update(req.body)
     res.json(order)
   } catch (err) {
-    console.error(err)
+    next(err)
+  }
+})
+
+router.post('/allShovels', adminCheck, async (req, res, next) => {
+  try {
+    let newShovel = await Product.create(req.body)
+    res.json(newShovel)
+  } catch (err) {
+    next(err)
   }
 })
 
