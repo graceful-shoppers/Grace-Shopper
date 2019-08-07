@@ -6,6 +6,10 @@ import styled from 'styled-components'
 import Review from './review'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
+const Loader = styled.img`
+max-height: 25vh
+max-width: 25vw`
+
 const ShovelCard = styled.div`
   width: '100%';
   border: 1px solid grey;
@@ -271,10 +275,12 @@ class AllShovelsView extends React.Component {
           <h5>No shovels found </h5>
         ) : (
           <StyledInfiniteScroll
-            dataLength={this.props.shovels.length} //This is important field to render the next data
+            dataLength={this.props.shovels.length}
             next={this.fetchMoreData}
             hasMore={this.state.hasMore}
-            loader={<h4>Loading...</h4>}
+            loader={
+              <Loader src="https://yachtclubgames.com/wp-content/uploads/2017/03/shovelKnight007.png" />
+            }
             endMessage={
               <p style={{textAlign: 'center'}}>
                 <b>Yay! You have seen it all</b>
