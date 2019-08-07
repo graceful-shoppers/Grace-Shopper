@@ -6,17 +6,14 @@ import styled from 'styled-components'
 import {BasicButton, DeleteButton} from '../../public/styled-components/buttons'
 
 const EachUser = styled.div`
-  // padding: 10px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid black;
-  flex-basis: 22%;
-  flex-grow: 1;
-  min-width: 250px;
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   margin: 10px;
   border-radius: 10px;
@@ -35,27 +32,23 @@ const UserEmail = styled.div`
   overflow: hidden;
   white-space: nowrap;
 `
-
-const UserListingHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  background-color: black;
-  color: white;
-  justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-`
 const FontSizeDiv = styled.div`
   font-size: 18px;
   white-space: nowrap;
   width: 60%;
-  display: flex:
-  flex-direction: column;
-  `
+`
+const MappedUsers = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`
+const PromoteButton = styled(BasicButton)`
+  border: none;
+  background-color: rgba(50, 205, 50, 0.4);
+  border-radius: 40px;
+`
 
 class AllUsersView extends React.Component {
   constructor() {
@@ -85,41 +78,33 @@ class AllUsersView extends React.Component {
 
     return (
       <UserListing>
-        <UserListingHeader>
-          <FontSizeDiv>Email</FontSizeDiv>
-          <FontSizeDiv>Status</FontSizeDiv>
-          <FontSizeDiv>User Options</FontSizeDiv>
-        </UserListingHeader>
-        {allUsers.map(user => {
-          return (
-            <EachUser className="EachUser" key={user.id}>
-              <UserEmail className="tooltip">
-                {user.email}
-                <span className="tooltiptext">{user.email}</span>
-              </UserEmail>
-              {user.isAdmin ? (
-                <FontSizeDiv>Administrator</FontSizeDiv>
-              ) : (
-                <FontSizeDiv>
-                  <div> User </div>
-                  <BasicButton
-                    type="button"
-                    onClick={() => this.promoteUser(user)}
-                  >
-                    Promote
-                  </BasicButton>
-                </FontSizeDiv>
-              )}
-              <FontSizeDiv>
+        <MappedUsers>
+          {allUsers.map(user => {
+            return (
+              <EachUser className="EachUser" key={user.id}>
+                <UserEmail className="tooltip">{user.email}</UserEmail>
                 <div>
+                  {user.isAdmin ? (
+                    <FontSizeDiv>Administrator</FontSizeDiv>
+                  ) : (
+                    <FontSizeDiv>
+                      User{' '}
+                      <PromoteButton
+                        type="button"
+                        onClick={() => this.promoteUser(user)}
+                      >
+                        Promote
+                      </PromoteButton>
+                    </FontSizeDiv>
+                  )}
+
                   <BasicButton
                     type="button"
                     onClick={() => this.resetUserPassword(user)}
                   >
                     Reset Password
                   </BasicButton>
-                </div>
-                <div>
+
                   <DeleteButton
                     type="button"
                     onClick={() => this.props.deleteUser(user.id)}
@@ -127,10 +112,10 @@ class AllUsersView extends React.Component {
                     Delete
                   </DeleteButton>
                 </div>
-              </FontSizeDiv>
-            </EachUser>
-          )
-        })}
+              </EachUser>
+            )
+          })}
+        </MappedUsers>
       </UserListing>
     )
   }
