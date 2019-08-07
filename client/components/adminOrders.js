@@ -7,6 +7,38 @@ const OrderList = styled.div`
   display: flex;
   font-size: 15px;
   padding: 2px;
+  margin: 10px;
+  width: 280px;
+  align-items: center;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  border-radius: 25px;
+  justify-content: center;
+`
+const CategoryStyle = styled.div`
+  display: flex;
+  font-size: 15px;
+  padding: 2px;
+  margin: 10px;
+  width: 280px;
+  align-items: center;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  justify-content: center;
+`
+
+const FlexBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+const Hidden = styled.div`
+  width: 280px;
+  visibility: hidden;
 `
 
 class AdminOrders extends React.Component {
@@ -47,8 +79,9 @@ class AdminOrders extends React.Component {
   render() {
     const orders = this.props.orders
     return (
-      <div>
-        <div>
+      <FlexBox>
+        <Hidden />
+        <CategoryStyle>
           <h4>Category:</h4>
           <select id="typeSelect" onChange={this.selectOrders}>
             <option value="all">All orders</option>
@@ -58,21 +91,21 @@ class AdminOrders extends React.Component {
             <option value="Cancelled">Cancelled</option>
           </select>
           <h6> Displaying {orders.length} orders</h6>
-        </div>
+        </CategoryStyle>
+        <Hidden />
         {orders &&
           orders.map(order => {
             return (
-              <div key={order.id}>
+              <FlexBox key={order.id}>
                 <OrderList>
                   {order.user ? (
                     <div>
-                      <div>{order.user.email}</div>
+                      <div>Email: {order.user.email}</div>
                       <div>
-                        {order.subtotal ? order.subtotal : '$FILLED IN VALUE'}
+                        Subtotal: {order.subtotal ? order.subtotal : '$0.00'}
                       </div>
-                      <div> {order.createdAt}</div>
                       <div>
-                        {order.status}
+                        Status: {order.status}
                         <select onChange={this.handleOrderStatus}>
                           <option value="">Change Status</option>
                           <option value="Created">Created</option>
@@ -90,11 +123,8 @@ class AdminOrders extends React.Component {
                     </div>
                   ) : (
                     <div>
-                      <div>{order.sid}</div>
-                      <div>
-                        {order.subtotal ? order.subtotal : '$FILLED IN VALUE'}
-                      </div>
-                      <div> {order.createdAt}</div>
+                      <div>Email: Pending...</div>
+                      <div>{order.subtotal ? order.subtotal : '$0.00'}</div>
                       <div>
                         {order.status}
                         <select onChange={this.handleOrderStatus}>
@@ -114,10 +144,10 @@ class AdminOrders extends React.Component {
                     </div>
                   )}
                 </OrderList>
-              </div>
+              </FlexBox>
             )
           })}
-      </div>
+      </FlexBox>
     )
   }
 }
