@@ -42,6 +42,7 @@ class Routes extends Component {
   render() {
     const {isLoggedIn} = this.props
     const passwordResetCheck = this.props.user.needPasswordReset
+    console.log(this.props)
     return (
       <MarginDiv>
         <Switch>
@@ -74,6 +75,39 @@ class Routes extends Component {
               <Route path="/" component={NotFound} />
             </Switch>
           )}
+
+        {!passwordResetCheck && (
+          <Switch>
+            {/* Routes placed here are only available after logging in */}
+            <Route exact path="/home" component={UserHome} />
+            <Route exact path="/" component={SplashTest} />
+            <Route exact path="/shovels" component={AllShovelsView} />
+            <Route path="/shovels/:shovelId" component={SingleShovel} />
+            <Route exact path="/cart" component={CartView} />
+            <Route exact path="/myAccount" component={MyAccount} />
+            <Route exact path="/myAccount/orders" component={Orders} />
+            {this.props.user.isAdmin && (
+              <Route exact path="/adminPortal" component={AdminPortal} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allShovels" component={AdminShovels} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route
+                path="/adminPortal/editShovel/:shovelId"
+                component={AdminEditShovel}
+              />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allUsers" component={AdminUsers} />
+            )}
+            {this.props.user.isAdmin && (
+              <Route path="/adminPortal/allOrders" component={AllOrders} />
+            )}
+            <Route path="/pirate" component={Pirate} />
+            <Route path="/" component={NotFound} />
+          </Switch>
+        )}
 
 
           {isLoggedIn && passwordResetCheck && <ResetPassword />}
