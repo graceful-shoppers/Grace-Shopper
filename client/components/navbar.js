@@ -29,18 +29,54 @@ const Navvy = styled.div`
   color: rgb(66, 245, 179);
 `
 
-const DropDown = styled.div`
+const DropDownCont = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
-  width: 75%;
+  // width: 100%;
   position: fixed;
   z-index: 5;
   left: 0;
   top: 0;
   background-color: black;
-  padding: 2px;
+  // padding: 2px;
   max-width: 340px;
+`
+
+const DropDown = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  background-color: black;
+  // padding: 2px;
+  // max-width: 340px;
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+`
+
+const Opac = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: black;
+  // padding: 2px;
+  // max-width: 1241px;
+  opacity: 0.5;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
 `
 
 const DropDownItemsCont = styled.div`
@@ -68,12 +104,14 @@ const CartItems = styled.div`
   font-size: 15px;
   width: 50;
   padding-right: 10px;
+  padding-top: 15px;
 `
 
 const ItemsCount = styled.div`
   position: absolute;
-  padding-bottom: 7px;
-  padding-left: 7px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  color: #db3eb1;
 `
 
 const HeaderDiv = styled.div`
@@ -140,74 +178,86 @@ class Navbar extends React.Component {
                 <div className="bar" />
                 <div className="bar" />
               </HamburgerButton>
-              <h2 style={font}>Graceful Shoveler</h2>
-              <CartItems>
-                <ItemsCount>
-                  <Link to="/cart">
+              <h2>Graceful Shoveler</h2>
+
+              <Link to="/cart">
+                <CartItems>
+                  <ItemsCount>
                     {this.props.cart.products
                       ? this.props.cart.products.length
                       : 0}
-                  </Link>
-                </ItemsCount>
-                <span>
-                  <Link to="/cart">
-                    <img src="/cart.png" style={{width: 50}} />
-                  </Link>
-                </span>
-              </CartItems>
+                  </ItemsCount>
+                  <span>
+                    <img src="/cart.png" style={{width: 60, height: 50}} />
+                  </span>
+                </CartItems>
+              </Link>
             </Container>
           </HeaderDiv>
         </Navvy>
+
         {this.state.burger ? (
-          <DropDown>
-            <HamburgerButton onClick={() => this.burgerShow()}>
-              <div className="bar" />
-              <div className="bar" />
-              <div className="bar" />
-            </HamburgerButton>
-            <DropDownItemsCont>
-              <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
-                Home
-              </BurgerLinkButton>
-              <BurgerLinkButton to="/shovels" onClick={() => this.burgerShow()}>
-                Shovels
-              </BurgerLinkButton>
-              {this.props.isLoggedIn ? (
+          <DropDownCont>
+            <DropDown>
+              <HamburgerButton onClick={() => this.burgerShow()}>
+                <div className="bar" />
+                <div className="bar" />
+                <div className="bar" />
+              </HamburgerButton>
+              <DropDownItemsCont>
+                <BurgerLinkButton to="/home" onClick={() => this.burgerShow()}>
+                  Home
+                </BurgerLinkButton>
                 <BurgerLinkButton
-                  to="/myAccount"
+                  to="/shovels"
                   onClick={() => this.burgerShow()}
                 >
-                  My Account
+                  Shovels
                 </BurgerLinkButton>
-              ) : (
-                <BurgerLinkButton
-                  to="/signup"
-                  onClick={() => this.burgerShow()}
-                >
-                  Sign Up
-                </BurgerLinkButton>
-              )}
-              {this.props.isLoggedIn ? (
-                <BurgerLinkButton to="#" onClick={() => this.logoutOnclicks()}>
-                  Logout
-                </BurgerLinkButton>
-              ) : (
-                <BurgerLinkButton to="/login" onClick={() => this.burgerShow()}>
-                  Login
-                </BurgerLinkButton>
-              )}
-              {this.props.isAdmin ? (
-                <LocalButton
-                  to="/adminPortal"
-                  onClick={() => this.burgerShow()}
-                >
-                  Admin Portal
-                </LocalButton>
-              ) : (
-                <div />
-              )}
-            </DropDownItemsCont>
-          </DropDown>
+                {this.props.isLoggedIn ? (
+                  <BurgerLinkButton
+                    to="/myAccount"
+                    onClick={() => this.burgerShow()}
+                  >
+                    My Account
+                  </BurgerLinkButton>
+                ) : (
+                  <BurgerLinkButton
+                    to="/signup"
+                    onClick={() => this.burgerShow()}
+                  >
+                    Sign Up
+                  </BurgerLinkButton>
+                )}
+                {this.props.isLoggedIn ? (
+                  <BurgerLinkButton
+                    to="#"
+                    onClick={() => this.logoutOnclicks()}
+                  >
+                    Logout
+                  </BurgerLinkButton>
+                ) : (
+                  <BurgerLinkButton
+                    to="/login"
+                    onClick={() => this.burgerShow()}
+                  >
+                    Login
+                  </BurgerLinkButton>
+                )}
+                {this.props.isAdmin ? (
+                  <LocalButton
+                    to="/adminPortal"
+                    onClick={() => this.burgerShow()}
+                  >
+                    Admin Portal
+                  </LocalButton>
+                ) : (
+                  <div />
+                )}
+              </DropDownItemsCont>
+            </DropDown>
+            <Opac />
+          </DropDownCont>
         ) : (
           <div />
         )}
