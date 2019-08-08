@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
 
 // const Container = styled.div`
 //   width: 100%;
@@ -70,6 +69,7 @@ const Content = styled.div`
   margin: 0 auto;
   padding: 75px 0;
   color: white;
+  height: 100vh;
 `
 const ParallaxContainer = styled.div`
   display: flex;
@@ -85,9 +85,10 @@ const ParallaxContainer = styled.div`
   background-size: cover;
 `
 const LinkButt = styled.div`
-  width: 30%;
-  margin: auto;
   border-radius: 50%;
+  &:hover {
+    box-shadow: 0px 0px 5px black;
+  }
 `
 
 {
@@ -114,8 +115,6 @@ const Splash = props => {
             </SplashText>
           </Content>
         </ContentContainer>
-      </MainContainer>
-      <MainContainer>
         <ParallaxContainer img="https://miro.medium.com/max/1838/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg">
           <ImgRotateLeft270
             className="hehe"
@@ -128,14 +127,10 @@ const Splash = props => {
             <SplashText>find something...</SplashText>
           </Content>
         </ContentContainer>
-      </MainContainer>
-      <MainContainer>
         <ParallaxContainer img="assets/spoon.jpg" />
         <ContentContainer>
           <Content>
             <SplashText>
-              <br />
-              <br />
               do<br /> EVERYTHING<br />
               <br />
               <br />
@@ -143,9 +138,13 @@ const Splash = props => {
               <br />
               <br />
               <br />
-              <Link to="/shovels">
-                <LinkButt>start here</LinkButt>
-              </Link>
+              <br />
+              <br />
+              <LinkButt>
+                <div>start here</div>
+              </LinkButt>
+              <br />
+              <br />
               <br />
               <br />
               <br />

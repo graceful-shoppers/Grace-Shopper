@@ -96,6 +96,10 @@ const LocalButton = styled(BurgerLinkButton)`
   background-color: tomato;
 `
 
+const font = {
+  fontFamily: "'Raleway', sans-serif"
+}
+
 class Navbar extends React.Component {
   constructor() {
     super()
@@ -136,7 +140,7 @@ class Navbar extends React.Component {
                 <div className="bar" />
                 <div className="bar" />
               </HamburgerButton>
-              <h2>Graceful Shoveler</h2>
+              <h2 style={font}>Graceful Shoveler</h2>
               <CartItems>
                 <ItemsCount>
                   <Link to="/cart">
