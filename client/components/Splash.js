@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 // const Container = styled.div`
 //   width: 100%;
@@ -21,7 +22,6 @@ import styled from 'styled-components'
 const ImgCont = styled.img`
   max-width: 90%;
   // max-height: 60%;
-  position: relative;
 `
 const ImgRotateLeft270 = styled(ImgCont)`
   transform: rotate(10deg);
@@ -44,34 +44,59 @@ const SplashText = styled.h1`
   line-height: 75px;
 `
 
-// img: https://miro.medium.com/max/1838/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg           assets/snowStuff.jpg  assets/spoon.jpg
-// pics: assets/Shovel-PNG-Picture.png   assets/snowShovel.png
-
-const BgImg = styled.div`
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  background-image: url(${props => props.url});
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
+const ShovelPanelText = styled.div`
+  margin-top: 25%;
 `
 
-const Caption = styled.div`
+const MainContainer = styled.div`
   position: absolute;
-  left: 0;
-  top: 50%;
+  scroll-behavior: smooth;
+  perspective-origin: 0 0;
+  height: calc(100% - 77px);
+  height: -o-calc(100% - 77px); /* opera */
+  height: -webkit-calc(100% - 77px); /* google, safari */
+  height: -moz-calc(100% - 77px); /* firefox */
   width: 100%;
-  text-align: center;
-  color: #000;
-  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 `
+
+const ContentContainer = styled.div``
+
+const Content = styled.div`
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 75px 0;
+  color: white;
+`
+const ParallaxContainer = styled.div`
+  transform-style: preserve-3d;
+`
+
+const ParallaxChild = styled.div`
+  background: url(${props => props.img});
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(3)
+  perspective: 1px;
+  top: 0px;
+  position: -webkit-sticky;
+  height: 90.5vh;
+  width: 100%;
+  position: relative;
+`
+const LinkButt = styled.div`
+  width: 30%;
+  margin: auto;
+  border-radius: 50%;
+`
+
+{
+  /* <ImgRotateLeft270
+className="hehe"
+src="http://www.pngall.com/wp-content/uploads/2016/04/Shovel-PNG-Picture.png"
+/> */
+}
 
 /**
  * COMPONENT
@@ -79,13 +104,17 @@ const Caption = styled.div`
 const Splash = props => {
   return (
     <div>
-      <BgImg url="assets/snowStuff.jpg">
-        <ImgCont src="assets/snowShovel.png" />
-      </BgImg>
-      <div>
-        <SplashText>find something...</SplashText>
-      </div>
-      <BgImg url="https://miro.medium.com/max/1838/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg" />
+      <MainContainer>
+        <ParallaxContainer>
+          <ParallaxChild img="assets/snowStuff.jpg">
+            {' '}
+            <ImgCont src="assets/snowShovel.png" />
+          </ParallaxChild>
+          <ParallaxChild>
+            <SplashText>find something...</SplashText>
+          </ParallaxChild>
+        </ParallaxContainer>
+      </MainContainer>
     </div>
   )
 }

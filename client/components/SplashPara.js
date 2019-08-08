@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
 
 // const Container = styled.div`
 //   width: 100%;
@@ -34,7 +33,7 @@ const ImgRotateLeft270 = styled(ImgCont)`
 //   align-items: center;
 // `
 
-const SplashText = styled.h1`
+const SplashText = styled.div`
   letter-spacing: 15px;
   font-family: 'Raleway', sans-serif;
   color: grey;
@@ -50,7 +49,7 @@ const ShovelPanelText = styled.div`
 
 const MainContainer = styled.div`
   scroll-behavior: smooth;
-  perspective: 1px;
+  perspective: 100px;
   // transform-style: preserve-3d;
   height: 100vh;
   overflow-x: hidden;
@@ -58,18 +57,24 @@ const MainContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-  position: relative;
+  // position: relative;
   display: block;
-  background-color: white;
   z-index: 1;
-  transform-origin: 100% 50%;
+  height: 100vh
+  width: 100%;
 `
 
 const Content = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  padding: 75px 0;
+  padding: 20px 0;
   color: white;
+  height: 20%;
+  background-color: white;
+  // transform-origin: 100% 100%;
+  position: relative;
+  top: 50%;
+  transform: translateZ(-75px) scale(2);
 `
 const ParallaxContainer = styled.div`
   display: flex;
@@ -79,15 +84,16 @@ const ParallaxContainer = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-100px) scale(2);
   background: url(${props => props.img});
   background-color: rgb(250, 228, 216);
   background-size: cover;
 `
 const LinkButt = styled.div`
-  width: 30%;
-  margin: auto;
   border-radius: 50%;
+  &:hover {
+    box-shadow: 0px 0px 5px black;
+  }
 `
 
 {
@@ -114,8 +120,6 @@ const Splash = props => {
             </SplashText>
           </Content>
         </ContentContainer>
-      </MainContainer>
-      <MainContainer>
         <ParallaxContainer img="https://miro.medium.com/max/1838/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg">
           <ImgRotateLeft270
             className="hehe"
@@ -128,14 +132,10 @@ const Splash = props => {
             <SplashText>find something...</SplashText>
           </Content>
         </ContentContainer>
-      </MainContainer>
-      <MainContainer>
         <ParallaxContainer img="assets/spoon.jpg" />
         <ContentContainer>
           <Content>
             <SplashText>
-              <br />
-              <br />
               do<br /> EVERYTHING<br />
               <br />
               <br />
@@ -143,9 +143,13 @@ const Splash = props => {
               <br />
               <br />
               <br />
-              <Link to="/shovels">
-                <LinkButt>start here</LinkButt>
-              </Link>
+              <br />
+              <br />
+              <LinkButt>
+                <div>start here</div>
+              </LinkButt>
+              <br />
+              <br />
               <br />
               <br />
               <br />

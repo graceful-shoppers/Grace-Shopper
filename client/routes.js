@@ -26,12 +26,7 @@ import SplashScroll from './components/SplashScroll'
 import styled from 'styled-components'
 import {getBrandsThunk} from './store/brands'
 
-const MarginDiv = styled.div`
-  padding-top: 104px;
-  @media (min-width: 337px) {
-    padding-top: 77px;
-  }
-`
+const MarginDiv = styled.div``
 /**
  * COMPONENT
  */

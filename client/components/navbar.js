@@ -134,6 +134,10 @@ const LocalButton = styled(BurgerLinkButton)`
   background-color: tomato;
 `
 
+const font = {
+  fontFamily: "'Raleway', sans-serif"
+}
+
 class Navbar extends React.Component {
   constructor() {
     super()
