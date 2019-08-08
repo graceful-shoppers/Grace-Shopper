@@ -116,7 +116,7 @@ const Splash = props => {
         <ContentContainer>
           <Content>
             <SplashText>
-              be<br /> SOMEONE...
+              find <br />something...
             </SplashText>
           </Content>
         </ContentContainer>
@@ -129,7 +129,9 @@ const Splash = props => {
 
         <ContentContainer>
           <Content>
-            <SplashText>find something...</SplashText>
+            <SplashText>
+              be<br /> SOMEONE...
+            </SplashText>
           </Content>
         </ContentContainer>
         <ParallaxContainer img="assets/spoon.jpg" />
