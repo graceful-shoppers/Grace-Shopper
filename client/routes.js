@@ -26,7 +26,13 @@ import SplashScroll from './components/SplashScroll'
 import styled from 'styled-components'
 import {getBrandsThunk} from './store/brands'
 
-const MarginDiv = styled.div``
+//IF YOU DELETE THIS LOOK AT LOTS OF PAGES AND MAKE SURE THE NAV BAR ISNT BLOCKING PARTS OF THE SITE
+const MarginDiv = styled.div`
+  padding-top: 104px;
+  @media (min-width: 337px) {
+    padding-top: 77px;
+  }
+`
 /**
  * COMPONENT
  */
