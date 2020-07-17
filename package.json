@@ -50,7 +50,7 @@
     "faker": "^4.1.0",
     "gmail-send": "^1.8.10",
     "history": "^4.9.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash.pick": "^4.4.0",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
